@@ -1,1 +1,3 @@
 Solving Project Euler problems in Swift.
+
+Note: You probably want to optimize this via `swift -O3`, otherwise it can be quite slow on some problems.

@@ -8,14 +8,14 @@
 //
 class FibonacciSequence: Sequence {
     func generate() -> GeneratorOf<Int> {
-        var a = 0
-        var b = 1
+        var last = 0
+        var current = 1
         
         return GeneratorOf<Int> {
-            let sum = a + b
-            a = b
-            b = sum
-            return sum
+            let next = last + current
+            last = current
+            current = next
+            return next
         }
     }
 }

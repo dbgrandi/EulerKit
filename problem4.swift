@@ -5,11 +5,7 @@
 // Find the largest palindrome made from the product of two 3-digit numbers.
 //
 
-var palindromeCache = Dictionary<Int,Int>()
 func isPalindrome(i:Int) -> Bool {
-    if let cachedValue = palindromeCache[i] {
-        return true
-    }
     let digits = toDigitArray(i)
     var first = 0
     var last = digits.count-1
@@ -20,7 +16,6 @@ func isPalindrome(i:Int) -> Bool {
         first+=1
         last-=1
     }
-    palindromeCache[i] = 1
     return true
 }
 

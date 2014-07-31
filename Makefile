@@ -1,10 +1,10 @@
 TARGETS = $(shell ls problem*.swift | cut -f 2 -d 'm' | cut -f 1 -d '.' | sort -g)
-PRODUCTS = $(shell ls problem*[0-9])
+PRODUCTS = $(shell ls problem*[0-9] 2> /dev/null )
 
 all: $(TARGETS)
 	
 clean:
-	rm $(PRODUCTS)
+	rm -f $(PRODUCTS)
 
 $(TARGETS):
 	xcrun -sdk macosx swift -O3 problem$@.swift

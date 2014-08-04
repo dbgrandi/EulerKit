@@ -30,7 +30,7 @@ extension Int {
 //
 // A Collatz Sequence, which eventually has an end
 //
-class CollatzSequence: Sequence {
+class CollatzSequence: SequenceType {
     let start:Int
     
     init(start:Int) {

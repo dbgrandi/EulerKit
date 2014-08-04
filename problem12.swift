@@ -76,7 +76,7 @@ func primeFactorization(n:Int) -> [Int] {
 //
 // An infinite sequence of Triangle numbers
 //
-class TriangleNumberSequence: Sequence {
+class TriangleNumberSequence: SequenceType {
     func generate() -> GeneratorOf<Int> {
         var current = 0
         var count = 0

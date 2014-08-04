@@ -6,7 +6,7 @@
 //
 // An infinite sequence of Fibonacci numbers
 //
-class FibonacciSequence: Sequence {
+class FibonacciSequence: SequenceType {
     func generate() -> GeneratorOf<Int> {
         var last = 0
         var current = 1
@@ -24,7 +24,7 @@ class FibonacciSequence: Sequence {
 // A wrapper to stop a Sequence when it grows to
 // a maximum value.
 //
-class MaxLimitSequence<S: Sequence, T where T == S.GeneratorType.Element, T:Comparable>: Sequence {
+class MaxLimitSequence<S: SequenceType, T where T == S.Generator.Element, T:Comparable>: SequenceType {
     let max:T
     var sequence:S
 

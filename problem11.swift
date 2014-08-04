@@ -22,7 +22,7 @@ var grid:[[Int]] = [[Int]](count:20, repeatedValue: [Int](count:20, repeatedValu
 for x in 0...19 {
     for y in 0...19 {
         let index = x*20+y
-        let str = String(elements[index])
+        let str = String(format:elements[index])
         if let toInt = str.toInt() {
             grid[x][y] = toInt
         }

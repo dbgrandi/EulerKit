@@ -38,7 +38,7 @@ func isPrime(num:Int) -> Bool {
 //
 // An infinite sequence of Prime numbers
 //
-class PrimeSequence: Sequence {
+class PrimeSequence: SequenceType {
     func generate() -> GeneratorOf<Int> {
         var currentPrime = 1
         var nextPrime = 1
@@ -58,7 +58,7 @@ class PrimeSequence: Sequence {
 // A wrapper to stop a Sequence when it grows to
 // a maximum value.
 //
-class MaxLimitSequence<S: Sequence, T where T == S.GeneratorType.Element, T:Comparable>: Sequence {
+class MaxLimitSequence<S: SequenceType, T where T == S.Generator.Element, T:Comparable>: SequenceType {
     let max:T
     var sequence:S
 
@@ -83,7 +83,7 @@ class MaxLimitSequence<S: Sequence, T where T == S.GeneratorType.Element, T:Comp
 let seq = MaxLimitSequence(max:2_000_000, sequence:PrimeSequence())
 var sum = 0
 for i in seq {
-  println(i)
+  // println(i)
   sum += i
 }
 // let sum = filter(seq).reduce(0,+)

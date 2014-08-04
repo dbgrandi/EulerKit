@@ -7,4 +7,4 @@ clean:
 	rm -f $(PRODUCTS)
 
 $(TARGETS):
-	xcrun -sdk macosx swift -O3 problem$@.swift
+	xcrun -sdk macosx swiftc -Ounchecked problem$@.swift

@@ -8,16 +8,16 @@
 // Find the product abc.
 //
 
+func isTriple(a:Int, b:Int, c:Int) -> Bool {
+  return (a+b+c == 1000) && (a<b && b<c) && ((a*a + b*b) == c*c)
+}
+
 for a in 1...999 {
   for b in 1...999 {
     for c in 1...999 {
-      if a+b+c == 1000 {
-        if a < b && b < c {
-          if (a*a + b*b) == (c*c) {
-            println("Triple found: a = \(a), b = \(b), c = \(c)")
-            println("Product = \(a*b*c)")
-          }
-        }
+      if isTriple(a,b,c) {
+        println("Triple found: a = \(a), b = \(b), c = \(c)")
+        println("Product = \(a*b*c)")
       }
     }
   }

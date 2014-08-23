@@ -19,13 +19,17 @@ func isPalindrome(i:Int) -> Bool {
   return true
 }
 
+// Returns the digits array in reverse, which is okay because
+// we are testing if it is a palindrome
 func toDigitArray(i:Int) -> [Int] {
   var num = i
   var digitArray:[Int] = []
+
   while num >= 10 {
     digitArray.append(num%10)
     num = num / 10
   }
+
   digitArray.append(num)
   return digitArray.reverse()
 }

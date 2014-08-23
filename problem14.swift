@@ -19,52 +19,52 @@
 //
 
 extension Int {
-    func even() -> Bool {
-        return self % 2 == 0
-    }
-    func odd() -> Bool {
-        return !self.even()
-    }
+  func even() -> Bool {
+    return self % 2 == 0
+  }
+  func odd() -> Bool {
+    return !self.even()
+  }
 }
 
 //
 // A Collatz Sequence, which eventually has an end
 //
 class CollatzSequence: SequenceType {
-    let start:Int
-    
-    init(start:Int) {
-        self.start = start
+  let start:Int
+  
+  init(start:Int) {
+    self.start = start
+  }
+  
+  func generate() -> GeneratorOf<Int> {
+    var n = 0
+    return GeneratorOf<Int> {
+      if n == 0 {
+        n = self.start
+        return n
+      }
+      if n == 1 {
+        return .None
+      }
+      if n.even() {
+        n = n/2
+      } else {
+        n = 3*n+1
+      }
+      return n
     }
-    
-    func generate() -> GeneratorOf<Int> {
-        var n = 0
-        return GeneratorOf<Int> {
-            if n == 0 {
-                n = self.start
-                return n
-            }
-            if n == 1 {
-                return .None
-            }
-            if n.even() {
-                n = n/2
-            } else {
-                n = 3*n+1
-            }
-            return n
-        }
-    }
+  }
 }
 
 var max = (n:0, length:0)
 
 for i in 1...1_000_000 {
-    let currentLength = reduce(CollatzSequence(start:i), 0, {(acc,val) in acc + 1})
-    if currentLength > max.length {
-        max.n = i
-        max.length = currentLength
-    }
+  let currentLength = reduce(CollatzSequence(start:i), 0, {(acc,val) in acc + 1})
+  if currentLength > max.length {
+    max.n = i
+    max.length = currentLength
+  }
 }
 
 println("n = \(max.n)")

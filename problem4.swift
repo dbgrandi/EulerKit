@@ -6,40 +6,40 @@
 //
 
 func isPalindrome(i:Int) -> Bool {
-    let digits = toDigitArray(i)
-    var first = 0
-    var last = digits.count-1
-    while first < last {
-        if digits[first] != digits[last] {
-            return false
-        }
-        first+=1
-        last-=1
+  let digits = toDigitArray(i)
+  var first = 0
+  var last = digits.count-1
+  while first < last {
+    if digits[first] != digits[last] {
+      return false
     }
-    return true
+    first+=1
+    last-=1
+  }
+  return true
 }
 
 func toDigitArray(i:Int) -> [Int] {
-    var num = i
-    var digitArray:[Int] = []
-    while num >= 10 {
-        digitArray.insert(num%10, atIndex:0)
-        num = num / 10
-    }
-    digitArray.insert(num, atIndex: 0)
-    return digitArray
+  var num = i
+  var digitArray:[Int] = []
+  while num >= 10 {
+    digitArray.append(num%10)
+    num = num / 10
+  }
+  digitArray.append(num)
+  return digitArray.reverse()
 }
 
 var palindromes:[Int] = []
 for i in 100...999 {
-    if i % 100 == 0 {
-        println(i)
+  if i % 100 == 0 {
+    println(i)
+  }
+  for j in 100...999 {
+    if isPalindrome(i*j) {
+      palindromes.append(i*j)
     }
-    for j in 100...999 {
-        if isPalindrome(i*j) {
-            palindromes.append(i*j)
-        }
-    }
+  }
 }
 
 sort(&palindromes) { $0 > $1 }

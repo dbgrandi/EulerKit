@@ -7,17 +7,17 @@
 // An infinite sequence of Fibonacci numbers
 //
 class FibonacciSequence: SequenceType {
-    func generate() -> GeneratorOf<Int> {
-        var last = 0
-        var current = 1
-        
-        return GeneratorOf<Int> {
-            let next = last + current
-            last = current
-            current = next
-            return next
-        }
+  func generate() -> GeneratorOf<Int> {
+    var last = 0
+    var current = 1
+    
+    return GeneratorOf<Int> {
+      let next = last + current
+      last = current
+      current = next
+      return next
     }
+  }
 }
 
 //
@@ -25,25 +25,25 @@ class FibonacciSequence: SequenceType {
 // a maximum value.
 //
 class MaxLimitSequence<S: SequenceType, T where T == S.Generator.Element, T:Comparable>: SequenceType {
-    let max:T
-    var sequence:S
+  let max:T
+  var sequence:S
 
-    init(max:T, sequence:S) {
-        self.max = max
-        self.sequence = sequence
-    }
-    
-    func generate() -> GeneratorOf<T> {
-        var generator = self.sequence.generate()
+  init(max:T, sequence:S) {
+    self.max = max
+    self.sequence = sequence
+  }
+  
+  func generate() -> GeneratorOf<T> {
+    var generator = self.sequence.generate()
 
-        return GeneratorOf<T> {
-            var next = generator.next()
-            if next != .None && next < self.max {
-                return next
-            }
-            return .None
-        }
+    return GeneratorOf<T> {
+      var next = generator.next()
+      if next != .None && next < self.max {
+        return next
+      }
+      return .None
     }
+  }
 }
 
 let seq = MaxLimitSequence(max:4_000_000, sequence:FibonacciSequence())

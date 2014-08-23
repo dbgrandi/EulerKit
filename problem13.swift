@@ -2,8 +2,7 @@
 // Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
 //
 
-let test:[String] = [
-"12", "23", "34", "45", "56", "67"]
+let test:[String] = ["12", "23", "34", "45", "56", "67"]
 
 let testSum = 12+23+34+45+56+67
 
@@ -140,8 +139,8 @@ while carry>0 {
     carry = carry/10
 }
 
-for i in result.reverse() {
-    print(i)
+for i in 0...9 {
+    print(result.reverse()[i])
 }
 
-println("")
+println()

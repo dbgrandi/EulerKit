@@ -81,10 +81,5 @@ class MaxLimitSequence<S: SequenceType, T where T == S.Generator.Element, T:Comp
 }
 
 let seq = MaxLimitSequence(max:2_000_000, sequence:PrimeSequence())
-var sum = 0
-for i in seq {
-  // println(i)
-  sum += i
-}
-// let sum = filter(seq).reduce(0,+)
+let sum = reduce(seq,0,+)
 println("sum = \(sum)")

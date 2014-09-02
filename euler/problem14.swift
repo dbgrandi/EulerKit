@@ -18,15 +18,6 @@
 // NOTE: Once the chain starts the terms are allowed to go above one million.
 //
 
-extension Int {
-  func even() -> Bool {
-    return self % 2 == 0
-  }
-  func odd() -> Bool {
-    return !self.even()
-  }
-}
-
 //
 // A Collatz Sequence, which eventually has an end
 //
@@ -57,17 +48,21 @@ class CollatzSequence: SequenceType {
   }
 }
 
-var max = (n:0, length:0)
+class Problem14: EulerProblem {
+  class func run() {
+    var max = (n:0, length:0)
 
-for i in 1...1_000_000 {
-  let currentLength = reduce(CollatzSequence(start:i), 0, {(acc,val) in acc + 1})
-  if currentLength > max.length {
-    max.n = i
-    max.length = currentLength
+    for i in 1...1_000_000 {
+      let currentLength = reduce(CollatzSequence(start:i), 0, {(acc,val) in acc + 1})
+      if currentLength > max.length {
+        max.n = i
+        max.length = currentLength
+      }
+    }
+
+    println("n = \(max.n)")
+    println("length = \(max.length)")
   }
 }
-
-println("n = \(max.n)")
-println("length = \(max.length)")
 
 

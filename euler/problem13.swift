@@ -108,13 +108,6 @@ let nums:[String] =
     "20849603980134001723930671666823555245252804609722",
     "53503534226472524250874054075591789781264330331690"]
 
-extension String {
-    var length: Int { return countElements(self) }
-
-    subscript(i: Int) -> String {
-        return String(Array(self)[i])
-    }
-}
 
 let length = nums[0].length-1
 var result = [Int]()

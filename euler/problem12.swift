@@ -52,27 +52,6 @@ func isPrime(num:Int) -> Bool {
     return true
 }
 
-func primeFactorization(n:Int) -> [Int] {
-    var current = n
-    var factors = Dictionary<Int,Int>()
-    var try = 2
-    
-    while try <= current {
-        if isPrime(try) && (current % try == 0) {
-            current = current / try
-            if let f = factors[try] {
-                factors[try] = f+1
-            } else {
-                factors[try] = 1
-            }
-        } else {
-            try++
-        }
-    }
-    
-    return Array(factors.values)
-}
-
 //
 // An infinite sequence of Triangle numbers
 //
@@ -91,7 +70,7 @@ class TriangleNumberSequence: SequenceType {
 
 func numberOfDivisors(num:Int) -> Int {
     var divisors = 1
-    for i in primeFactorization(num) {
+    for i in num.primeFactors() {
         divisors = divisors * (i+1)
     }
     return divisors

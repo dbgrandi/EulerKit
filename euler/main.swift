@@ -8,37 +8,30 @@
 
 import Foundation
 
-protocol EulerProblem {
-  class func run()
-  class func allProblems() -> Dictionary<Int,String>
-}
-
-private class EulerProblemDict {
-  class var sharedInstance : Dictionary<Int,String> {
+@objc class EulerProblemDict {
+  @objc class var sharedInstance : Dictionary<Int,String> {
   struct Static {
     static var onceToken : dispatch_once_t = 0
     static var instance : Dictionary<Int,String>? = nil
     }
     dispatch_once(&Static.onceToken) {
-      println("init")
+      println("EulerProblemDict: init static dictionary")
       Static.instance = Dictionary<Int,String>()
     }
     return Static.instance!
   }
+  
+  class func load() {
+    println("EulerProblemDict: +load()")
+    EulerProblemDict.sharedInstance
+  }
 }
 
-@objc class EulerProblemImpl: EulerProblem {
+@objc class EulerProblem {
 
-//  class var problems: Dictionary<Int,String> {
-//    struct EulerProblems {
-//      static var problems = Dictionary<Int,String>()
-//    }
-//    println(EulerProblems.problems.count)
-//    return EulerProblems.problems
-//  }
-
-  class func initialize() {
+  class func load() {
     let clazz = NSStringFromClass(self).componentsSeparatedByString(".").last!
+    println("EulerProblem: +load() for class = \(clazz)")
     if let problemNumber:String = clazz.componentsSeparatedByString("Problem").last {
       if let num = problemNumber.toInt() {
         var dict = EulerProblemDict.sharedInstance
@@ -57,21 +50,37 @@ private class EulerProblemDict {
   }
 }
 
-class Problem1: EulerProblemImpl {
+class Problem1: EulerProblem {
+  
+  override class func load() {
+    let clazz = NSStringFromClass(self).componentsSeparatedByString(".").last!
+    println("EulerProblem: +load() for class = \(clazz)")
+    if let problemNumber:String = clazz.componentsSeparatedByString("Problem").last {
+      if let num = problemNumber.toInt() {
+        var dict = EulerProblemDict.sharedInstance
+        dict[num] = clazz
+        println("problem[\(num)] = \(clazz)")
+      }
+    }
+  }
+  
   override class func run() {
-    println("problem 1 is RUNNING")
+    println("Problem1: RUNNING")
   }
 }
 
-class Problem2: EulerProblemImpl {
+class Problem2: EulerProblem {
+  override class func load() {
+    super.load()
+  }
+
   override class func run() {
-    println("problem 2 is RUNNING")
+    println("Problem2: RUNNING")
   }
 }
 
-println("loaded")
-EulerProblemDict.sharedInstance.count
+println("Main: running")
 var dict = EulerProblemDict.sharedInstance
-dict[3] = "asdf"
-dict[4] = "asdf2"
-println(dict.count)
+Problem2.run()
+println("Main: \(dict.count)")
+

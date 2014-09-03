@@ -10,6 +10,13 @@
 // Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 //
 
+class Problem6: EulerProblem {
+  override func run() {
+    let diff = squareOfSumUpTo(100) - sumOfSquaresUpTo(100)
+    println(diff)
+  }
+}
+
 func sumOfSquaresUpTo(max:Int) -> Int {
   var sum = 0
   for i in 1...max {
@@ -25,6 +32,3 @@ func squareOfSumUpTo(max:Int) -> Int {
   }
   return sum*sum
 }
-
-let diff = squareOfSumUpTo(100) - sumOfSquaresUpTo(100)
-println(diff)

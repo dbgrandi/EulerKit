@@ -8,5 +8,20 @@
 
 import Foundation
 
-println("Hello, World!")
+EulerProblem.registerProblems()
+
+var problems = EulerProblem.problems()
+//println("problem count = \(problems.count)")
+//for i in problems {
+//  println("problem name: \(i)")
+//}
+
+let prob = problems[4] as EulerProblem
+let stopwatch = Stopwatch(name:"problem")
+stopwatch.start()
+prob.run()
+stopwatch.stop()
+stopwatch.stats()
+
+// read the input args
 

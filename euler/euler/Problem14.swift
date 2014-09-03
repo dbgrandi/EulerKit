@@ -49,9 +49,9 @@ class CollatzSequence: SequenceType {
 }
 
 class Problem14: EulerProblem {
-  class func run() {
+  override func run() {
     var max = (n:0, length:0)
-
+    
     for i in 1...1_000_000 {
       let currentLength = reduce(CollatzSequence(start:i), 0, {(acc,val) in acc + 1})
       if currentLength > max.length {
@@ -59,7 +59,7 @@ class Problem14: EulerProblem {
         max.length = currentLength
       }
     }
-
+    
     println("n = \(max.n)")
     println("length = \(max.length)")
   }

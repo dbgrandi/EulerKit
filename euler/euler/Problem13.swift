@@ -6,7 +6,7 @@ let test:[String] = ["12", "23", "34", "45", "56", "67"]
 
 let testSum = 12+23+34+45+56+67
 
-let nums:[String] =
+let problem13nums:[String] =
 ["37107287533902102798797998220837590246510135740250",
     "46376937677490009712648124896970078050417018260538",
     "74324986199524741059474233309513058123726617309629",
@@ -108,32 +108,35 @@ let nums:[String] =
     "20849603980134001723930671666823555245252804609722",
     "53503534226472524250874054075591789781264330331690"]
 
-
-let length = nums[0].length-1
-var result = [Int]()
-var carry = 0
-
-for i in stride(from:length, through:0, by: -1) {
-    var sum = carry
-    for num in nums {
+class Problem13: EulerProblem {
+  override func run() {
+    let length = problem13nums[0].length-1
+    var result = [Int]()
+    var carry = 0
+    
+    for i in stride(from:length, through:0, by: -1) {
+      var sum = carry
+      for num in problem13nums {
         if let digit = num[i].toInt() {
-            sum += digit
+          sum += digit
         }
+      }
+      let digitSum = sum%10
+      let digitCarry = sum-digitSum
+      result.append(digitSum)
+      carry = digitCarry
+      carry = carry/10
     }
-    let digitSum = sum%10
-    let digitCarry = sum-digitSum
-    result.append(digitSum)
-    carry = digitCarry
-    carry = carry/10
+    
+    while carry>0 {
+      result.append(carry%10)
+      carry = carry/10
+    }
+    
+    for i in 0...9 {
+      print(result.reverse()[i])
+    }
+    
+    println()
+  }
 }
-
-while carry>0 {
-    result.append(carry%10)
-    carry = carry/10
-}
-
-for i in 0...9 {
-    print(result.reverse()[i])
-}
-
-println()

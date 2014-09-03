@@ -15,71 +15,74 @@ let gridString = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08 49
 // direction (up, down, left, right, or diagonally) in the 20×20 grid?
 //
 
-var elements = gridString.componentsSeparatedByString(" ")
-
-var grid:[[Int]] = [[Int]](count:20, repeatedValue: [Int](count:20, repeatedValue:0))
-
-for x in 0...19 {
-    for y in 0...19 {
+class Problem11: EulerProblem {
+  override func run() {
+    var elements = gridString.componentsSeparatedByString(" ")
+    
+    var grid:[[Int]] = [[Int]](count:20, repeatedValue: [Int](count:20, repeatedValue:0))
+    
+    for x in 0...19 {
+      for y in 0...19 {
         let index = x*20+y
         let str = String(format:elements[index])
         if let toInt = str.toInt() {
-            grid[x][y] = toInt
+          grid[x][y] = toInt
         }
+      }
     }
-}
-
-func findMaxValue(g:[[Int]],dx:Int, dy:Int) -> Int {
-    var localMax = 0
-    let x_size = g.count
-    let y_size = g[0].count
     
-    for x in 0...x_size {
+    func findMaxValue(g:[[Int]],dx:Int, dy:Int) -> Int {
+      var localMax = 0
+      let x_size = g.count
+      let y_size = g[0].count
+      
+      for x in 0...x_size {
         for y in 0...y_size {
-            var product = 1
-            for length in 0...3 {
-                var xprime = x+(dx*length)
-                var yprime = y+(dy*length)
-                if xprime >= 0 && xprime <= 19 && yprime >= 0 && yprime <= 19 {
-                    product = product * g[xprime][yprime]
-                } else {
-                    product = 0
-                }
+          var product = 1
+          for length in 0...3 {
+            var xprime = x+(dx*length)
+            var yprime = y+(dy*length)
+            if xprime >= 0 && xprime <= 19 && yprime >= 0 && yprime <= 19 {
+              product = product * g[xprime][yprime]
+            } else {
+              product = 0
             }
-            if product > localMax {
-                localMax = product
-            }
+          }
+          if product > localMax {
+            localMax = product
+          }
         }
+      }
+      return localMax
     }
-    return localMax
+    
+    var maxProduct = 0
+    
+    var maxHorizontal = findMaxValue(grid,1,0)
+    println("maxHorizontal = \(maxHorizontal)")
+    if maxHorizontal > maxProduct {
+      maxProduct = maxHorizontal
+    }
+    
+    var maxVertical = findMaxValue(grid,0,1)
+    println("maxVertical = \(maxVertical)")
+    if maxVertical > maxProduct {
+      maxProduct = maxVertical
+    }
+    
+    var maxIncDiagonal = findMaxValue(grid,1,1)
+    println("maxIncDiagonal = \(maxIncDiagonal)")
+    if maxIncDiagonal > maxProduct {
+      maxProduct = maxIncDiagonal
+    }
+    
+    var maxDecDiagonal = findMaxValue(grid,1,-1)
+    println("maxDecDiagonal = \(maxDecDiagonal)")
+    if maxDecDiagonal > maxProduct {
+      maxProduct = maxDecDiagonal
+    }
+    
+    println("maxProduct = \(maxProduct)")
+  }
 }
-
-var maxProduct = 0
-
-var maxHorizontal = findMaxValue(grid,1,0)
-println("maxHorizontal = \(maxHorizontal)")
-if maxHorizontal > maxProduct {
-    maxProduct = maxHorizontal
-}
-
-var maxVertical = findMaxValue(grid,0,1)
-println("maxVertical = \(maxVertical)")
-if maxVertical > maxProduct {
-    maxProduct = maxVertical
-}
-
-var maxIncDiagonal = findMaxValue(grid,1,1)
-println("maxIncDiagonal = \(maxIncDiagonal)")
-if maxIncDiagonal > maxProduct {
-    maxProduct = maxIncDiagonal
-}
-
-var maxDecDiagonal = findMaxValue(grid,1,-1)
-println("maxDecDiagonal = \(maxDecDiagonal)")
-if maxDecDiagonal > maxProduct {
-    maxProduct = maxDecDiagonal
-}
-
-println("maxProduct = \(maxProduct)")
-
 

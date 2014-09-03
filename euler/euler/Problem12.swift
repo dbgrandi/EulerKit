@@ -24,33 +24,7 @@
 // hundred divisors?
 //
 
-import Cocoa
-
-var primeCache = Dictionary<Int, Bool>()
-func isPrime(num:Int) -> Bool {
-    if num < 2 {
-        return false
-    }
-    if num == 2 || num == 3 {
-        return true
-    }
-    if num % 2 == 0 {
-        return false
-    }
-    if let cachedVal = primeCache[num] {
-        return true
-    }
-    
-    let squareRoot:Int = Int(sqrt(Float(num)))
-    let upperBound = squareRoot
-    for i in 3...upperBound {
-        if num % i == 0 {
-            return false
-        }
-    }
-    primeCache[num] = true
-    return true
-}
+//import Cocoa
 
 //
 // An infinite sequence of Triangle numbers
@@ -68,18 +42,23 @@ class TriangleNumberSequence: SequenceType {
     }
 }
 
-func numberOfDivisors(num:Int) -> Int {
-    var divisors = 1
-    for i in num.primeFactors() {
-        divisors = divisors * (i+1)
-    }
-    return divisors
-}
-
-for i in TriangleNumberSequence() {
-    if numberOfDivisors(i) > 500 {
+class Problem12: EulerProblem {
+  override func run() {
+    for i in TriangleNumberSequence() {
+      if numberOfDivisors(i) > 500 {
         println(i)
         break
+      }
     }
+  }
+  
+  func numberOfDivisors(num:Int) -> Int {
+    var divisors = 1
+    for i in num.primeFactors() {
+      divisors = divisors * (i+1)
+    }
+    return divisors
+  }
 }
+
 

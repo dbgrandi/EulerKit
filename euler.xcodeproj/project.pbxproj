@@ -8,8 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		552558CA19AEB953004B958F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552558C919AEB953004B958F /* main.swift */; };
-		552558DF19AEB9B0004B958F /* problem1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552558D019AEB9B0004B958F /* problem1.swift */; };
-		552558F119AEBAA4004B958F /* Euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552558F019AEBAA4004B958F /* Euler.swift */; };
+		558DE42A19B687CF0088B812 /* Euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DE42919B687CF0088B812 /* Euler.swift */; };
+		558DE46319B6A3CB0088B812 /* eulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DE46219B6A3CB0088B812 /* eulerTests.swift */; };
+		558DE46919B6A4050088B812 /* Euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DE42919B687CF0088B812 /* Euler.swift */; };
+		558DE47819B6A6F00088B812 /* Problem4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DE47719B6A6F00088B812 /* Problem4Tests.swift */; };
+		558DE47A19B6B6EB0088B812 /* Stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DE47919B6B6EB0088B812 /* Stopwatch.swift */; };
+		55B8949F19C016F400A7E598 /* Problem1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8948F19C016F400A7E598 /* Problem1.swift */; };
+		55B894A019C016F400A7E598 /* Problem2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949019C016F400A7E598 /* Problem2.swift */; };
+		55B894A119C016F400A7E598 /* Problem3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949119C016F400A7E598 /* Problem3.swift */; };
+		55B894A219C016F400A7E598 /* Problem4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949219C016F400A7E598 /* Problem4.swift */; };
+		55B894A319C016F400A7E598 /* Problem5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949319C016F400A7E598 /* Problem5.swift */; };
+		55B894A419C016F400A7E598 /* Problem6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949419C016F400A7E598 /* Problem6.swift */; };
+		55B894A519C016F400A7E598 /* Problem7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949519C016F400A7E598 /* Problem7.swift */; };
+		55B894A619C016F400A7E598 /* Problem8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949619C016F400A7E598 /* Problem8.swift */; };
+		55B894A719C016F400A7E598 /* Problem9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949719C016F400A7E598 /* Problem9.swift */; };
+		55B894A819C016F400A7E598 /* Problem10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949819C016F400A7E598 /* Problem10.swift */; };
+		55B894A919C016F400A7E598 /* Problem11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949919C016F400A7E598 /* Problem11.swift */; };
+		55B894AA19C016F400A7E598 /* Problem12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949A19C016F400A7E598 /* Problem12.swift */; };
+		55B894AB19C016F400A7E598 /* Problem13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949B19C016F400A7E598 /* Problem13.swift */; };
+		55B894AC19C016F400A7E598 /* Problem14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949C19C016F400A7E598 /* Problem14.swift */; };
+		55B894AD19C016F400A7E598 /* Problem15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949D19C016F400A7E598 /* Problem15.swift */; };
+		55B894AE19C016F400A7E598 /* Problem16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949E19C016F400A7E598 /* Problem16.swift */; };
+		55B894AF19C0173700A7E598 /* Problem1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8948F19C016F400A7E598 /* Problem1.swift */; };
+		55B894B019C0173700A7E598 /* Problem2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949019C016F400A7E598 /* Problem2.swift */; };
+		55B894B119C0173700A7E598 /* Problem3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949119C016F400A7E598 /* Problem3.swift */; };
+		55B894B219C0173700A7E598 /* Problem4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949219C016F400A7E598 /* Problem4.swift */; };
+		55B894B319C0173700A7E598 /* Problem5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949319C016F400A7E598 /* Problem5.swift */; };
+		55B894B419C0173700A7E598 /* Problem6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949419C016F400A7E598 /* Problem6.swift */; };
+		55B894B519C0173700A7E598 /* Problem7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949519C016F400A7E598 /* Problem7.swift */; };
+		55B894B619C0173700A7E598 /* Problem8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949619C016F400A7E598 /* Problem8.swift */; };
+		55B894B719C0173700A7E598 /* Problem9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949719C016F400A7E598 /* Problem9.swift */; };
+		55B894B819C0173700A7E598 /* Problem10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949819C016F400A7E598 /* Problem10.swift */; };
+		55B894B919C0173700A7E598 /* Problem11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949919C016F400A7E598 /* Problem11.swift */; };
+		55B894BA19C0173700A7E598 /* Problem12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949A19C016F400A7E598 /* Problem12.swift */; };
+		55B894BB19C0173700A7E598 /* Problem13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949B19C016F400A7E598 /* Problem13.swift */; };
+		55B894BC19C0173700A7E598 /* Problem14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949C19C016F400A7E598 /* Problem14.swift */; };
+		55B894BD19C0173700A7E598 /* Problem15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949D19C016F400A7E598 /* Problem15.swift */; };
+		55B894BE19C0173700A7E598 /* Problem16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949E19C016F400A7E598 /* Problem16.swift */; };
+		55B894C019C0174A00A7E598 /* Problem16Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B894BF19C0174A00A7E598 /* Problem16Tests.swift */; };
+		55B894C319C0285400A7E598 /* Problem15Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B894C219C0285400A7E598 /* Problem15Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,12 +64,42 @@
 /* Begin PBXFileReference section */
 		552558C619AEB953004B958F /* euler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = euler; sourceTree = BUILT_PRODUCTS_DIR; };
 		552558C919AEB953004B958F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		552558D019AEB9B0004B958F /* problem1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = problem1.swift; sourceTree = "<group>"; };
-		552558F019AEBAA4004B958F /* Euler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Euler.swift; sourceTree = "<group>"; };
+		558DE42919B687CF0088B812 /* Euler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Euler.swift; sourceTree = "<group>"; };
+		558DE45E19B6A3CB0088B812 /* eulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		558DE46119B6A3CB0088B812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		558DE46219B6A3CB0088B812 /* eulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eulerTests.swift; sourceTree = "<group>"; };
+		558DE47719B6A6F00088B812 /* Problem4Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem4Tests.swift; sourceTree = "<group>"; };
+		558DE47919B6B6EB0088B812 /* Stopwatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stopwatch.swift; sourceTree = "<group>"; };
+		55B8948F19C016F400A7E598 /* Problem1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem1.swift; sourceTree = "<group>"; };
+		55B8949019C016F400A7E598 /* Problem2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem2.swift; sourceTree = "<group>"; };
+		55B8949119C016F400A7E598 /* Problem3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem3.swift; sourceTree = "<group>"; };
+		55B8949219C016F400A7E598 /* Problem4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem4.swift; sourceTree = "<group>"; };
+		55B8949319C016F400A7E598 /* Problem5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem5.swift; sourceTree = "<group>"; };
+		55B8949419C016F400A7E598 /* Problem6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem6.swift; sourceTree = "<group>"; };
+		55B8949519C016F400A7E598 /* Problem7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem7.swift; sourceTree = "<group>"; };
+		55B8949619C016F400A7E598 /* Problem8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem8.swift; sourceTree = "<group>"; };
+		55B8949719C016F400A7E598 /* Problem9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem9.swift; sourceTree = "<group>"; };
+		55B8949819C016F400A7E598 /* Problem10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem10.swift; sourceTree = "<group>"; };
+		55B8949919C016F400A7E598 /* Problem11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem11.swift; sourceTree = "<group>"; };
+		55B8949A19C016F400A7E598 /* Problem12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem12.swift; sourceTree = "<group>"; };
+		55B8949B19C016F400A7E598 /* Problem13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem13.swift; sourceTree = "<group>"; };
+		55B8949C19C016F400A7E598 /* Problem14.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem14.swift; sourceTree = "<group>"; };
+		55B8949D19C016F400A7E598 /* Problem15.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem15.swift; sourceTree = "<group>"; };
+		55B8949E19C016F400A7E598 /* Problem16.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem16.swift; sourceTree = "<group>"; };
+		55B894BF19C0174A00A7E598 /* Problem16Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem16Tests.swift; sourceTree = "<group>"; };
+		55B894C119C01F9400A7E598 /* euclidPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = euclidPlayground.playground; sourceTree = "<group>"; };
+		55B894C219C0285400A7E598 /* Problem15Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem15Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		552558C319AEB953004B958F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		558DE45B19B6A3CB0088B812 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,7 +112,9 @@
 		552558BD19AEB953004B958F = {
 			isa = PBXGroup;
 			children = (
+				55B894C119C01F9400A7E598 /* euclidPlayground.playground */,
 				552558C819AEB953004B958F /* euler */,
+				558DE45F19B6A3CB0088B812 /* eulerTests */,
 				552558C719AEB953004B958F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				552558C619AEB953004B958F /* euler */,
+				558DE45E19B6A3CB0088B812 /* eulerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,11 +131,55 @@
 		552558C819AEB953004B958F /* euler */ = {
 			isa = PBXGroup;
 			children = (
-				552558D019AEB9B0004B958F /* problem1.swift */,
+				55B8948E19C016D900A7E598 /* Problems */,
+				558DE42919B687CF0088B812 /* Euler.swift */,
 				552558C919AEB953004B958F /* main.swift */,
-				552558F019AEBAA4004B958F /* Euler.swift */,
+				558DE47919B6B6EB0088B812 /* Stopwatch.swift */,
 			);
 			path = euler;
+			sourceTree = "<group>";
+		};
+		558DE45F19B6A3CB0088B812 /* eulerTests */ = {
+			isa = PBXGroup;
+			children = (
+				558DE46219B6A3CB0088B812 /* eulerTests.swift */,
+				558DE47719B6A6F00088B812 /* Problem4Tests.swift */,
+				55B894C219C0285400A7E598 /* Problem15Tests.swift */,
+				55B894BF19C0174A00A7E598 /* Problem16Tests.swift */,
+				558DE46019B6A3CB0088B812 /* Supporting Files */,
+			);
+			path = eulerTests;
+			sourceTree = "<group>";
+		};
+		558DE46019B6A3CB0088B812 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				558DE46119B6A3CB0088B812 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55B8948E19C016D900A7E598 /* Problems */ = {
+			isa = PBXGroup;
+			children = (
+				55B8948F19C016F400A7E598 /* Problem1.swift */,
+				55B8949019C016F400A7E598 /* Problem2.swift */,
+				55B8949119C016F400A7E598 /* Problem3.swift */,
+				55B8949219C016F400A7E598 /* Problem4.swift */,
+				55B8949319C016F400A7E598 /* Problem5.swift */,
+				55B8949419C016F400A7E598 /* Problem6.swift */,
+				55B8949519C016F400A7E598 /* Problem7.swift */,
+				55B8949619C016F400A7E598 /* Problem8.swift */,
+				55B8949719C016F400A7E598 /* Problem9.swift */,
+				55B8949819C016F400A7E598 /* Problem10.swift */,
+				55B8949919C016F400A7E598 /* Problem11.swift */,
+				55B8949A19C016F400A7E598 /* Problem12.swift */,
+				55B8949B19C016F400A7E598 /* Problem13.swift */,
+				55B8949C19C016F400A7E598 /* Problem14.swift */,
+				55B8949D19C016F400A7E598 /* Problem15.swift */,
+				55B8949E19C016F400A7E598 /* Problem16.swift */,
+			);
+			path = Problems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +202,23 @@
 			productReference = 552558C619AEB953004B958F /* euler */;
 			productType = "com.apple.product-type.tool";
 		};
+		558DE45D19B6A3CB0088B812 /* eulerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 558DE46419B6A3CB0088B812 /* Build configuration list for PBXNativeTarget "eulerTests" */;
+			buildPhases = (
+				558DE45A19B6A3CB0088B812 /* Sources */,
+				558DE45B19B6A3CB0088B812 /* Frameworks */,
+				558DE45C19B6A3CB0088B812 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = eulerTests;
+			productName = eulerTests;
+			productReference = 558DE45E19B6A3CB0088B812 /* eulerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +229,9 @@
 				ORGANIZATIONNAME = "David Grandinetti";
 				TargetAttributes = {
 					552558C519AEB953004B958F = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					558DE45D19B6A3CB0088B812 = {
 						CreatedOnToolsVersion = 6.0;
 					};
 				};
@@ -115,18 +249,73 @@
 			projectRoot = "";
 			targets = (
 				552558C519AEB953004B958F /* euler */,
+				558DE45D19B6A3CB0088B812 /* eulerTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		558DE45C19B6A3CB0088B812 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		552558C219AEB953004B958F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55B894A619C016F400A7E598 /* Problem8.swift in Sources */,
+				55B894A419C016F400A7E598 /* Problem6.swift in Sources */,
+				55B894A519C016F400A7E598 /* Problem7.swift in Sources */,
+				55B894AA19C016F400A7E598 /* Problem12.swift in Sources */,
+				55B894A719C016F400A7E598 /* Problem9.swift in Sources */,
+				558DE47A19B6B6EB0088B812 /* Stopwatch.swift in Sources */,
+				55B894A019C016F400A7E598 /* Problem2.swift in Sources */,
 				552558CA19AEB953004B958F /* main.swift in Sources */,
-				552558F119AEBAA4004B958F /* Euler.swift in Sources */,
-				552558DF19AEB9B0004B958F /* problem1.swift in Sources */,
+				55B894A819C016F400A7E598 /* Problem10.swift in Sources */,
+				55B894A119C016F400A7E598 /* Problem3.swift in Sources */,
+				558DE42A19B687CF0088B812 /* Euler.swift in Sources */,
+				55B894AD19C016F400A7E598 /* Problem15.swift in Sources */,
+				55B894A219C016F400A7E598 /* Problem4.swift in Sources */,
+				55B894A919C016F400A7E598 /* Problem11.swift in Sources */,
+				55B894AE19C016F400A7E598 /* Problem16.swift in Sources */,
+				55B894AC19C016F400A7E598 /* Problem14.swift in Sources */,
+				55B8949F19C016F400A7E598 /* Problem1.swift in Sources */,
+				55B894A319C016F400A7E598 /* Problem5.swift in Sources */,
+				55B894AB19C016F400A7E598 /* Problem13.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		558DE45A19B6A3CB0088B812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B894B619C0173700A7E598 /* Problem8.swift in Sources */,
+				55B894B419C0173700A7E598 /* Problem6.swift in Sources */,
+				55B894B519C0173700A7E598 /* Problem7.swift in Sources */,
+				55B894BA19C0173700A7E598 /* Problem12.swift in Sources */,
+				55B894B719C0173700A7E598 /* Problem9.swift in Sources */,
+				558DE46319B6A3CB0088B812 /* eulerTests.swift in Sources */,
+				55B894C019C0174A00A7E598 /* Problem16Tests.swift in Sources */,
+				55B894B019C0173700A7E598 /* Problem2.swift in Sources */,
+				558DE47819B6A6F00088B812 /* Problem4Tests.swift in Sources */,
+				55B894B819C0173700A7E598 /* Problem10.swift in Sources */,
+				55B894B119C0173700A7E598 /* Problem3.swift in Sources */,
+				558DE46919B6A4050088B812 /* Euler.swift in Sources */,
+				55B894BD19C0173700A7E598 /* Problem15.swift in Sources */,
+				55B894B219C0173700A7E598 /* Problem4.swift in Sources */,
+				55B894B919C0173700A7E598 /* Problem11.swift in Sources */,
+				55B894BE19C0173700A7E598 /* Problem16.swift in Sources */,
+				55B894BC19C0173700A7E598 /* Problem14.swift in Sources */,
+				55B894AF19C0173700A7E598 /* Problem1.swift in Sources */,
+				55B894B319C0173700A7E598 /* Problem5.swift in Sources */,
+				55B894C319C0285400A7E598 /* Problem15Tests.swift in Sources */,
+				55B894BB19C0173700A7E598 /* Problem13.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +343,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -170,7 +359,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Ounchecked";
 			};
 			name = Debug;
 		};
@@ -222,6 +411,40 @@
 			};
 			name = Release;
 		};
+		558DE46519B6A3CB0088B812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = eulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		558DE46619B6A3CB0088B812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = eulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -239,6 +462,15 @@
 			buildConfigurations = (
 				552558CE19AEB953004B958F /* Debug */,
 				552558CF19AEB953004B958F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		558DE46419B6A3CB0088B812 /* Build configuration list for PBXNativeTarget "eulerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				558DE46519B6A3CB0088B812 /* Debug */,
+				558DE46619B6A3CB0088B812 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

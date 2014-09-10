@@ -35,12 +35,12 @@ class Problem4Tests: XCTestCase {
     XCTAssertFalse(p4.isPalindrome(123456789087654321), "123456789087654321 should NOT be a palindrome")
   }
 
-  func testIsPalindromePerformance() {
-    self.measureBlock() {
-      for i in 0...10000 {
-        p4.isPalindrome(995000 + i)
-      }
-    }
-  }
+//  func testIsPalindromePerformance() {
+//    self.measureBlock() {
+//      for i in 0...10000 {
+//        p4.isPalindrome(995000 + i)
+//      }
+//    }
+//  }
 
 }

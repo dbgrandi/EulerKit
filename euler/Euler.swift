@@ -27,6 +27,7 @@ class EulerProblem {
     registerProblem(12, obj:Problem12())
     registerProblem(13, obj:Problem13())
     registerProblem(14, obj:Problem14())
+    registerProblem(16, obj:Problem16())
   }
   
   class func registerProblem(num:Int, obj:AnyObject) {
@@ -122,6 +123,13 @@ extension Int {
     }
     
     return Array(factors.values)
+  }
+  
+  func factorial() -> Int {
+    if self == 1 {
+      return 1
+    }
+    return self * (self-1).factorial()
   }
 }
 

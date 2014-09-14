@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		552558CA19AEB953004B958F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552558C919AEB953004B958F /* main.swift */; };
+		554B6F7819C5532000421F5F /* Problem20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B6F7719C5532000421F5F /* Problem20.swift */; };
+		554B6F7919C5532000421F5F /* Problem20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B6F7719C5532000421F5F /* Problem20.swift */; };
+		554B6F7B19C5532F00421F5F /* Problem19.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B6F7A19C5532F00421F5F /* Problem19.swift */; };
+		554B6F7C19C5532F00421F5F /* Problem19.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B6F7A19C5532F00421F5F /* Problem19.swift */; };
 		5581721F19C54F5000053B00 /* Problem18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5581721E19C54F5000053B00 /* Problem18.swift */; };
 		5581722019C54F5000053B00 /* Problem18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5581721E19C54F5000053B00 /* Problem18.swift */; };
 		558C9EF919C1460700D8E04D /* Problem17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C9EF819C1460700D8E04D /* Problem17.swift */; };
@@ -69,6 +73,8 @@
 /* Begin PBXFileReference section */
 		552558C619AEB953004B958F /* euler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = euler; sourceTree = BUILT_PRODUCTS_DIR; };
 		552558C919AEB953004B958F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		554B6F7719C5532000421F5F /* Problem20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem20.swift; sourceTree = "<group>"; };
+		554B6F7A19C5532F00421F5F /* Problem19.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem19.swift; sourceTree = "<group>"; };
 		5581721E19C54F5000053B00 /* Problem18.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem18.swift; sourceTree = "<group>"; };
 		558C9EF819C1460700D8E04D /* Problem17.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem17.swift; sourceTree = "<group>"; };
 		558DE42919B687CF0088B812 /* Euler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Euler.swift; sourceTree = "<group>"; };
@@ -189,6 +195,8 @@
 				55B8949E19C016F400A7E598 /* Problem16.swift */,
 				558C9EF819C1460700D8E04D /* Problem17.swift */,
 				5581721E19C54F5000053B00 /* Problem18.swift */,
+				554B6F7A19C5532F00421F5F /* Problem19.swift */,
+				554B6F7719C5532000421F5F /* Problem20.swift */,
 			);
 			path = Problems;
 			sourceTree = "<group>";
@@ -293,6 +301,7 @@
 				55B894A119C016F400A7E598 /* Problem3.swift in Sources */,
 				558DE42A19B687CF0088B812 /* Euler.swift in Sources */,
 				558C9EF919C1460700D8E04D /* Problem17.swift in Sources */,
+				554B6F7B19C5532F00421F5F /* Problem19.swift in Sources */,
 				55B894AD19C016F400A7E598 /* Problem15.swift in Sources */,
 				55B894A219C016F400A7E598 /* Problem4.swift in Sources */,
 				55B894A919C016F400A7E598 /* Problem11.swift in Sources */,
@@ -301,6 +310,7 @@
 				55B8949F19C016F400A7E598 /* Problem1.swift in Sources */,
 				55B894A319C016F400A7E598 /* Problem5.swift in Sources */,
 				55B894AB19C016F400A7E598 /* Problem13.swift in Sources */,
+				554B6F7819C5532000421F5F /* Problem20.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +328,8 @@
 				55B894C019C0174A00A7E598 /* Problem16Tests.swift in Sources */,
 				55B894B019C0173700A7E598 /* Problem2.swift in Sources */,
 				558DE47819B6A6F00088B812 /* Problem4Tests.swift in Sources */,
+				554B6F7919C5532000421F5F /* Problem20.swift in Sources */,
+				554B6F7C19C5532F00421F5F /* Problem19.swift in Sources */,
 				55B894B819C0173700A7E598 /* Problem10.swift in Sources */,
 				55B894B119C0173700A7E598 /* Problem3.swift in Sources */,
 				5581722019C54F5000053B00 /* Problem18.swift in Sources */,

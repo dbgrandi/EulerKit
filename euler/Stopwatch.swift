@@ -19,7 +19,7 @@ class Stopwatch {
   }
   
   func start() {
-    startDate = NSDate.date()
+    startDate = NSDate()
   }
   
   func stop() {

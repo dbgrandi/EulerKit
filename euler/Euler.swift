@@ -28,6 +28,8 @@ class EulerProblem {
     registerProblem(13, obj:Problem13())
     registerProblem(14, obj:Problem14())
     registerProblem(16, obj:Problem16())
+    registerProblem(17, obj:Problem17())
+    registerProblem(18, obj:Problem18())
   }
   
   class func registerProblem(num:Int, obj:AnyObject) {

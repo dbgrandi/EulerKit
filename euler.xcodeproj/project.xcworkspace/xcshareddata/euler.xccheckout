@@ -14,11 +14,11 @@
 		<string>github.com:dbgrandi/swiftEuler.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>euler/euler.xcodeproj</string>
+	<string>euler.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A668053C9B7D8B7F256184018A5895CB709C380E</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:dbgrandi/swiftEuler.git</string>

@@ -33,7 +33,7 @@ class Problem18: EulerProblem {
   // You don't need to know the specific route, only the maximum sum.
   //
   override func run() {
-    for i in stride(from: rows.count-2, through: 0, by: -1) {
+    for i in reverse(0...rows.count-2) {
       for j in 0..<rows[i].count {
         rows[i][j] = rows[i][j] + max(rows[i+1][j],rows[i+1][j+1])
       }

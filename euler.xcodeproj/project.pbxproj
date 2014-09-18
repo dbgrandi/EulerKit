@@ -14,6 +14,8 @@
 		554B6F7C19C5532F00421F5F /* Problem19.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B6F7A19C5532F00421F5F /* Problem19.swift */; };
 		5581721F19C54F5000053B00 /* Problem18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5581721E19C54F5000053B00 /* Problem18.swift */; };
 		5581722019C54F5000053B00 /* Problem18.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5581721E19C54F5000053B00 /* Problem18.swift */; };
+		558A364C19CA7CC6007740E2 /* Problem21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558A364B19CA7CC6007740E2 /* Problem21.swift */; };
+		558A364D19CA7CC6007740E2 /* Problem21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558A364B19CA7CC6007740E2 /* Problem21.swift */; };
 		558C9EF919C1460700D8E04D /* Problem17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C9EF819C1460700D8E04D /* Problem17.swift */; };
 		558C9EFA19C1460700D8E04D /* Problem17.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C9EF819C1460700D8E04D /* Problem17.swift */; };
 		558DE42A19B687CF0088B812 /* Euler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DE42919B687CF0088B812 /* Euler.swift */; };
@@ -76,6 +78,7 @@
 		554B6F7719C5532000421F5F /* Problem20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem20.swift; sourceTree = "<group>"; };
 		554B6F7A19C5532F00421F5F /* Problem19.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem19.swift; sourceTree = "<group>"; };
 		5581721E19C54F5000053B00 /* Problem18.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem18.swift; sourceTree = "<group>"; };
+		558A364B19CA7CC6007740E2 /* Problem21.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem21.swift; sourceTree = "<group>"; };
 		558C9EF819C1460700D8E04D /* Problem17.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem17.swift; sourceTree = "<group>"; };
 		558DE42919B687CF0088B812 /* Euler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Euler.swift; sourceTree = "<group>"; };
 		558DE45E19B6A3CB0088B812 /* eulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +200,7 @@
 				5581721E19C54F5000053B00 /* Problem18.swift */,
 				554B6F7A19C5532F00421F5F /* Problem19.swift */,
 				554B6F7719C5532000421F5F /* Problem20.swift */,
+				558A364B19CA7CC6007740E2 /* Problem21.swift */,
 			);
 			path = Problems;
 			sourceTree = "<group>";
@@ -302,6 +306,7 @@
 				558DE42A19B687CF0088B812 /* Euler.swift in Sources */,
 				558C9EF919C1460700D8E04D /* Problem17.swift in Sources */,
 				554B6F7B19C5532F00421F5F /* Problem19.swift in Sources */,
+				558A364C19CA7CC6007740E2 /* Problem21.swift in Sources */,
 				55B894AD19C016F400A7E598 /* Problem15.swift in Sources */,
 				55B894A219C016F400A7E598 /* Problem4.swift in Sources */,
 				55B894A919C016F400A7E598 /* Problem11.swift in Sources */,
@@ -338,6 +343,7 @@
 				55B894B219C0173700A7E598 /* Problem4.swift in Sources */,
 				55B894B919C0173700A7E598 /* Problem11.swift in Sources */,
 				55B894BE19C0173700A7E598 /* Problem16.swift in Sources */,
+				558A364D19CA7CC6007740E2 /* Problem21.swift in Sources */,
 				55B894BC19C0173700A7E598 /* Problem14.swift in Sources */,
 				55B894AF19C0173700A7E598 /* Problem1.swift in Sources */,
 				55AEC16A19C22A5300402275 /* Problem17Tests.swift in Sources */,

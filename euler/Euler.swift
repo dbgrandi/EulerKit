@@ -32,6 +32,7 @@ class EulerProblem {
     registerProblem(18, obj:Problem18())
     registerProblem(19, obj:Problem19())
     registerProblem(20, obj:Problem20())
+    registerProblem(21, obj:Problem21())
   }
   
   class func registerProblem(num:Int, obj:AnyObject) {
@@ -248,3 +249,31 @@ class MaxCountSequence<S: SequenceType, T where T == S.Generator.Element>: Seque
     }
   }
 }
+
+class Set<T:Equatable> {
+  var items = [T]()
+  
+  func reduce<U>(initial:U, combine:(U, T) -> U) -> U {
+    return items.reduce(initial, combine:combine)
+  }
+  
+  func insert(item:T) {
+    if !contains(items, {$0 == item}) {
+      items.append(item)
+    }
+  }
+}
+
+
+//
+// global helper functions
+//
+
+func invertDict<U, T>(dict:Dictionary<U,T>) -> Dictionary<T,U> {
+  var invertedDict = Dictionary<T,U>()
+  for (key, value) in dict {
+    invertedDict[value] = key
+  }
+  return invertedDict
+}
+

@@ -64,6 +64,7 @@
 		55B894BE19C0173700A7E598 /* Problem16.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8949E19C016F400A7E598 /* Problem16.swift */; };
 		55B894C019C0174A00A7E598 /* Problem16Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B894BF19C0174A00A7E598 /* Problem16Tests.swift */; };
 		55B894C319C0285400A7E598 /* Problem15Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B894C219C0285400A7E598 /* Problem15Tests.swift */; };
+		55C643DE19CCB522000FD9E1 /* Problem25.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C643DD19CCB522000FD9E1 /* Problem25.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -116,6 +117,7 @@
 		55B894BF19C0174A00A7E598 /* Problem16Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem16Tests.swift; sourceTree = "<group>"; };
 		55B894C119C01F9400A7E598 /* euclidPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = euclidPlayground.playground; sourceTree = "<group>"; };
 		55B894C219C0285400A7E598 /* Problem15Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem15Tests.swift; sourceTree = "<group>"; };
+		55C643DD19CCB522000FD9E1 /* Problem25.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem25.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				558A365119CA96BF007740E2 /* Problem22.swift */,
 				550BF5B219CB787400ECDF82 /* Problem23.swift */,
 				5567C01B19CC011B0057B113 /* Problem24.swift */,
+				55C643DD19CCB522000FD9E1 /* Problem25.swift */,
 			);
 			path = Problems;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				55B894A919C016F400A7E598 /* Problem11.swift in Sources */,
 				55B894AE19C016F400A7E598 /* Problem16.swift in Sources */,
 				55B894AC19C016F400A7E598 /* Problem14.swift in Sources */,
+				55C643DE19CCB522000FD9E1 /* Problem25.swift in Sources */,
 				55B8949F19C016F400A7E598 /* Problem1.swift in Sources */,
 				55B894A319C016F400A7E598 /* Problem5.swift in Sources */,
 				5567C01C19CC011B0057B113 /* Problem24.swift in Sources */,

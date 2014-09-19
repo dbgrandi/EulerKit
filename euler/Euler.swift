@@ -34,6 +34,7 @@ class EulerProblem {
     registerProblem(20, obj:Problem20())
     registerProblem(21, obj:Problem21())
     registerProblem(22, obj:Problem22())
+    registerProblem(23, obj:Problem23())
   }
   
   class func registerProblem(num:Int, obj:AnyObject) {
@@ -254,6 +255,10 @@ class MaxCountSequence<S: SequenceType, T where T == S.Generator.Element>: Seque
 class Set<T:Equatable> {
   var items = [T]()
   
+  func count() -> Int {
+    return items.count
+  }
+
   func reduce<U>(initial:U, combine:(U, T) -> U) -> U {
     return items.reduce(initial, combine:combine)
   }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		550BF5B019CAA5EF00ECDF82 /* p022_names.txt in Resources */ = {isa = PBXBuildFile; fileRef = 558A364F19CA968C007740E2 /* p022_names.txt */; };
+		550BF5B319CB787400ECDF82 /* Problem23.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BF5B219CB787400ECDF82 /* Problem23.swift */; };
 		552558CA19AEB953004B958F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552558C919AEB953004B958F /* main.swift */; };
 		554B6F7819C5532000421F5F /* Problem20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B6F7719C5532000421F5F /* Problem20.swift */; };
 		554B6F7919C5532000421F5F /* Problem20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554B6F7719C5532000421F5F /* Problem20.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		550BF5B219CB787400ECDF82 /* Problem23.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem23.swift; sourceTree = "<group>"; };
 		552558C619AEB953004B958F /* euler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = euler; sourceTree = BUILT_PRODUCTS_DIR; };
 		552558C919AEB953004B958F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		554B6F7719C5532000421F5F /* Problem20.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem20.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				554B6F7719C5532000421F5F /* Problem20.swift */,
 				558A364B19CA7CC6007740E2 /* Problem21.swift */,
 				558A365119CA96BF007740E2 /* Problem22.swift */,
+				550BF5B219CB787400ECDF82 /* Problem23.swift */,
 			);
 			path = Problems;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				55B894A119C016F400A7E598 /* Problem3.swift in Sources */,
 				558DE42A19B687CF0088B812 /* Euler.swift in Sources */,
 				558C9EF919C1460700D8E04D /* Problem17.swift in Sources */,
+				550BF5B319CB787400ECDF82 /* Problem23.swift in Sources */,
 				554B6F7B19C5532F00421F5F /* Problem19.swift in Sources */,
 				558A364C19CA7CC6007740E2 /* Problem21.swift in Sources */,
 				55B894AD19C016F400A7E598 /* Problem15.swift in Sources */,

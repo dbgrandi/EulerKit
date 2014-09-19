@@ -16,7 +16,7 @@ var problems = EulerProblem.problems()
 //  println("problem name: \(i)")
 //}
 
-let prob = problems[23] as EulerProblem
+let prob = problems[24] as EulerProblem
 let stopwatch = Stopwatch(name:"problem")
 stopwatch.start()
 prob.run()

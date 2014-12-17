@@ -18,17 +18,10 @@ class Problem6: EulerProblem {
 }
 
 func sumOfSquaresUpTo(max:Int) -> Int {
-  var sum = 0
-  for i in 1...max {
-    sum += i*i
-  }
-  return sum
+  return (1...max).map({n in n*n}).reduce(0,+)
 }
 
 func squareOfSumUpTo(max:Int) -> Int {
-  var sum = 0
-  for i in 1...max {
-    sum += i
-  }
-  return sum*sum
+  let sum = reduce(1...max,0,+)
+  return sum * sum
 }

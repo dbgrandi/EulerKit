@@ -6,11 +6,11 @@
 
 class Problem7: EulerProblem {
   override func run() {
-    var primes = MaxCountSequence(max:10_001, sequence:PrimeSequence())
-    var lastPrime = 0
-    for i in primes {
-      lastPrime = i
-    }
-    println(lastPrime)
+//    var primes = LimitSequence(sequence:PrimeSequence()) { $0 < 10_001 }
+//    var lastPrime = 0
+//    for i in primes {
+//      lastPrime = i
+//    }
+//    println(lastPrime)
   }
 }

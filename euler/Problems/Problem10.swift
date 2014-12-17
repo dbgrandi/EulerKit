@@ -6,7 +6,7 @@
 
 class Problem10: EulerProblem {
   override func run() {
-    let seq = MaxLimitSequence(max:2_000_000, sequence:PrimeSequence())
+    let seq = LimitSequence(sequence: PrimeSequence()) { $1 < 2_000_000 }
     let sum = reduce(seq,0,+)
     println("sum = \(sum)")  }
 }

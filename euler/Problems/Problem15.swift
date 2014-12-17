@@ -1,14 +1,11 @@
 
 class Problem15: EulerProblem {
-  class func run() {
-    //nothing
-  }
-  
-  func binaryCoefficient(n:Int, k:Int) -> Int {
-    var result = 1
-    for i in 0..<k {
-      result = result * (n-i)/(i+1)
+    override func run() {
+        let paths = binaryCoefficient(40,k:20)
+        println(paths)
     }
-    return result
-  }
+
+    func binaryCoefficient(n:Int, k:Int) -> Int {
+        return reduce(0..<k, 1) { $0 * (n-$1)/($1+1) }
+    }
 }

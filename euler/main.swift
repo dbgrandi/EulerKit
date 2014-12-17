@@ -8,15 +8,15 @@
 
 import Foundation
 
-EulerProblem.registerProblems()
+//EulerProblem.registerProblems()
 
-var problems = EulerProblem.problems()
+//var problems = EulerProblem.problems()
 //println("problem count = \(problems.count)")
 //for i in problems {
 //  println("problem name: \(i)")
 //}
 
-let prob = problems[25] as EulerProblem
+let prob = Problem15() //  as EulerProblem // problems[2] as EulerProblem
 let stopwatch = Stopwatch(name:"problem")
 stopwatch.start()
 prob.run()

@@ -1,0 +1,27 @@
+PODS:
+  - JKBigInteger (0.0.1)
+  - Nimble (0.2.0)
+
+DEPENDENCIES:
+  - JKBigInteger (from `./JKBigInteger.podspec`)
+  - Nimble (from `https://github.com/Quick/Nimble`)
+
+EXTERNAL SOURCES:
+  JKBigInteger:
+    :podspec: ./JKBigInteger.podspec
+  Nimble:
+    :git: https://github.com/Quick/Nimble
+
+CHECKOUT OPTIONS:
+  JKBigInteger:
+    :commit: 2ff281fecda53d788fa0a574103894403f615ead
+    :git: https://github.com/kirsteins/JKBigInteger.git
+  Nimble:
+    :commit: 89affdde2b3bc946b4ff33683dc3b573548e9c3c
+    :git: https://github.com/Quick/Nimble
+
+SPEC CHECKSUMS:
+  JKBigInteger: b621086ea39b952fa4770cbec2235f75acc149ac
+  Nimble: 79679d4cd5a3710db75e1dd9f5479f71842da6a6
+
+COCOAPODS: 0.36.0.beta.1

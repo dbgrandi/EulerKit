@@ -13,7 +13,7 @@ class Problem4: EulerProblem {
         println(i)
       }
       for j in 100...999 {
-        if isPalindrome(i*j) {
+        if (i*j).isPalindrome() {
           palindromes.append(i*j)
         }
       }
@@ -25,17 +25,4 @@ class Problem4: EulerProblem {
     println("max palindrome = \(palindromes[0])")
   }
   
-  func isPalindrome(i:Int) -> Bool {
-    let digits = Array(String(i))
-    var first = 0
-    var last = digits.count-1
-    while first < last {
-      if digits[first] != digits[last] {
-        return false
-      }
-      first++
-      last--
-    }
-    return true
-  }
 }

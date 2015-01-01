@@ -8,19 +8,11 @@
 
 import Cocoa
 import XCTest
+import Nimble
 
 var p15 = Problem15()
 
 class Problem15Tests: XCTestCase {
-  
-  override func setUp() {
-    super.setUp()
-  }
-  
-  override func tearDown() {
-    super.tearDown()
-  }
-  
   func testBinaryCoefficient() {
     XCTAssertTrue(p15.binaryCoefficient(5, k: 0) == 1,  "5 choose 0 = 1")
     XCTAssertTrue(p15.binaryCoefficient(5, k: 1) == 5,  "5 choose 1 = 5")

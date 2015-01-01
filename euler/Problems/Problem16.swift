@@ -1,22 +1,12 @@
-import Foundation
+//
+// 2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+//
+// What is the sum of the digits of the number 2^1000?
+//
 
 class Problem16: EulerProblem {
   override func run() {
     println(powerDigitSum(1000))
-  }
-  
-  // given an arbitrarily large integer as a string
-  // get the sum of each digit
-  func sumOfDigits(num:String) -> Int {
-    let length = num.length-1
-    var sum = 0
-    
-    for i in 0...length {
-      if let digit = num[i].toInt() {
-        sum += digit
-      }
-    }
-    return sum
   }
   
   func doubleIntegerString(s:String) -> String {
@@ -55,13 +45,21 @@ class Problem16: EulerProblem {
     var n = num
     var stringNum = "2"
     while n > 1 {
-      if n%50 == 0 {
-        println("n = \(n)")
-      }
       stringNum = doubleIntegerString(stringNum)
       n--
     }
     return sumOfDigits(stringNum)
   }
-  
+}
+
+class Problem16BigNum : EulerProblem {
+  override func run() {
+    var two = JKBigInteger(string:"2")
+    var accumulator = JKBigInteger(string:"2")
+    for i in 1..<1000 {
+      accumulator = accumulator.multiply(two) as JKBigInteger
+    }
+    let sum = sumOfDigits(accumulator.stringValue())
+    println("sum of digits of 2^1000 = \(sum)")
+  }
 }

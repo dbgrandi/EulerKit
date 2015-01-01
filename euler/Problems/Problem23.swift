@@ -1,14 +1,4 @@
 //
-//  Problem23.swift
-//  euler
-//
-//  Created by David Grandinetti on 9/18/14.
-//  Copyright (c) 2014 David Grandinetti. All rights reserved.
-//
-
-import Foundation
-
-//
 // A perfect number is a number for which the sum of its proper divisors is
 // exactly equal to the number. For example, the sum of the proper divisors
 // of 28 would be 1 + 2 + 4 + 7 + 14 = 28, which means that 28 is a perfect
@@ -28,13 +18,12 @@ import Foundation
 // Find the sum of all the positive integers which cannot be written as the
 // sum of two abundant numbers.
 //
+
+import Foundation
+
 class Problem23: EulerProblem {
-  func properDivisors(n:Int) -> [Int] {
-    return filter(1...n/2, { n % $0 == 0 })
-  }
-  
   func aliquotSum(n:Int) -> Int {
-    return properDivisors(n).reduce(0,+)
+    return n.properDivisors().reduce(0,+)
   }
   
   func isAbundant(n:Int) -> Bool {

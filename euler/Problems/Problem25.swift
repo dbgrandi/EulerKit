@@ -1,60 +1,3 @@
-//
-//  Problem25.swift
-//  euler
-//
-//  Created by David Grandinetti on 9/19/14.
-//  Copyright (c) 2014 David Grandinetti. All rights reserved.
-//
-
-import Foundation
-func zeroPadString(s:String, toLength:Int) -> String {
-  let length = toLength - s.length
-  if length > 0 {
-    return "0".repeat(length) + s
-  }
-  return s
-}
-
-//
-// Add two integers that are represented as Strings
-//
-func addStringInteger(lhs:String, rhs:String) -> String {
-  let length = max(lhs.length, rhs.length)
-  let left = zeroPadString(lhs, length)
-  let right = zeroPadString(rhs, length)
-  
-  var result = [Int]()
-  var carry = 0
-  
-  let leftDigits = Array(left)
-  let rightDigits = Array(right)
-  
-  for i in stride(from:length-1, through:0, by: -1) {
-    var sum = carry
-    let ldigit = String(leftDigits[i]).toInt()!
-    let rdigit = String(rightDigits[i]).toInt()!
-    sum += ldigit + rdigit
-    
-    let digitSum = sum%10
-    let digitCarry = sum-digitSum
-    result.append(digitSum)
-    carry = digitCarry
-    carry = carry/10
-  }
-  
-  while carry>0 {
-    result.append(carry%10)
-    carry = carry/10
-  }
-  
-  var resultString:String = ""
-  for i in result.reverse() {
-    resultString += String(i)
-  }
-  
-  return resultString
-}
-
 class StringFibonacciSequence: SequenceType {
   func generate() -> GeneratorOf<String> {
     var last = "0"
@@ -71,16 +14,65 @@ class StringFibonacciSequence: SequenceType {
 
 class Problem25: EulerProblem {
   override func run() {
-    var fibGenerator = StringFibonacciSequence().generate()
-    var current = fibGenerator.next()!
-    var next = fibGenerator.next()!
-    var n = 3
-    
-    while next != .None && next.length < 1000 {
+    let seq = LimitSequence(sequence: StringFibonacciSequence()) { $1.length < 1000 }
+    let items = Array(seq)
+    let n = items.count
+    // our fib sequence spits out the 3rd value the first time it is pumped, so we add 2
+    println("fib(\(n+2)) is longer than 1000 digits")
+  }
+}
+
+class BigNumFibonacciSequence: SequenceType {
+  func generate() -> GeneratorOf<JKBigInteger> {
+    var last = JKBigInteger(string:"0")
+    var current = JKBigInteger(string:"1")
+
+    return GeneratorOf<JKBigInteger> {
+      let next = last.add(current) as JKBigInteger
+      last = current
       current = next
-      next = fibGenerator.next()!
-      n++
+      return next
     }
-    println("fib(\(n)) is longer than 1000 characters")
+  }
+}
+
+class Problem25BigNum: EulerProblem {
+//  func check(n:JKBigInteger) -> Bool {
+//    let s:NSString = n.stringValue()
+//    return s.length < 1000
+//  }
+
+  override func run() {
+    let bigNumFibSeq = BigNumFibonacciSequence()
+//    let lengthMapSeq = MappingSequence(sequence: bigNumFibSeq) { $0.stringValue().length }
+//    let limitSeq = LimitSequence(sequence: lengthMapSeq) { (i:Int, j:Int) in return j < 1000 }
+//    let limitSeq = LimitSequence(sequence: bigNumFibSeq) { $1.stringValue().length < 1000 }
+    let limitSeq = LimitSequence(sequence: bigNumFibSeq) { countElements($1.stringValue().utf16) < 1000 }
+    let items = Array(limitSeq)
+    // our fib sequence spits out the 3rd value the first time it is pumped, so we add 2
+    println("fib(\(items.count+2)) is longer than 1000 digits")
+  }
+}
+
+class Problem25Iterative: EulerProblem {
+  func check(n:JKBigInteger) -> Bool {
+    let s:NSString = n.stringValue()
+    return s.length < 1000
+  }
+
+  override func run() {
+    var n1 = JKBigInteger(string:"1")
+    var n2 = JKBigInteger(string:"2")
+    var next_number:JKBigInteger
+    var i:Int = 2
+
+    do {
+      next_number = n1.add(n2) as JKBigInteger
+      i += 1
+      n1 = n2
+      n2 = next_number
+    } while countElements(next_number.stringValue().unicodeScalars) < 1000
+
+    println("fib(\(i)) is longer than 1000 digits")
   }
 }

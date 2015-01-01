@@ -140,3 +140,15 @@ class Problem13: EulerProblem {
     println()
   }
 }
+
+func addBigNum(lhs:JKBigInteger, rhs:JKBigInteger) -> JKBigInteger {
+  return lhs.add(rhs) as JKBigInteger
+}
+
+class Problem13BigNum: EulerProblem {
+    override func run() {
+      let bignums = map(problem13nums) { JKBigInteger(string:$0)! }
+      let sum = reduce(bignums, JKBigInteger(string:"0"), addBigNum)
+      println("accumulator = \(sum)")
+    }
+}

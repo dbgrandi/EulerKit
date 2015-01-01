@@ -24,40 +24,12 @@
 // hundred divisors?
 //
 
-//import Cocoa
-
-//
-// An infinite sequence of Triangle numbers
-//
-class TriangleNumberSequence: SequenceType {
-    func generate() -> GeneratorOf<Int> {
-        var current = 0
-        var count = 0
-        
-        return GeneratorOf<Int> {
-            count += 1
-            current = current + count
-            return current
-        }
-    }
-}
-
 class Problem12: EulerProblem {
   override func run() {
-    for i in TriangleNumberSequence() {
-      if numberOfDivisors(i) > 500 {
-        println(i)
-        break
-      }
+    let seq = LimitSequence(sequence: TriangleNumberSequence()) { $1.numberOfDivisors() > 500 }
+    if let last = Array(seq).last {
+      println(last)
     }
-  }
-  
-  func numberOfDivisors(num:Int) -> Int {
-    var divisors = 1
-    for i in num.primeFactors() {
-      divisors = divisors * (i+1)
-    }
-    return divisors
   }
 }
 

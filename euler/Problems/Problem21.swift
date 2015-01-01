@@ -1,14 +1,4 @@
 //
-//  Problem21.swift
-//  euler
-//
-//  Created by David Grandinetti on 9/17/14.
-//  Copyright (c) 2014 David Grandinetti. All rights reserved.
-//
-
-import Foundation
-
-//
 // Let d(n) be defined as the sum of proper divisors of n (numbers less than
 // n which divide evenly into n).
 //
@@ -22,19 +12,11 @@ import Foundation
 // Evaluate the sum of all the amicable numbers under 10000.
 //
 class Problem21: EulerProblem {
-  
-  func properDivisors(n:Int) -> [Int] {
-    return filter(1...n/2, { n % $0 == 0 })
-  }
-  
-  func sum(ns:[Int]) -> Int {
-    return ns.reduce(0, combine: +)
-  }
-  
+
   func findSums() -> Dictionary<Int,Int> {
     var sums = Dictionary<Int,Int>()
     for i in 2..<10000 {
-      sums[i] = sum(properDivisors(i))
+      sums[i] = i.properDivisors().reduce(0,+)
     }
     return sums
   }

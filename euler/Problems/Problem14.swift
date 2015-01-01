@@ -38,7 +38,7 @@ class CollatzSequence: SequenceType {
       if n == 1 {
         return .None
       }
-      if n.even() {
+      if n.isEven() {
         n = n/2
       } else {
         n = 3*n+1

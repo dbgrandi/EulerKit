@@ -12,6 +12,11 @@ class StringFibonacciSequence: SequenceType {
   }
 }
 
+func thousandDigitBigNum -> JKBigInteger {
+  var bigString = "1"
+
+}
+
 class Problem25: EulerProblem {
   override func run() {
     let seq = LimitSequence(sequence: StringFibonacciSequence()) { $1.length < 1000 }

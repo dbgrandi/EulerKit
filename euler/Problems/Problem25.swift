@@ -41,6 +41,7 @@ class BigNumFibonacciSequence: SequenceType {
 }
 
 class Problem25BigNum: EulerProblem {
+  // problem finished in 3.19666504859924 seconds
   override func run() {
     let fibSeq = BigNumFibonacciSequence()
     let limitSeq = LimitSequence(sequence: fibSeq) { countElements($1.stringValue().utf16) < 1000 }

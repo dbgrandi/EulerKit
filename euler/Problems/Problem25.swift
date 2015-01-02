@@ -37,16 +37,8 @@ class BigNumFibonacciSequence: SequenceType {
 }
 
 class Problem25BigNum: EulerProblem {
-//  func check(n:JKBigInteger) -> Bool {
-//    let s:NSString = n.stringValue()
-//    return s.length < 1000
-//  }
-
   override func run() {
     let bigNumFibSeq = BigNumFibonacciSequence()
-//    let lengthMapSeq = MappingSequence(sequence: bigNumFibSeq) { $0.stringValue().length }
-//    let limitSeq = LimitSequence(sequence: lengthMapSeq) { (i:Int, j:Int) in return j < 1000 }
-//    let limitSeq = LimitSequence(sequence: bigNumFibSeq) { $1.stringValue().length < 1000 }
     let limitSeq = LimitSequence(sequence: bigNumFibSeq) { countElements($1.stringValue().utf16) < 1000 }
     let items = Array(limitSeq)
     // our fib sequence spits out the 3rd value the first time it is pumped, so we add 2

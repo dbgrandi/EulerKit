@@ -47,7 +47,7 @@ class BigNumFibonacciSequence: SequenceType {
   }
 }
 
-class Problem25BigNum: EulerProblem {
+class Problem25BigNumWithMapping: EulerProblem {
   override func run() {
     let bigNumFibSeq = BigNumFibonacciSequence()
     let mapSequence = MappingSequence(sequence: bigNumFibSeq, map: { $0.stringValue().length } )

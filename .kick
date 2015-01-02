@@ -1,3 +1,5 @@
+puts "Loading .kick file"
+
 def date
   DateTime.now.strftime("%Y-%m-%d %H:%M:%S")
 end
@@ -28,8 +30,6 @@ end
 if git_branch == "auto-commit" && has_changes(".kick")
   git_commit [".kick"]
 end
-
-puts "reloaded"
 
 process do |files|
   if git_branch == 'auto-commit'

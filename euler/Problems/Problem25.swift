@@ -42,7 +42,7 @@ class MappedBigNumFibonacciSequence: SequenceType {
       let next = last.add(current) as JKBigInteger
       last = current
       current = next
-      return next
+      return next.stringValue().length
     }
   }
 }

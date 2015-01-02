@@ -16,7 +16,7 @@ import Foundation
 //  println("problem name: \(i)")
 //}
 
-let prob = Problem25BigNumWithMappedFib() //  as EulerProblem // problems[2] as EulerProblem
+let prob = Problem25BigNum() //  as EulerProblem // problems[2] as EulerProblem
 let stopwatch = Stopwatch(name:"problem")
 stopwatch.start()
 prob.run()

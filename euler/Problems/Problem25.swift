@@ -40,7 +40,7 @@ class BigNumFibonacciSequence: SequenceType {
   }
 }
 
-class Problem25BigNumWithMappingWrapper: EulerProblem {
+class Problem25BigNum: EulerProblem {
   override func run() {
     let fibSeq = BigNumFibonacciSequence()
     let limitSeq = LimitSequence(sequence: fibSeq) { countElements($1.stringValue().utf16) < 1000 }
@@ -80,7 +80,7 @@ class Problem25BigNumWithByteCount: EulerProblem {
   }
 }
 
-class Problem25Iterative: EulerProblem {
+class Problem25BigNumIterative: EulerProblem {
   func check(n:JKBigInteger) -> Bool {
     let s:NSString = n.stringValue()
     return s.length < 1000

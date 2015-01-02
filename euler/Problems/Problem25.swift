@@ -100,7 +100,7 @@ class Problem25BigNumIterative: EulerProblem {
     var i:Int = 2
 
     do {
-      next_number = n1.add(n2) as JKBigInteger
+      next_number = n1 + n2
       i += 1
       n1 = n2
       n2 = next_number

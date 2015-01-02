@@ -32,7 +32,7 @@ class BigNumFibonacciSequence: SequenceType {
     var current = JKBigInteger(string:"1")
 
     return GeneratorOf<JKBigInteger> {
-      let next = last.add(current) as JKBigInteger
+      let next = last + current
       last = current
       current = next
       return next

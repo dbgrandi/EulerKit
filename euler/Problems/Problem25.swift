@@ -59,7 +59,7 @@ class Problem25BigNum: EulerProblem {
 
   override func run() {
     let bigNumFibSeq = BigNumFibonacciSequence()
-    let limitSeq = LimitSequence(sequence: bigNumFibSeq) { countElements($1.stringValue().utf16) < 1000 }
+    let limitSeq = LimitSequence(sequence: bigNumFibSeq) { self.check($1) }
     let items = Array(limitSeq)
     // our fib sequence spits out the 3rd value the first time it is pumped, so we add 2
     println("fib(\(items.count+2)) is longer than 1000 digits")

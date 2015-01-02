@@ -12,7 +12,7 @@ class StringFibonacciSequence: SequenceType {
   }
 }
 
-func thousandDigitBigNum -> JKBigInteger {
+func thousandDigitBigNum() -> JKBigInteger {
   //
   // a = "1"
   // 999.times { a += "0" }

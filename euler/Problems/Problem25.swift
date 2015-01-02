@@ -50,7 +50,7 @@ class BigNumFibonacciSequence: SequenceType {
 class Problem25BigNum: EulerProblem {
   override func run() {
     let bigNumFibSeq = BigNumFibonacciSequence()
-    let mapSequence = MappingSequence(sequence: bigNumFibSeq, map: { $0} )
+    let mapSequence = MappingSequence(sequence: bigNumFibSeq, map: { $0.string} )
     let limitSeq = LimitSequence(sequence: mapSequence) { self.check($1) }
     let items = Array(limitSeq)
     // our fib sequence spits out the 3rd value the first time it is pumped, so we add 2

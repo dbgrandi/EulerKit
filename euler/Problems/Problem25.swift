@@ -117,6 +117,7 @@ class Problem25BigNumIterativeWithByteCount: EulerProblem {
     return countElements(num.stringValue().utf16) < 1000
   }
 
+  // problem finished in 0.0239300131797791 seconds
   override func run() {
     var n1 = JKBigInteger(string:"0")
     var n2 = JKBigInteger(string:"1")

@@ -108,7 +108,7 @@ class Problem25BigNumWithByteCountAndGenerator: EulerProblem {
     }
 
     // our fib sequence spits out the 3rd value the first time it is pumped, so we add 2
-    println("fib(\(counter+2)) is longer than 1000 digits")
+    println("fib(\(counter)) is longer than 1000 digits")
   }
 }
 

@@ -108,7 +108,15 @@ class Problem25BigNumIterative: EulerProblem {
 }
 
 class Problem25BigNumIterativeWithByteCount: EulerProblem {
-  
+  let thousandDigitByteSize = thousandDigitBigNum().countBytes()
+
+  func check(num:JKBigInteger) -> Bool {
+    if num.countBytes() < thousandDigitByteSize {
+      return true
+    }
+    return countElements(num.stringValue().utf16) < 1000
+  }
+
   override func run() {
     var n1 = JKBigInteger(string:"0")
     var n2 = JKBigInteger(string:"1")
@@ -120,7 +128,7 @@ class Problem25BigNumIterativeWithByteCount: EulerProblem {
       i += 1
       n1 = n2
       n2 = next_number
-    } while countElements(next_number.stringValue().unicodeScalars) < 1000
+    } while check(next_number)
 
     println("fib(\(i)) is longer than 1000 digits")
   }

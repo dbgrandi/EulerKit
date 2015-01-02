@@ -97,7 +97,7 @@ class Problem25BigNumWithByteCountAndGenerator: EulerProblem {
     return countElements(num.stringValue().utf16) < 1000
   }
 
-  // problem finished in 0.0535169839859009 seconds
+  // problem finished in 0.0250449776649475 seconds
   override func run() {
     var fibGen = BigNumFibonacciSequence().generate()
     var counter = 2

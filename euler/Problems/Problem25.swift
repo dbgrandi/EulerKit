@@ -12,17 +12,6 @@ class StringFibonacciSequence: SequenceType {
   }
 }
 
-func thousandDigitBigNum() -> JKBigInteger {
-  //
-  // a = "1"
-  // 999.times { a += "0" }
-  //
-
-  let bigString = "1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
-
-  return JKBigInteger(string:bigString)
-}
-
 class Problem25: EulerProblem {
   override func run() {
     let seq = LimitSequence(sequence: StringFibonacciSequence()) { $1.length < 1000 }
@@ -33,29 +22,9 @@ class Problem25: EulerProblem {
   }
 }
 
-class MappedBigNumFibonacciSequence: SequenceType {
-  func generate() -> GeneratorOf<Int> {
-    var last = JKBigInteger(string:"0")
-    var current = JKBigInteger(string:"1")
-
-    return GeneratorOf<Int> {
-      let next = last.add(current) as JKBigInteger
-      last = current
-      current = next
-      return countElements(next.stringValue().utf16)
-    }
-  }
-}
-
-class Problem25BigNumWithMappedFib: EulerProblem {
-  override func run() {
-    let bigNumFibSeq = MappedBigNumFibonacciSequence()
-    let limitSeq = LimitSequence(sequence: bigNumFibSeq) { (i:Int, j:Int) in return j < 1000 }
-    let items = Array(limitSeq)
-    // our fib sequence spits out the 3rd value the first time it is pumped, so we add 2
-    println("fib(\(items.count+2)) is longer than 1000 digits")
-  }
-}
+//
+// Use JKBigInteger
+//
 
 class BigNumFibonacciSequence: SequenceType {
   func generate() -> GeneratorOf<JKBigInteger> {

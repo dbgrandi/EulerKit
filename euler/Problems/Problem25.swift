@@ -88,11 +88,7 @@ class Problem25BigNumWithByteCount: EulerProblem {
 }
 
 class Problem25BigNumIterative: EulerProblem {
-  func check(n:JKBigInteger) -> Bool {
-    let s:NSString = n.stringValue()
-    return s.length < 1000
-  }
-
+  // problem finished in 3.2816349864006 seconds
   override func run() {
     var n1 = JKBigInteger(string:"1")
     var n2 = JKBigInteger(string:"2")

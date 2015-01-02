@@ -78,6 +78,7 @@ class Problem25BigNumWithByteCount: EulerProblem {
     return countElements(num.stringValue().utf16) < 1000
   }
 
+  // problem finished in 0.0535169839859009 seconds
   override func run() {
     let bigNumFibSeq = BigNumFibonacciSequence()
     let limitSeq = LimitSequence(sequence: bigNumFibSeq) { self.check($1) }
@@ -89,6 +90,25 @@ class Problem25BigNumWithByteCount: EulerProblem {
 
 class Problem25BigNumIterative: EulerProblem {
   // problem finished in 3.2816349864006 seconds
+  override func run() {
+    var n1 = JKBigInteger(string:"0")
+    var n2 = JKBigInteger(string:"1")
+    var next_number:JKBigInteger
+    var i:Int = 2
+
+    do {
+      next_number = n1 + n2
+      i += 1
+      n1 = n2
+      n2 = next_number
+    } while countElements(next_number.stringValue().unicodeScalars) < 1000
+
+    println("fib(\(i)) is longer than 1000 digits")
+  }
+}
+
+class Problem25BigNumIterativeWithByteCount: EulerProblem {
+  
   override func run() {
     var n1 = JKBigInteger(string:"0")
     var n2 = JKBigInteger(string:"1")

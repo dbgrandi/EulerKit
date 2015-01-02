@@ -85,7 +85,7 @@ class LimitSequence<S: SequenceType, T where T == S.Generator.Element>: Sequence
     }
 }
 
-class MappingSequence<S: SequenceType, U,  T where T == S.Generator.Element, T:Equatable>: SequenceType {
+class MappingSequence<S: SequenceType, U,  T where T == S.Generator.Element>: SequenceType {
   let sequence: S
   let map: (T) -> U
 
@@ -99,7 +99,7 @@ class MappingSequence<S: SequenceType, U,  T where T == S.Generator.Element, T:E
 
     return GeneratorOf<U> {
       var next = generator.next()
-      if next != .None {
+      if next != nil {
         return self.map(next!)
       }
       return .None

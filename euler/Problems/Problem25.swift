@@ -52,7 +52,7 @@ class Problem25BigNum: EulerProblem {
 
   func check(num:JKBigInteger) -> Bool {
     if num.countBytes() < thousandDigitByteSize {
-      return false
+      return true
     }
     return countElements(num.stringValue().utf16) < 1000
   }

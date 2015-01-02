@@ -87,6 +87,30 @@ class Problem25BigNumWithByteCount: EulerProblem {
     println("fib(\(items.count+2)) is longer than 1000 digits")
   }
 }
+class Problem25BigNumWithByteCountAndGenerator: EulerProblem {
+  let thousandDigitByteSize = thousandDigitBigNum().countBytes()
+
+  func check(num:JKBigInteger) -> Bool {
+    if num.countBytes() < thousandDigitByteSize {
+      return true
+    }
+    return countElements(num.stringValue().utf16) < 1000
+  }
+
+  // problem finished in 0.0535169839859009 seconds
+  override func run() {
+    var fibGen = BigNumFibonacciSequence().generate()
+    var counter = 2
+    var next = fibGen.next()
+    while check(next!) {
+      counter += 1
+      next = fibGen.next()
+    }
+
+    // our fib sequence spits out the 3rd value the first time it is pumped, so we add 2
+    println("fib(\(counter+2)) is longer than 1000 digits")
+  }
+}
 
 class Problem25BigNumIterative: EulerProblem {
   // problem finished in 3.2816349864006 seconds

@@ -48,7 +48,15 @@ class BigNumFibonacciSequence: SequenceType {
 }
 
 class Problem25BigNum: EulerProblem {
-  let thousandDigitBitSize = thousandDigitBigNum().
+  let thousandDigitByteSize = thousandDigitBigNum().countBytes()
+
+  func check(num:JKBigInteger) -> Bool {
+    if num.countBytes() < thousandDigitByteSize {
+      return false
+    }
+    return countElements(num.stringValue().utf16) < 1000
+  }
+
   override func run() {
     let bigNumFibSeq = BigNumFibonacciSequence()
     let limitSeq = LimitSequence(sequence: bigNumFibSeq) { countElements($1.stringValue().utf16) < 1000 }

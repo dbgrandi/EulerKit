@@ -23,6 +23,8 @@
 		291948F01A54DD2B00DB9AAF /* StringNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948EE1A54DD2B00DB9AAF /* StringNum.swift */; };
 		293741C01A57A85000CDF2DF /* Problem27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741BF1A57A85000CDF2DF /* Problem27.swift */; };
 		293741C11A57A85000CDF2DF /* Problem27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741BF1A57A85000CDF2DF /* Problem27.swift */; };
+		293741C31A589CA700CDF2DF /* Problem26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741C21A589CA700CDF2DF /* Problem26.swift */; };
+		293741C41A589CA700CDF2DF /* Problem26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741C21A589CA700CDF2DF /* Problem26.swift */; };
 		29B7CDF11A54F47000BBDCB1 /* JKBigNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7CDF01A54F47000BBDCB1 /* JKBigNum.swift */; };
 		29B7CDF31A55E2D900BBDCB1 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B7CDF21A55E2D900BBDCB1 /* libssl.dylib */; };
 		29B7CDF61A55E40200BBDCB1 /* SSLBigNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7CDF51A55E40200BBDCB1 /* SSLBigNum.swift */; };
@@ -114,6 +116,7 @@
 		291948EB1A54D29C00DB9AAF /* GlobalHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		291948EE1A54DD2B00DB9AAF /* StringNum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringNum.swift; sourceTree = "<group>"; };
 		293741BF1A57A85000CDF2DF /* Problem27.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem27.swift; sourceTree = "<group>"; };
+		293741C21A589CA700CDF2DF /* Problem26.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem26.swift; sourceTree = "<group>"; };
 		29B7CDEF1A54F00600BBDCB1 /* euler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "euler-Bridging-Header.h"; sourceTree = "<group>"; };
 		29B7CDF01A54F47000BBDCB1 /* JKBigNum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKBigNum.swift; sourceTree = "<group>"; };
 		29B7CDF21A55E2D900BBDCB1 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
@@ -311,6 +314,7 @@
 				55C643DD19CCB522000FD9E1 /* Problem25.swift */,
 				293741BF1A57A85000CDF2DF /* Problem27.swift */,
 				29B7CDF71A579F2E00BBDCB1 /* Problem28.swift */,
+				293741C21A589CA700CDF2DF /* Problem26.swift */,
 			);
 			path = Problems;
 			sourceTree = "<group>";
@@ -509,6 +513,7 @@
 				291948E91A54D24100DB9AAF /* Int+EulerKit.swift in Sources */,
 				55B894A619C016F400A7E598 /* Problem8.swift in Sources */,
 				55B894A419C016F400A7E598 /* Problem6.swift in Sources */,
+				293741C31A589CA700CDF2DF /* Problem26.swift in Sources */,
 				55B894A519C016F400A7E598 /* Problem7.swift in Sources */,
 				291948E01A54CFDA00DB9AAF /* String+EulerKit.swift in Sources */,
 				293741C01A57A85000CDF2DF /* Problem27.swift in Sources */,
@@ -555,6 +560,7 @@
 				55B894B619C0173700A7E598 /* Problem8.swift in Sources */,
 				55B894B419C0173700A7E598 /* Problem6.swift in Sources */,
 				55BD79B11A42882700B293C1 /* PrimeFactorsTest.swift in Sources */,
+				293741C41A589CA700CDF2DF /* Problem26.swift in Sources */,
 				55B894B519C0173700A7E598 /* Problem7.swift in Sources */,
 				55B894BA19C0173700A7E598 /* Problem12.swift in Sources */,
 				293741C11A57A85000CDF2DF /* Problem27.swift in Sources */,

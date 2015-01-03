@@ -57,3 +57,34 @@ class Problem27Iterative : EulerProblem {
     println("prod = \(prod)")
   }
 }
+
+class Problem27 : EulerProblem {
+
+  func quadratic(n:Int, a:Int, b:Int) -> Int {
+    return n*n + a*n + b
+  }
+
+  func primesLength(a:Int, b:Int) -> Int {
+    var n = 0
+    while(quadratic(n, a:a, b:b).isPrime()) {
+      n += 1
+    }
+    return n
+  }
+
+  override func run() {
+    var coefficients: (a:Int, b:Int) = (0,0)
+    var maxLength = 0
+    for a in -1000...1000 {
+      for b in -1000...1000 {
+        let length = primesLength(a, b:b)
+        if length > maxLength {
+          maxLength = length
+          coefficients = (a,b)
+        }
+      }
+    }
+    let prod = coefficients.a * coefficients.b
+    println("prod = \(prod)")
+  }
+}

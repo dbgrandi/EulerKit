@@ -14,7 +14,7 @@ struct IntegerSequence: SequenceType {
 
   func generate() -> GeneratorOf<Int> {
     return GeneratorOf<Int> {
-      self.n += 1
+      self.n = n+1
       return self.n
     }
   }

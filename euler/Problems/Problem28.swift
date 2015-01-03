@@ -9,7 +9,12 @@ class Problem28 : EulerProblem {
     for i in stride(from: 3, through: 1001, by: 2) {
       // get the first
       last += i-1
-      last + i
+      nums.append(last)
+      last += i-1
+      nums.append(last)
+      last += i-1
+      nums.append(last)
+      last += i-1
     }
     //
   }

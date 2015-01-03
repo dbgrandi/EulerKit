@@ -16,7 +16,6 @@ class Problem28Iterative : EulerProblem {
 
 class Problem28 : EulerProblem {
   override func run() {
-
     // given a size, find the next 4 diagonal numbers around it
     let findCorners: Int -> [Int] = { i in
       let corner = i*i

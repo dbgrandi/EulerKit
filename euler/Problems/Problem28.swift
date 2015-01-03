@@ -17,6 +17,8 @@ class Problem28Iterative : EulerProblem {
 class Problem28 : EulerProblem {
   override func run() {
     // assume the 1x1 core
-    stride(from:1, through:1001, by:2).map(
+    map(stride(from:1, through:1001, by:2)) {
+      
+    }
   }
 }

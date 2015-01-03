@@ -1,1 +1,5 @@
-class Problem26Iter
+class Problem26Iter : EulerProblem {
+  override func run() {
+    //
+  }
+}

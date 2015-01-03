@@ -17,10 +17,10 @@ class Problem28Iterative : EulerProblem {
 class Problem28 : EulerProblem {
   override func run() {
     // given a size, find the sum of the next 4 diagonal numbers around it
-    let findCorners: Int -> Int = { i in
+    let findCorners: Int -> [Int] = { i in
       let corner = i*i
       let stride = i+1
-      return [(corner+stride), corner+(2*stride), corner+(3*stride), corner+4*stride].reduce(0,+)
+      return (corner+stride), corner+(2*stride), corner+(3*stride), corner+4*stride]
     }
 
     // because we are mapping on the diagonals of the next
@@ -28,7 +28,8 @@ class Problem28 : EulerProblem {
     let s = stride(from:1, through:999, by:2)
 
     // assume the 1x1 core
-    let sum = map(s,findCorners).reduce(1,+)
+    let diagonals = map(s,findCorners).reduce([1],+)
+    let sum = diagonals.reduce(0,+)
     println("sum = \(sum)")
   }
 }

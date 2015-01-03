@@ -3,6 +3,23 @@
 //
 
 //
+// An infinite sequence of natural numbers
+//
+class NumbersSequence: SequenceType {
+  func generate() -> GeneratorOf<Int> {
+    var last = 0
+    var current = 1
+
+    return GeneratorOf<Int> {
+      let next = last + current
+      last = current
+      current = next
+      return next
+    }
+  }
+}
+
+//
 // An infinite sequence of Fibonacci numbers
 //
 class FibonacciSequence: SequenceType {

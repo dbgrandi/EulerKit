@@ -42,6 +42,12 @@ class Problem27Iterative : EulerProblem {
   }
 
   override func run() {
+    var 
+    for a in -1000...1000 {
+      for b in -1000...1000 {
+
+      }
+      }
     //
   }
 }

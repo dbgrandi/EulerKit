@@ -6,12 +6,14 @@ class Problem28Iterative : EulerProblem {
     var nums = [1]
     var last = 1
     // 1 + 3...1001
-    for i in stride(from: 3, through: 1001, by: 2) {
+//    for i in stride(from: 3, through: 1001, by: 2) {
+    for i in stride(from: 3, through: 5, by: 2) {
       for j in 0...3 {
         last += i-1
         nums.append(last)
       }
     }
-    //
+    let sum = nums.reduce(0,+)
+    println("sum = \(sum)")
   }
 }

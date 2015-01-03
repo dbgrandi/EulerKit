@@ -7,14 +7,10 @@ class Problem28 : EulerProblem {
     var last = 1
     // 1 + 3...1001
     for i in stride(from: 3, through: 1001, by: 2) {
-      // get the first
-      last += i-1
-      nums.append(last)
-      last += i-1
-      nums.append(last)
-      last += i-1
-      nums.append(last)
-      last += i-1
+      for j in 0...3 {
+        last += i-1
+        nums.append(last)
+      }
     }
     //
   }

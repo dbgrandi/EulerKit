@@ -7,14 +7,11 @@
 //
 class NumbersSequence: SequenceType {
   func generate() -> GeneratorOf<Int> {
-    var last = 0
-    var current = 1
+    var n = 0
 
     return GeneratorOf<Int> {
-      let next = last + current
-      last = current
-      current = next
-      return next
+      n += 1
+      return n
     }
   }
 }

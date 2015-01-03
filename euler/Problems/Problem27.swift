@@ -42,7 +42,7 @@ class Problem27Iterative : EulerProblem {
   }
 
   override func run() {
-    var coefficients: (a:Int, b:Int)
+    var coefficients: (a:Int, b:Int) = (0,0)
     var maxLength = 0
     for a in -1000...1000 {
       for b in -1000...1000 {

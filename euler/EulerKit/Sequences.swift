@@ -24,6 +24,7 @@ struct IntSequence : SequenceType
     }
   }
 }
+
 struct IntegerSequence: SequenceType {
   var n = 0
 

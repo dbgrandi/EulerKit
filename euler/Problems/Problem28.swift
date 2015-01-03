@@ -17,13 +17,12 @@ class Problem28Iterative : EulerProblem {
 class Problem28 : EulerProblem {
   override func run() {
     // assume the 1x1 core
-    let s = stride(from:1, through:1001, by:2)
+    let s = stride(from:1, through:5, by:2)
+//    let s = stride(from:1, through:1001, by:2)
     s.map() { i in
-
       let corner = i*i
       let stride = i+1
-      [corner+stride, corner+(2*stride), corner+(3*stride), corner+4*stride]
-
+      return [corner+stride, corner+(2*stride), corner+(3*stride), corner+4*stride]
     }
 
   }

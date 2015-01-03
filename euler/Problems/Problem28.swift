@@ -1,6 +1,6 @@
 import Foundation
 
-class Problem28 : EulerProblem {
+class Problem28Iterative : EulerProblem {
   override func run() {
     // assume the 1x1 core
     var nums = [1]

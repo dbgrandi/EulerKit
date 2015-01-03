@@ -77,7 +77,6 @@ class TriangleNumberSequence: SequenceType {
 // A wrapper to stop a Sequence when it grows to
 // a maximum value.
 //
-
 class LimitSequence<S: SequenceType, T where T == S.Generator.Element>: SequenceType {
     let test: (Int,T) -> Bool
     let sequence: S

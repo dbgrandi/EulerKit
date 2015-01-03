@@ -77,24 +77,24 @@ class TriangleNumberSequence: SequenceType {
 // A wrapper to stop a Sequence when it grows to
 // a maximum value.
 //
-class LimitSequence<S: SequenceType, T where T == S.Generator.Element>: SequenceType {
+struct LimitSequence<S: SequenceType, T where T == S.Generator.Element>: SequenceType {
     let test: (Int,T) -> Bool
     let sequence: S
-    var counter:Int
 
     init(sequence:S, test: (Int,T) -> Bool) {
         self.sequence = sequence
         self.test = test
-        self.counter = 0
     }
 
     func generate() -> GeneratorOf<T> {
         var generator = self.sequence.generate()
+        let t = test
+        var counter:Int = 0
 
         return GeneratorOf<T> {
             var next = generator.next()
-            self.counter += 1
-            if next != nil && self.test(self.counter, next!) {
+            counter += 1
+            if next != nil && t(counter, next!) {
                 return next
             }
             return .None

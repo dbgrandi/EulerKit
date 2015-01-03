@@ -309,8 +309,8 @@
 				550BF5B219CB787400ECDF82 /* Problem23.swift */,
 				5567C01B19CC011B0057B113 /* Problem24.swift */,
 				55C643DD19CCB522000FD9E1 /* Problem25.swift */,
-				29B7CDF71A579F2E00BBDCB1 /* Problem28.swift */,
 				293741BF1A57A85000CDF2DF /* Problem27.swift */,
+				29B7CDF71A579F2E00BBDCB1 /* Problem28.swift */,
 			);
 			path = Problems;
 			sourceTree = "<group>";

@@ -5,7 +5,7 @@
 //
 // An infinite sequence of natural numbers
 //
-class NumbersSequence: SequenceType {
+class NaturalNumberSequence: SequenceType {
   func generate() -> GeneratorOf<Int> {
     var n = 0
 

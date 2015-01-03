@@ -16,7 +16,7 @@ import Foundation
 //  println("problem name: \(i)")
 //}
 
-let prob = Problem28Iterative() //  as EulerProblem // problems[2] as EulerProblem
+let prob = Problem28() //  as EulerProblem // problems[2] as EulerProblem
 let stopwatch = Stopwatch(name:"problem")
 stopwatch.start()
 prob.run()

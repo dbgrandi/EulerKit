@@ -27,10 +27,18 @@
 // consecutive values of n, starting with n = 0.
 //
 
-class Problem27 : EulerProblem {
+func quadratic(n:Int, a:Int, b:Int) -> Int {
+  return n*n + a*n + b
+}
+
+class Problem27Iterative : EulerProblem {
 
   func primesLength(a:Int, b:Int) -> Int {
-
+    var n = 0
+    while(quadratic(n, a, b).isPrime()) {
+      n += 1
+    }
+    return n
   }
 
   override func run() {

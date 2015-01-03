@@ -42,12 +42,17 @@ class Problem27Iterative : EulerProblem {
   }
 
   override func run() {
-    var coefficients:(a:Int, b:Int)
+    var coefficients: (a:Int, b:Int)
+    var maxLength = 0
     for a in -1000...1000 {
       for b in -1000...1000 {
-
+        let length = primesLength(a, b:b)
+        if length > maxLength {
+          maxLength = length
+          coefficients = (a,b)
+        }
       }
-      }
-    //
+    }
+    return coefficients(a
   }
 }

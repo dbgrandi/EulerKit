@@ -71,6 +71,7 @@ class Problem27 : EulerProblem {
   }
 
   override func run() {
+    println("Starting")
     var coefficients: (a:Int, b:Int) = (0,0)
     var maxLength = 0
     for a in -1000...1000 {

@@ -11,7 +11,7 @@
 // consecutive values of n, starting with n = 0.
 //
 
-class Problem27 : EulerProblem {
+class Problem27Iterative : EulerProblem {
   override func run() {
     //
   }

@@ -5,6 +5,25 @@
 //
 // An infinite sequence of integers starting from n
 //
+struct IntSequence : SequenceType
+{
+  var n = 0
+  init(n:Int) {
+    self.n = n
+  }
+
+  let endPower : Int
+  init(end: Int)
+  {
+    self.endPower = end
+  }
+  func generate() -> GeneratorOf<Int> {
+    var power : Int = 0
+    return GeneratorOf<Int> {
+      (power < self.endPower) ? pow2(power++) : nil
+    }
+  }
+}
 struct IntegerSequence: SequenceType {
   var n = 0
 

@@ -53,7 +53,7 @@ class Problem27Iterative : EulerProblem {
         }
       }
     }
-    let (coA, coB) = coefficients
-    return coA * coB
+    let prod = coefficients.a * coefficients.b
+    println("prod = \(prod)")
   }
 }

@@ -68,8 +68,7 @@ class Problem27Recursive : EulerProblem {
     return self.quadratic(n, a:a, b:b).isPrime() ? primesLength(a, b:b, n:n+1) : n
   }
 
-  // problem finished in 27.8849409818649 seconds
-  // NOTE: this crashes when run in Instruments, wtf?
+  // problem finished in 0.201462030410767 seconds
   override func run() {
     println("Starting")
     var coefficients: (a:Int, b:Int) = (0,0)

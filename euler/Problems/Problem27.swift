@@ -58,6 +58,36 @@ class Problem27Iterative : EulerProblem {
   }
 }
 
+class Problem27Recursive : EulerProblem {
+
+  func quadratic(n:Int, a:Int, b:Int) -> Int {
+    return n*n + a*n + b
+  }
+
+  func primesLength(a:Int, b:Int, n:Int = 0) -> Int {
+    return self.quadratic(n, a:a, b:b).isPrime() ? primesLength(a, b:b, n:n+1) : n
+  }
+
+  // problem finished in 27.8849409818649 seconds
+  // NOTE: this crashes when run in Instruments, wtf?
+  override func run() {
+    println("Starting")
+    var coefficients: (a:Int, b:Int) = (0,0)
+    var maxLength = 0
+    for a in -1000...1000 {
+      for b in -1000...1000 {
+        let length = primesLength(a, b:b)
+        if length > maxLength {
+          maxLength = length
+          coefficients = (a,b)
+        }
+      }
+    }
+    let prod = coefficients.a * coefficients.b
+    println("prod = \(prod)")
+  }
+}
+
 class Problem27 : EulerProblem {
 
   func quadratic(n:Int, a:Int, b:Int) -> Int {
@@ -66,7 +96,7 @@ class Problem27 : EulerProblem {
 
   func primesLength(a:Int, b:Int) -> Int {
     let nums = IntegerSequence(n: 0)
-    let limit = LimitSequence(sequence: nums) { $1 < 10000 } //self.quadratic($1, a:a, b:b).isPrime() }
+    let limit = LimitSequence(sequence: nums) { self.quadratic($1, a:a, b:b).isPrime() }
     return Array(limit).last!
   }
 

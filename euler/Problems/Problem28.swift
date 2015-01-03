@@ -21,7 +21,8 @@ class Problem28 : EulerProblem {
     s.map() { i in
 
       let corner = i*i
-      [corner+(i+1), corner+(2i)]
+      let stride = i+1
+      [corner+stride, corner+(2*stride), corner+(3*stride), corner+4*stride]
 
     }
 

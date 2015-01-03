@@ -3,15 +3,20 @@
 //
 
 //
-// An infinite sequence of natural numbers
+// An infinite sequence of integers starting
+// from n
 //
-class NaturalNumberSequence: SequenceType {
-  func generate() -> GeneratorOf<Int> {
-    var n = 0
+class IntegerSequence: SequenceType {
+  var n = 0
 
+  init(n:Int) {
+    self.n = n
+  }
+
+  func generate() -> GeneratorOf<Int> {
     return GeneratorOf<Int> {
-      n += 1
-      return n
+      self.n += 1
+      return self.n
     }
   }
 }

@@ -5,7 +5,7 @@
 //
 // An infinite sequence of integers starting from n
 //
-class IntegerSequence: SequenceType {
+struct IntegerSequence: SequenceType {
   var n = 0
 
   init(n:Int) {

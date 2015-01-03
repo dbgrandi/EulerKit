@@ -19,17 +19,13 @@ class Problem28 : EulerProblem {
     // assume the 1x1 core
     let s = stride(from:1, through:3, by:2)
 //    let s = stride(from:1, through:1001, by:2)
-    let m = { i in
+    let m: Int -> [Int] = { i in
       let corner = i*i
       let stride = i+1
       return [corner+stride, corner+(2*stride), corner+(3*stride), corner+4*stride]
     }
 
-    map(s, { i in
-      let corner = i*i
-      let stride = i+1
-      return [corner+stride, corner+(2*stride), corner+(3*stride), corner+4*stride]
-    }
-
+    let sum = map(s,m).reduce([1],+).reduce(0,+)
+    println("sum = \(sum)")
   }
 }

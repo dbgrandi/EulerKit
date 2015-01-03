@@ -3,8 +3,7 @@
 //
 
 //
-// An infinite sequence of integers starting
-// from n
+// An infinite sequence of integers starting from n
 //
 class IntegerSequence: SequenceType {
   var n = 0

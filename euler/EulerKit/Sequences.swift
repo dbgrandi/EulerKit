@@ -12,15 +12,10 @@ struct IntSequence : SequenceType
     self.n = n
   }
 
-  let endPower : Int
-  init(end: Int)
-  {
-    self.endPower = end
-  }
   func generate() -> GeneratorOf<Int> {
-    var power : Int = 0
+    var power : Int = n
     return GeneratorOf<Int> {
-      (power < self.endPower) ? pow2(power++) : nil
+      return n++
     }
   }
 }

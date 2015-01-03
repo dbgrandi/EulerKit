@@ -66,7 +66,7 @@ class Problem27 : EulerProblem {
 
   func primesLength(a:Int, b:Int) -> Int {
     let nums = IntegerSequence(n: 0)
-    let limit = LimitSequence(sequence: nums) { !self.quadratic($1, a:a, b:b).isPrime() }
+    let limit = LimitSequence(sequence: nums) { self.quadratic($1, a:a, b:b).isPrime() }
     return Array(limit).last!
   }
 

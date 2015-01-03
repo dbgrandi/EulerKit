@@ -41,6 +41,7 @@ class Problem27Iterative : EulerProblem {
     return n
   }
 
+  // problem finished in 0.197467982769012 seconds
   override func run() {
     var coefficients: (a:Int, b:Int) = (0,0)
     var maxLength = 0

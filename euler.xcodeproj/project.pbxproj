@@ -685,7 +685,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 658A5A94FFCD657F9190220C /* Pods.release.xcconfig */;
 			buildSettings = {
-				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_OPTIMIZATION_LEVEL = s;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./euler/euler-Bridging-Header.h";
 			};

@@ -18,7 +18,7 @@ class Problem28 : EulerProblem {
   override func run() {
     // assume the 1x1 core
 //    let s = stride(from:1, through:3, by:2)
-    let s = stride(from:1, through:1001, by:2)
+    let s = stride(from:1, through:999, by:2)
     let m: Int -> [Int] = { i in
       let corner = i*i
       let stride = i+1

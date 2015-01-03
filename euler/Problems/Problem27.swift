@@ -70,7 +70,7 @@ class Problem27 : EulerProblem {
     return Array(limit).last!
   }
 
-  // problem finished in 33.3551000356674 seconds
+  // problem finished in 27.8849409818649 seconds
   // NOTE: this crashes when run in Instruments, wtf?
   override func run() {
     println("Starting")

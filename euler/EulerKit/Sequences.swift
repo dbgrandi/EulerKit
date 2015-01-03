@@ -7,30 +7,15 @@
 //
 struct IntSequence : SequenceType
 {
-  var n = 0
-  init(n:Int) {
-    self.n = n
+  var start = 0
+  init(start:Int) {
+    self.start = start
   }
 
   func generate() -> GeneratorOf<Int> {
-    var power : Int = n
+    var n : Int = start
     return GeneratorOf<Int> {
       return n++
-    }
-  }
-}
-
-struct IntegerSequence: SequenceType {
-  var n = 0
-
-  init(n:Int) {
-    self.n = n
-  }
-
-  func generate() -> GeneratorOf<Int> {
-    return GeneratorOf<Int> {
-      self.n = n+1
-      return self.n
     }
   }
 }

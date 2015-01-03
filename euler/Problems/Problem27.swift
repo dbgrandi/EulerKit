@@ -28,6 +28,11 @@
 //
 
 class Problem27 : EulerProblem {
+
+  func primesLength(a:Int, b:Int) -> Int {
+
+  }
+
   override func run() {
     //
   }

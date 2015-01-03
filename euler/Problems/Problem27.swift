@@ -53,6 +53,7 @@ class Problem27Iterative : EulerProblem {
         }
       }
     }
-    return coefficients(a
+    let coA, coB = coefficients
+    return coA * coB
   }
 }

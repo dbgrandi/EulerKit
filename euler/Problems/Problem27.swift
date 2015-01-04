@@ -98,7 +98,7 @@ class Problem27 : EulerProblem {
     let limit = LimitSequence(sequence: nums) { self.quadratic($1, a:a, b:b).isPrime() }
 
     // option a
-    // 
+    // problem finished in 8.32333594560623 seconds
     var g = limit.generate()
     var n = 0
     while let _ = g.next() {

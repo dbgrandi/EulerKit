@@ -18,15 +18,14 @@ import Foundation
 
 class Problem29 : EulerProblem {
   override func run() {
-    var terms = Set<JKBigInteger>()
+    var terms = Set<Double>()
 
     for a in 2...100 {
       for b in 2...100 {
-        let bigA = JKBigInteger(unsignedLong: UInt(a))
-        terms.insert(bigA.pow(UInt32(b)) as JKBigInteger)
+        terms.insert(pow(Double(a), Double(b)))
       }
     }
-
+    
     println("unique terms count = \(terms.count())")
   }
 }

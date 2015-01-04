@@ -1,9 +1,7 @@
 class Set<T:Hashable> {
   var items = [T: Bool]()
 
-  func count() -> Int {
-    return items.count
-  }
+  var count:Int { return items.count }
 
   func reduce<U>(initial:U, combine:(U, T) -> U) -> U {
     return Array(items.keys).reduce(initial, combine:combine)

@@ -10,8 +10,6 @@ class Set<T:Hashable> {
   }
 
   func insert(item:T) {
-    if !contains(items, {$0 == item}) {
-      items.append(item)
-    }
+    items[item] = true
   }
 }

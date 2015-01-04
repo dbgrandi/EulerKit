@@ -17,18 +17,23 @@
 import Foundation
 
 class Problem29 : EulerProblem {
+  //
+  // Using our Set implementation is **MUCH** slower than
+  // a straight Dictionary
+  //
+
   // problem finished in 0.00285303592681885 seconds
   override func run() {
-    var terms = Dictionary<Double,Int>()
-//    var terms = Set<Double>()
+//    var terms = Dictionary<Double,Int>()
+    var terms = Set<Double>()
 
     for a in 2...100 {
       for b in 2...100 {
-        terms[pow(Double(a), Double(b))] = 1
-//        terms.insert(pow(Double(a), Double(b)))
+//        terms[pow(Double(a), Double(b))] = 1
+        terms.insert(pow(Double(a), Double(b)))
       }
     }
     
-    println("unique terms count = \(terms.count)")
+    println("unique terms count = \(terms.count())")
   }
 }

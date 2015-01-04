@@ -6,7 +6,7 @@ class Set<T:Hashable> {
   }
 
   func reduce<U>(initial:U, combine:(U, T) -> U) -> U {
-    return items.keys.reduce(initial, combine:combine)
+    return Array(items.keys).reduce(initial, combine:combine)
   }
 
   func insert(item:T) {

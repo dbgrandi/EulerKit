@@ -6,12 +6,14 @@
 //  Copyright (c) 2014 David Grandinetti. All rights reserved.
 //
 
+import Foundation
+
 func + (lhs:JKBigInteger, rhs:JKBigInteger) -> JKBigInteger {
   return lhs.add(rhs) as JKBigInteger
 }
 
-extension JKBigInteger : Equatable {
-  func ==(lhs: Self, rhs: Self) -> Bool {
-    return true
-  }
+public func == (lhs: JKBigInteger, rhs: JKBigInteger) -> Bool {
+  return lhs.compare(rhs) == NSOrderedSame
 }
+
+extension JKBigInteger : Equatable {}

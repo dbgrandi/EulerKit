@@ -1,5 +1,9 @@
-class Set<T:Hashable> {
-  var items = [T: Bool]()
+struct Set<T:Hashable> {
+  var items: [T: Bool]
+
+  init() {
+    items = [T: Bool]()
+  }
 
   var count:Int { return items.count }
 

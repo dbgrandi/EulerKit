@@ -2,7 +2,7 @@
 // sequence tools
 //
 
-func lastElement<T>(s:SequenceOf<T>) -> T? {
+func lastElement<T>(s:SequenceType<T>) -> T? {
   var g = s.generate()
   var last:T? = g.next()
   while let next = g.next() {

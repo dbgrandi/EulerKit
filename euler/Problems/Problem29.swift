@@ -17,14 +17,11 @@
 import Foundation
 
 class Problem29 : EulerProblem {
-  //
-  // Using our Set implementation is **MUCH** slower than
-  // a straight Dictionary
-  //
-
   override func run() {
     // problem finished in 0.00285303592681885 seconds
 //    var terms = Dictionary<Double,Int>()
+
+    // problem finished in 0.151324987411499 seconds
     var terms = Set<Double>()
 
     for a in 2...100 {

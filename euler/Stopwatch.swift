@@ -29,4 +29,6 @@ class Stopwatch {
   func stats() {
     println("\(name) finished in \(runtime) seconds")
   }
+
+  func
 }

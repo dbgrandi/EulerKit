@@ -10,4 +10,8 @@ func + (lhs:JKBigInteger, rhs:JKBigInteger) -> JKBigInteger {
   return lhs.add(rhs) as JKBigInteger
 }
 
-extension JKBigInteger
+extension JKBigInteger : Equatable {
+  func ==(lhs: Self, rhs: Self) -> Bool {
+
+  }
+}

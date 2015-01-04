@@ -2,15 +2,13 @@
 // sequence tools
 //
 
-internal extension SequenceOf {
-  func last() -> T? {
-    var g = self.generate()
-    var last:T? = g.next()
-    while let next = g.next() {
-      last = next
-    }
-    return last
+func lastElement(s:SequenceOf<T>) -> T? {
+  var g = s.generate()
+  var last:T? = g.next()
+  while let next = g.next() {
+    last = next
   }
+  return last
 }
 
 //

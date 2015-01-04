@@ -11,7 +11,7 @@ struct Set<T:Hashable> {
     return Array(items.keys).reduce(initial, combine:combine)
   }
 
-  func insert(item:T) {
+  mutating func insert(item:T) {
     items[item] = true
   }
 }

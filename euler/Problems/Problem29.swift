@@ -20,8 +20,8 @@ class Problem29 : EulerProblem {
   override func run() {
     var terms = Set<JKBigInteger>()
 
-    for a in 2...5 {
-      for b in 2...5 {
+    for a in 2...100 {
+      for b in 2...100 {
         let bigA = JKBigInteger(unsignedLong: UInt(a))
         terms.insert(bigA.pow(UInt32(b)) as JKBigInteger)
       }

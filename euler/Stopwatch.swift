@@ -5,7 +5,14 @@ class Stopwatch {
   var startDate:NSDate!
   var runtime:NSTimeInterval!
 
-  
+  class func measure(name:String, closure:() -> ()) {
+    let stopwatch = Stopwatch(name:name)
+    stopwatch.start()
+    closure()
+    stopwatch.stop()
+    stopwatch.stats()
+  }
+
   init(name:String) {
     self.name = name
     self.runtime = 0
@@ -23,10 +30,4 @@ class Stopwatch {
     println("\(name) finished in \(runtime) seconds")
   }
 
-  func measure(closure:()->()) {
-    start()
-    closure()
-    stop()
-    stats()
-  }
 }

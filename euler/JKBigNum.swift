@@ -9,3 +9,5 @@
 func + (lhs:JKBigInteger, rhs:JKBigInteger) -> JKBigInteger {
   return lhs.add(rhs) as JKBigInteger
 }
+
+extension JKBigInteger

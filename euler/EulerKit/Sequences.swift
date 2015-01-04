@@ -2,6 +2,10 @@
 // sequence tools
 //
 
+extension SequenceType {
+  func last() ->
+}
+
 //
 // An infinite sequence of integers starting from n
 //

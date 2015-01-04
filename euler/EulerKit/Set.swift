@@ -1,4 +1,4 @@
-class Set<T:Equatable> {
+class Set<T:Hashable> {
   var items = [T]()
 
   func count() -> Int {

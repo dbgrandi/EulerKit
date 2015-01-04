@@ -12,6 +12,6 @@ struct Set<T:Hashable> {
   }
 
   func insert(item:T) {
-    items[item] = true
+    self.items[item] = true
   }
 }

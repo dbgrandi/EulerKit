@@ -106,12 +106,14 @@ class Problem27 : EulerProblem {
     }
     return n
 
-    // option B - problem finished in 29.7052240371704 seconds
+    // option B - problem finished in 27.8849409818649 seconds
     // return Array(limit).last!
   }
 
-  // problem finished in 27.8849409818649 seconds
   // NOTE: this crashes when run in Instruments, wtf?
+  // Crash in instruments goes away if I use -Ounchecked for
+  // the swift optimization.
+  //
   override func run() {
     var coefficients: (a:Int, b:Int) = (0,0)
     var maxLength = 0

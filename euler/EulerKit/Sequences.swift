@@ -2,7 +2,7 @@
 // sequence tools
 //
 
-extension SequenceType {
+extension SequenceOf {
   func last() ->
 }
 

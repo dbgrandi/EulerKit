@@ -1,17 +1,21 @@
-class Set<T:Equatable> {
-  var items = [T]()
+//
+// Found http://natecook.com/blog/2014/08/creating-a-set-type-in-swift/
+// and took some ideas from Nate's impl.
+//
+struct Set<T:Hashable> {
+  private var items: [T: Bool]
 
-  func count() -> Int {
-    return items.count
+  init() {
+    items = [T: Bool]()
   }
+
+  var count:Int { return items.count }
 
   func reduce<U>(initial:U, combine:(U, T) -> U) -> U {
-    return items.reduce(initial, combine:combine)
+    return Array(items.keys).reduce(initial, combine:combine)
   }
 
-  func insert(item:T) {
-    if !contains(items, {$0 == item}) {
-      items.append(item)
-    }
+  mutating func insert(item:T) {
+    items[item] = true
   }
 }

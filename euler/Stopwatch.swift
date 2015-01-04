@@ -1,18 +1,18 @@
-//
-//  Stopwatch.swift
-//  euler
-//
-//  Created by David Grandinetti on 9/2/14.
-//  Copyright (c) 2014 David Grandinetti. All rights reserved.
-//
-
 import Foundation
 
 class Stopwatch {
   var name:String!
   var startDate:NSDate!
   var runtime:NSTimeInterval!
-  
+
+  class func measure(name:String, closure:() -> ()) {
+    let stopwatch = Stopwatch(name:name)
+    stopwatch.start()
+    closure()
+    stopwatch.stop()
+    stopwatch.stats()
+  }
+
   init(name:String) {
     self.name = name
     self.runtime = 0
@@ -29,4 +29,5 @@ class Stopwatch {
   func stats() {
     println("\(name) finished in \(runtime) seconds")
   }
+
 }

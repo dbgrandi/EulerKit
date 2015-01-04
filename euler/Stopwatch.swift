@@ -22,5 +22,10 @@ class Stopwatch {
     println("\(name) finished in \(runtime) seconds")
   }
 
-  func measure()
+  func measure(closure:()->()) {
+    start()
+    closure()
+    stop()
+    stats()
+  }
 }

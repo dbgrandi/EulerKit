@@ -2,8 +2,8 @@
 // sequence tools
 //
 
-extension SequenceOf<T> {
-  func last() -> T {
+internal extension SequenceOf {
+  func last() ->  {
     var g = self.generate()
     var n = nil
     while let _ = g.next() {

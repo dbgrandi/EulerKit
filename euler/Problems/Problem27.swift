@@ -99,7 +99,7 @@ class Problem27 : EulerProblem {
 
     // option a
     // problem finished in 8.32333594560623 seconds
-    return limit.last()
+    return lastElement(limit)!
 //    var g = limit.generate()
 //    var n = 0
 //    while let _ = g.next() {

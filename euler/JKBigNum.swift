@@ -12,6 +12,6 @@ func + (lhs:JKBigInteger, rhs:JKBigInteger) -> JKBigInteger {
 
 extension JKBigInteger : Equatable {
   func ==(lhs: Self, rhs: Self) -> Bool {
-
+    return true
   }
 }

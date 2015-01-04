@@ -1,8 +1,5 @@
-import Foundation
-
-let prob = Problem26Iter()
 let stopwatch = Stopwatch(name:"problem")
 stopwatch.start()
-prob.run()
+Problem26Iter().run()
 stopwatch.stop()
 stopwatch.stats()

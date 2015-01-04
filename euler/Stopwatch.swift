@@ -4,6 +4,7 @@ class Stopwatch {
   var name:String!
   var startDate:NSDate!
   var runtime:NSTimeInterval!
+
   
   init(name:String) {
     self.name = name

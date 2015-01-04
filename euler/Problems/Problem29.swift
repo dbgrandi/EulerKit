@@ -17,6 +17,7 @@
 import Foundation
 
 class Problem29 : EulerProblem {
+  // problem finished in 0.00285303592681885 seconds
   override func run() {
     var terms = Dictionary<Double,Int>()
 //    var terms = Set<Double>()

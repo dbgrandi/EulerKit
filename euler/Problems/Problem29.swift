@@ -18,10 +18,12 @@ import Foundation
 
 class Problem29 : EulerProblem {
   override func run() {
-    var terms = Set<Double>()
+    var terms = Dictionary<Double,Int>()
+//    var terms = Set<Double>()
 
     for a in 2...100 {
       for b in 2...100 {
+        terms.
         terms.insert(pow(Double(a), Double(b)))
       }
     }

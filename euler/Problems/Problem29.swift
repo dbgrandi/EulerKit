@@ -22,8 +22,8 @@ class Problem29 : EulerProblem {
   // a straight Dictionary
   //
 
-  // problem finished in 0.00285303592681885 seconds
   override func run() {
+    // problem finished in 0.00285303592681885 seconds
 //    var terms = Dictionary<Double,Int>()
     var terms = Set<Double>()
 

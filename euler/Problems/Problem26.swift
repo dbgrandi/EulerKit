@@ -20,7 +20,14 @@
 //
 
 class Problem26Iter : EulerProblem {
+
+  func cycleLength(n:Int) -> Int {
+    var remainders = Dictionary<Int,Int>()
+    var rem = Array<Int>(count: <#Int#>, repeatedValue: <#Int#>)
+
+  }
+
   override func run() {
-    //
+
   }
 }

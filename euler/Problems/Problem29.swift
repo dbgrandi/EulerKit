@@ -16,6 +16,12 @@
 
 class Problem29 : EulerProblem {
   override func run() {
-    //
+    var terms = Set<Int>()
+
+    for a in 2...100 {
+      for b in 2...100 {
+        terms.insert()
+      }
+    }
   }
 }

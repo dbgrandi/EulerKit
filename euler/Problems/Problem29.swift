@@ -19,16 +19,16 @@ import Foundation
 class Problem29 : EulerProblem {
   override func run() {
     // problem finished in 0.00285303592681885 seconds
-//    var terms = Dictionary<Double,Int>()
+    var terms = Dictionary<Double,Int>()
 
     // problem finished in 0.151324987411499 seconds
-    var terms = Set<Double>()
+//    var terms = Set<Double>()
 
     for a in 2...100 {
       for b in 2...100 {
-//        terms[pow(Double(a), Double(b))] = 1
+        terms[pow(Double(a), Double(b))] = 1
 
-        terms.insert(pow(Double(a), Double(b)))
+//        terms.insert(pow(Double(a), Double(b)))
       }
     }
     

@@ -1,3 +1,7 @@
+//
+// Found http://natecook.com/blog/2014/08/creating-a-set-type-in-swift/
+// and took some ideas from Nate's impl.
+//
 struct Set<T:Hashable> {
   var items: [T: Bool]
 

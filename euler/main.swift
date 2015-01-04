@@ -1,3 +1,3 @@
 Stopwatch.measure("problem") {
-  Problem26Iter().run()
+  Problem29().run()
 }

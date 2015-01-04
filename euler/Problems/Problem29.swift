@@ -22,7 +22,7 @@ class Problem29 : EulerProblem {
 
     for a in 2...5 {
       for b in 2...5 {
-        terms.insert(pow(Double(a), Double(b)))
+        terms.insert(Int(pow(Double(a), Double(b))))
       }
     }
   }

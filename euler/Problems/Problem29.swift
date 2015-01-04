@@ -23,8 +23,8 @@ class Problem29 : EulerProblem {
 
     for a in 2...100 {
       for b in 2...100 {
-        terms.
-        terms.insert(pow(Double(a), Double(b)))
+        terms[pow(Double(a), Double(b))] = 1
+//        terms.insert(pow(Double(a), Double(b)))
       }
     }
     

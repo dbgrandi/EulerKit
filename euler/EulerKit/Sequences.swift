@@ -2,15 +2,6 @@
 // sequence tools
 //
 
-func lastElement<T>(s:SequenceType<T>) -> T? {
-  var g = s.generate()
-  var last:T? = g.next()
-  while let next = g.next() {
-    last = next
-  }
-  return last
-}
-
 //
 // An infinite sequence of integers starting from n
 //

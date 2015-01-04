@@ -3,7 +3,7 @@
 // and took some ideas from Nate's impl.
 //
 struct Set<T:Hashable> {
-  var items: [T: Bool]
+  private var items: [T: Bool]
 
   init() {
     items = [T: Bool]()

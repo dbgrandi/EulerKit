@@ -110,6 +110,7 @@ class Problem27 : EulerProblem {
     // return Array(limit).last!
   }
 
+  
   // NOTE: this crashes when run in Instruments, wtf?
   // Crash in instruments goes away if I use -Ounchecked for
   // the swift optimization.

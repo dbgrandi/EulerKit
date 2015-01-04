@@ -21,7 +21,7 @@ class Problem29 : EulerProblem {
     // problem finished in 0.00285303592681885 seconds
 //    var terms = Dictionary<Double,Bool>()
 
-    // problem finished in 0.151324987411499 seconds
+    // problem finished in 0.144563972949982 seconds
     var terms = Set<Double>()
 
     for a in 2...100 {

@@ -25,5 +25,7 @@ class Problem29 : EulerProblem {
         terms.insert(Int(pow(Double(a), Double(b))))
       }
     }
+
+    println("unique terms count = \(terms.count())")
   }
 }

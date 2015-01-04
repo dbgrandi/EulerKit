@@ -3,13 +3,13 @@
 //
 
 internal extension SequenceOf {
-  func last() ->  {
+  func last() -> T {
     var g = self.generate()
-    var n = nil
-    while let _ = g.next() {
-      n++
+    var last:T
+    while let next = g.next() {
+      last = next
     }
-    return n
+    return (last == nil) ? nil : last
   }
 }
 

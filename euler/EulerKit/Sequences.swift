@@ -4,7 +4,12 @@
 
 extension SequenceOf<T> {
   func last() -> T {
-    
+    var g = self.generate()
+    var n = nil
+    while let _ = g.next() {
+      n++
+    }
+    return n
   }
 }
 

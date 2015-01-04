@@ -2,8 +2,10 @@
 // sequence tools
 //
 
-extension SequenceOf {
-  func last() ->
+extension SequenceOf<T> {
+  func last() -> T {
+    
+  }
 }
 
 //

@@ -34,6 +34,8 @@
 		29D1B4571A47AA200002B363 /* BigNumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1B4561A47AA200002B363 /* BigNumTests.swift */; };
 		29E2E5041A599D7700124A29 /* Problem29.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2E5031A599D7700124A29 /* Problem29.swift */; };
 		29E2E5051A599D7700124A29 /* Problem29.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2E5031A599D7700124A29 /* Problem29.swift */; };
+		29E2E5071A59BB9B00124A29 /* Problem30.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2E5061A59BB9B00124A29 /* Problem30.swift */; };
+		29E2E5081A59BB9B00124A29 /* Problem30.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E2E5061A59BB9B00124A29 /* Problem30.swift */; };
 		550BF5B019CAA5EF00ECDF82 /* p022_names.txt in Resources */ = {isa = PBXBuildFile; fileRef = 558A364F19CA968C007740E2 /* p022_names.txt */; };
 		550BF5B319CB787400ECDF82 /* Problem23.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BF5B219CB787400ECDF82 /* Problem23.swift */; };
 		552558CA19AEB953004B958F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552558C919AEB953004B958F /* main.swift */; };
@@ -127,6 +129,7 @@
 		29D1B4541A47A91F0002B363 /* BigNum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BigNum.swift; path = EulerKit/BigNum.swift; sourceTree = "<group>"; };
 		29D1B4561A47AA200002B363 /* BigNumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigNumTests.swift; sourceTree = "<group>"; };
 		29E2E5031A599D7700124A29 /* Problem29.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem29.swift; sourceTree = "<group>"; };
+		29E2E5061A59BB9B00124A29 /* Problem30.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem30.swift; sourceTree = "<group>"; };
 		5073322D203495D289EB5811 /* Pods-eulerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eulerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eulerTests/Pods-eulerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		550BF5B219CB787400ECDF82 /* Problem23.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem23.swift; sourceTree = "<group>"; };
 		552558C619AEB953004B958F /* euler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = euler; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,6 +322,7 @@
 				293741BF1A57A85000CDF2DF /* Problem27.swift */,
 				29B7CDF71A579F2E00BBDCB1 /* Problem28.swift */,
 				29E2E5031A599D7700124A29 /* Problem29.swift */,
+				29E2E5061A59BB9B00124A29 /* Problem30.swift */,
 			);
 			path = Problems;
 			sourceTree = "<group>";
@@ -544,6 +548,7 @@
 				291948EC1A54D29C00DB9AAF /* GlobalHelpers.swift in Sources */,
 				55B894A219C016F400A7E598 /* Problem4.swift in Sources */,
 				29B7CDF11A54F47000BBDCB1 /* JKBigNum.swift in Sources */,
+				29E2E5071A59BB9B00124A29 /* Problem30.swift in Sources */,
 				55B894A919C016F400A7E598 /* Problem11.swift in Sources */,
 				55B894AE19C016F400A7E598 /* Problem16.swift in Sources */,
 				291948E31A54D04F00DB9AAF /* Sequences.swift in Sources */,
@@ -592,6 +597,7 @@
 				55B894B219C0173700A7E598 /* Problem4.swift in Sources */,
 				55B894B919C0173700A7E598 /* Problem11.swift in Sources */,
 				291948EA1A54D24100DB9AAF /* Int+EulerKit.swift in Sources */,
+				29E2E5081A59BB9B00124A29 /* Problem30.swift in Sources */,
 				29D1B4571A47AA200002B363 /* BigNumTests.swift in Sources */,
 				291948E11A54CFE200DB9AAF /* String+EulerKit.swift in Sources */,
 				55B894BE19C0173700A7E598 /* Problem16.swift in Sources */,

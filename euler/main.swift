@@ -1,5 +1,3 @@
-let stopwatch = Stopwatch(name:"problem")
-stopwatch.start()
-Problem26Iter().run()
-stopwatch.stop()
-stopwatch.stats()
+Stopwatch.measure("problem") {
+  Problem26Iter().run()
+}

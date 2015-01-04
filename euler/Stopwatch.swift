@@ -22,5 +22,4 @@ class Stopwatch {
     println("\(name) finished in \(runtime) seconds")
   }
 
-  func
 }

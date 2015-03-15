@@ -31,12 +31,17 @@ class EulerProblem {
         registerProblem(17, obj:Problem17())
         registerProblem(18, obj:Problem18())
         registerProblem(19, obj:Problem19())
-        registerProblem(20, obj:Problem20())
+        registerProblem(20, obj:Problem20BigNum())
         registerProblem(21, obj:Problem21())
         registerProblem(22, obj:Problem22())
         registerProblem(23, obj:Problem23())
         registerProblem(24, obj:Problem24())
-        registerProblem(25, obj:Problem25())
+        registerProblem(25, obj:Problem25BigNum())
+        registerProblem(26, obj:Problem26Iter())
+        registerProblem(27, obj:Problem27Iterative())
+        registerProblem(28, obj:Problem28())
+        registerProblem(29, obj:Problem29())
+        registerProblem(30, obj:Problem30())
       }
 
       class func registerProblem(num:Int, obj:EulerProblem) {

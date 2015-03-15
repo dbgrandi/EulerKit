@@ -21,16 +21,16 @@
 
 import Foundation
 
-class Problem23: EulerProblem {
-  func aliquotSum(n:Int) -> Int {
+final class Problem23: EulerProblem {
+  final func aliquotSum(n:Int) -> Int {
     return n.properDivisors().reduce(0,combine: +)
   }
   
-  func isAbundant(n:Int) -> Bool {
+  final func isAbundant(n:Int) -> Bool {
     return aliquotSum(n) > n
   }
   
-  func allAbundantNumbersBelow(n:Int) -> [Int] {
+  final func allAbundantNumbersBelow(n:Int) -> [Int] {
     return filter(2..<n) { self.isAbundant($0) }
   }
   
@@ -45,7 +45,7 @@ class Problem23: EulerProblem {
 //    return sums
 //  }
 
-  func allPairsAsSum(n:[Int], lessThan:Int) -> Set<Int> {
+  final func allPairsAsSum(n:[Int], lessThan:Int) -> Set<Int> {
     var sums = Set<Int>()
     for head in n {
       for tail in n {
@@ -56,7 +56,7 @@ class Problem23: EulerProblem {
     return sums
   }
 
-  override func run() {
+  final override func run() {
     let abundantNumbers = allAbundantNumbersBelow(28123)
     let sums = allPairsAsSum(abundantNumbers, lessThan: 28123)
     var sum = filter(1...28123, { !sums.contains($0) }).reduce(0,combine: +)

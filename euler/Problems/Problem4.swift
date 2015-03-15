@@ -5,13 +5,10 @@
 // Find the largest palindrome made from the product of two 3-digit numbers.
 //
 
-class Problem4: EulerProblem {
-  override func run() {
+final class Problem4: EulerProblem {
+  final override func run() {
     var palindromes:[Int] = []
     for i in 100...999 {
-      if i % 100 == 0 {
-        println(i)
-      }
       for j in 100...999 {
         if (i*j).isPalindrome() {
           palindromes.append(i*j)

@@ -21,14 +21,14 @@
 //
 // A Collatz Sequence, which eventually has an end
 //
-class CollatzSequence: SequenceType {
+final class CollatzSequence: SequenceType {
   let start:Int
   
   init(start:Int) {
     self.start = start
   }
   
-  func generate() -> GeneratorOf<Int> {
+  final func generate() -> GeneratorOf<Int> {
     var n = 0
     return GeneratorOf<Int> {
       if n == 0 {
@@ -48,8 +48,8 @@ class CollatzSequence: SequenceType {
   }
 }
 
-class Problem14: EulerProblem {
-  override func run() {
+final class Problem14: EulerProblem {
+  final override func run() {
     var max = (n:0, length:0)
     
     for i in 1...1_000_000 {

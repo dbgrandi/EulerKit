@@ -23,7 +23,7 @@ struct IntSequence : SequenceType
 //
 // An infinite sequence of Fibonacci numbers
 //
-class FibonacciSequence: SequenceType {
+struct FibonacciSequence: SequenceType {
   func generate() -> GeneratorOf<Int> {
     var last = 0
         var current = 1
@@ -41,7 +41,7 @@ class FibonacciSequence: SequenceType {
 // An infinite sequence of Prime numbers
 //
 
-class PrimeSequence: SequenceType {
+struct PrimeSequence: SequenceType {
     func generate() -> GeneratorOf<Int> {
         var currentPrime = 1
         var nextPrime = 1
@@ -60,7 +60,7 @@ class PrimeSequence: SequenceType {
 //
 // An infinite sequence of Triangle numbers
 //
-class TriangleNumberSequence: SequenceType {
+struct TriangleNumberSequence: SequenceType {
   func generate() -> GeneratorOf<Int> {
     var current = 0
     var count = 0
@@ -102,7 +102,7 @@ struct LimitSequence<S: SequenceType, T where T == S.Generator.Element>: Sequenc
     }
 }
 
-class MappingSequence<S: SequenceType, U,  T where T == S.Generator.Element>: SequenceType {
+struct MappingSequence<S: SequenceType, U,  T where T == S.Generator.Element>: SequenceType {
   let sequence: S
   let map: (T) -> U
 

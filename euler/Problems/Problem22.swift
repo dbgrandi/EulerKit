@@ -43,12 +43,12 @@ class Problem22: EulerProblem {
   let letters = ["","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
   func alphabeticalValue(s:String) -> Int {
-    return Array(s).map({ find(self.letters, (String($0)))! }).reduce(0,+)
+    return Array(s).map({ find(self.letters, (String($0)))! }).reduce(0,combine: +)
   }
 
   override func run() {
     let names = loadNames()
-    let total = (0..<names.count).map({ ($0+1) * self.alphabeticalValue(names[$0]) }).reduce(0,+)
+    let total = (0..<names.count).map({ ($0+1) * self.alphabeticalValue(names[$0]) }).reduce(0,combine: +)
 
     println("total = \(total)")
   }

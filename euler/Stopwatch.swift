@@ -27,7 +27,8 @@ class Stopwatch {
   }
   
   func stats() {
-    println("\(name) finished in \(runtime) seconds")
+//    println("\(name) finished in \(runtime) seconds")
+    println(NSString(format:"%@ finished in %.5f seconds", name, runtime))
   }
 
 }

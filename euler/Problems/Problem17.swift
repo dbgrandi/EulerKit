@@ -91,6 +91,6 @@ class Problem17: EulerProblem {
   }
   
   func lengthAfterCleaning(s:String) -> Int {
-    return countElements(Array(s).filter({$0 != " " && $0 != "-"}))
+    return count(Array(s).filter({$0 != " " && $0 != "-"}))
   }
 }

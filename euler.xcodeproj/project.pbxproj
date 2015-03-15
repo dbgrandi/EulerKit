@@ -13,8 +13,6 @@
 		291948E11A54CFE200DB9AAF /* String+EulerKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948DF1A54CFDA00DB9AAF /* String+EulerKit.swift */; };
 		291948E31A54D04F00DB9AAF /* Sequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948E21A54D04F00DB9AAF /* Sequences.swift */; };
 		291948E41A54D04F00DB9AAF /* Sequences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948E21A54D04F00DB9AAF /* Sequences.swift */; };
-		291948E61A54D0B800DB9AAF /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948E51A54D0B800DB9AAF /* Set.swift */; };
-		291948E71A54D0B800DB9AAF /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948E51A54D0B800DB9AAF /* Set.swift */; };
 		291948E91A54D24100DB9AAF /* Int+EulerKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948E81A54D24100DB9AAF /* Int+EulerKit.swift */; };
 		291948EA1A54D24100DB9AAF /* Int+EulerKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948E81A54D24100DB9AAF /* Int+EulerKit.swift */; };
 		291948EC1A54D29C00DB9AAF /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948EB1A54D29C00DB9AAF /* GlobalHelpers.swift */; };
@@ -115,7 +113,6 @@
 		291948DC1A54CFA500DB9AAF /* PrimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeTests.swift; sourceTree = "<group>"; };
 		291948DF1A54CFDA00DB9AAF /* String+EulerKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+EulerKit.swift"; path = "EulerKit/String+EulerKit.swift"; sourceTree = "<group>"; };
 		291948E21A54D04F00DB9AAF /* Sequences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sequences.swift; path = EulerKit/Sequences.swift; sourceTree = "<group>"; };
-		291948E51A54D0B800DB9AAF /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Set.swift; path = EulerKit/Set.swift; sourceTree = "<group>"; };
 		291948E81A54D24100DB9AAF /* Int+EulerKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+EulerKit.swift"; sourceTree = "<group>"; };
 		291948EB1A54D29C00DB9AAF /* GlobalHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		291948EE1A54DD2B00DB9AAF /* StringNum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringNum.swift; sourceTree = "<group>"; };
@@ -203,7 +200,6 @@
 				29D1B4541A47A91F0002B363 /* BigNum.swift */,
 				291948E81A54D24100DB9AAF /* Int+EulerKit.swift */,
 				291948E21A54D04F00DB9AAF /* Sequences.swift */,
-				291948E51A54D0B800DB9AAF /* Set.swift */,
 				291948DF1A54CFDA00DB9AAF /* String+EulerKit.swift */,
 				291948EB1A54D29C00DB9AAF /* GlobalHelpers.swift */,
 				291948EE1A54DD2B00DB9AAF /* StringNum.swift */,
@@ -351,6 +347,7 @@
 				552558C319AEB953004B958F /* Frameworks */,
 				552558C419AEB953004B958F /* CopyFiles */,
 				C9D803CBA4E192AB2F202EC1 /* Copy Pods Resources */,
+				29D3BC711AB5EFE300931E66 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -451,6 +448,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eulerTests/Pods-eulerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		29D3BC711AB5EFE300931E66 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp ${BUILT_PRODUCTS_DIR}/euler ${SOURCE_ROOT}/bin/euler\necho \"euler copied to ${SOURCE_ROOT}/bin/euler\"";
+		};
 		6C559B4FCD5F55DE1BCB2A25 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -537,7 +547,6 @@
 				55B894A119C016F400A7E598 /* Problem3.swift in Sources */,
 				558DE42A19B687CF0088B812 /* Euler.swift in Sources */,
 				558C9EF919C1460700D8E04D /* Problem17.swift in Sources */,
-				291948E61A54D0B800DB9AAF /* Set.swift in Sources */,
 				550BF5B319CB787400ECDF82 /* Problem23.swift in Sources */,
 				554B6F7B19C5532F00421F5F /* Problem19.swift in Sources */,
 				29E2E5041A599D7700124A29 /* Problem29.swift in Sources */,
@@ -577,7 +586,6 @@
 				55B894B719C0173700A7E598 /* Problem9.swift in Sources */,
 				558C9EFA19C1460700D8E04D /* Problem17.swift in Sources */,
 				558DE46319B6A3CB0088B812 /* EulerTests.swift in Sources */,
-				291948E71A54D0B800DB9AAF /* Set.swift in Sources */,
 				55B894C019C0174A00A7E598 /* Problem16Tests.swift in Sources */,
 				291948F01A54DD2B00DB9AAF /* StringNum.swift in Sources */,
 				55B894B019C0173700A7E598 /* Problem2.swift in Sources */,

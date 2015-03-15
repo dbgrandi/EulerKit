@@ -16,7 +16,7 @@ class Problem21: EulerProblem {
   func findSums() -> Dictionary<Int,Int> {
     var sums = Dictionary<Int,Int>()
     for i in 2..<10000 {
-      sums[i] = i.properDivisors().reduce(0,+)
+      sums[i] = i.properDivisors().reduce(0,combine: +)
     }
     return sums
   }
@@ -32,8 +32,8 @@ class Problem21: EulerProblem {
         amicableNumbers.insert(value)
       }
     }
-    
-    let total = amicableNumbers.reduce(0,+)
+
+    let total = Array(amicableNumbers).reduce(0, combine: +)
     println("total = \(total)")
   }
 }

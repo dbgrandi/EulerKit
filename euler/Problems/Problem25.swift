@@ -50,7 +50,7 @@ class Problem25BigNum: EulerProblem {
     // problem finished in 4.03327995538712 seconds
     //
 
-    let limitSeq = LimitSequence(sequence: fibSeq) { countElements($1.stringValue().utf16) < 1000 }
+    let limitSeq = LimitSequence(sequence: fibSeq) { count($1.stringValue().utf16) < 1000 }
     let items = Array(limitSeq)
     // our fib sequence spits out the 3rd value the first time it is pumped, so we add 2
     println("fib(\(items.count+2)) is longer than 1000 digits")
@@ -75,7 +75,7 @@ class Problem25BigNumWithByteCount: EulerProblem {
     if num.countBytes() < thousandDigitByteSize {
       return true
     }
-    return countElements(num.stringValue().utf16) < 1000
+    return count(num.stringValue().utf16) < 1000
   }
 
   // problem finished in 0.0535169839859009 seconds
@@ -94,7 +94,7 @@ class Problem25BigNumWithByteCountAndGenerator: EulerProblem {
     if num.countBytes() < thousandDigitByteSize {
       return true
     }
-    return countElements(num.stringValue().utf16) < 1000
+    return count(num.stringValue().utf16) < 1000
   }
 
   // problem finished in 0.0250449776649475 seconds
@@ -125,7 +125,7 @@ class Problem25BigNumIterative: EulerProblem {
       i += 1
       n1 = n2
       n2 = next_number
-    } while countElements(next_number.stringValue().unicodeScalars) < 1000
+    } while count(next_number.stringValue().unicodeScalars) < 1000
 
     println("fib(\(i)) is longer than 1000 digits")
   }
@@ -138,7 +138,7 @@ class Problem25BigNumIterativeWithByteCount: EulerProblem {
     if num.countBytes() < thousandDigitByteSize {
       return true
     }
-    return countElements(num.stringValue().utf16) < 1000
+    return count(num.stringValue().utf16) < 1000
   }
 
   // problem finished in 0.0239300131797791 seconds

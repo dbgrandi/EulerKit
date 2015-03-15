@@ -57,7 +57,7 @@ class Problem16BigNum : EulerProblem {
     var two = JKBigInteger(string:"2")
     var accumulator = JKBigInteger(string:"2")
     for i in 1..<1000 {
-      accumulator = accumulator.multiply(two) as JKBigInteger
+      accumulator = accumulator.multiply(two) as! JKBigInteger
     }
     let sum = sumOfDigits(accumulator.stringValue())
     println("sum of digits of 2^1000 = \(sum)")

@@ -1,5 +1,5 @@
 extension String {
-  var length: Int { return countElements(self) }
+  var length: Int { return count(self) }
 
   func repeat(i:Int) -> String {
     var result = ""

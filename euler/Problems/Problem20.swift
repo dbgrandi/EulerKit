@@ -8,7 +8,7 @@
 //
 
 func sumOfDigits(s:String) -> Int {
-  return map(0..<s.length, { s[$0].toInt()! }).reduce(0,+)
+  return map(0..<s.length, { s[$0].toInt()! }).reduce(0,combine: +)
 }
 
 class Problem20: EulerProblem {
@@ -26,7 +26,7 @@ class Problem20BigNum: EulerProblem {
   override func run() {
     var accumulator = JKBigInteger(string:"1")
     for i in 2...100 {
-      accumulator = accumulator.multiply(JKBigInteger(unsignedLong:UInt(i))) as JKBigInteger
+      accumulator = accumulator.multiply(JKBigInteger(unsignedLong:UInt(i))) as! JKBigInteger
     }
     println("10! = \(accumulator)")
     println("sum = \(sumOfDigits(accumulator.stringValue()))")

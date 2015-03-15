@@ -1,0 +1,100 @@
+Running all problems
+Running problem 12...
+problem finished in 0.00006 seconds
+Running problem 17...
+sum of length = 21124
+problem finished in 0.04042 seconds
+Running problem 10...
+sum = 142913828922
+problem finished in 1.55651 seconds
+Running problem 14...
+n = 837799
+length = 525
+problem finished in 0.59816 seconds
+Running problem 20...
+10! = 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
+sum = 648
+problem finished in 1.35797 seconds
+Running problem 23...
+sum = 4179871
+problem finished in 2.32097 seconds
+Running problem 25...
+fib(4782) is longer than 1000 digits
+problem finished in 7.11048 seconds
+Running problem 5...
+232792560
+problem finished in 2.97617 seconds
+Running problem 7...
+104729
+problem finished in 0.01791 seconds
+Running problem 24...
+perms[999999] = 2783915460
+problem finished in 0.00001 seconds
+Running problem 3...
+Max prime factor of 600851475143 is 1
+problem finished in 0.00063 seconds
+Running problem 11...
+maxHorizontal = 51267216
+maxVertical = 48477312
+maxIncDiagonal = 40304286
+maxDecDiagonal = 70600674
+maxProduct = 70600674
+problem finished in 0.00152 seconds
+Running problem 13...
+5537376230
+problem finished in 0.05480 seconds
+Running problem 16...
+1366
+problem finished in 0.26763 seconds
+Running problem 19...
+171 months started on a Sunday in the 20th century
+problem finished in 0.00010 seconds
+Running problem 22...
+total = 0
+problem finished in 0.00011 seconds
+Running problem 2...
+sum = 4613732
+problem finished in 0.00002 seconds
+Running problem 4...
+100
+200
+300
+400
+500
+600
+700
+800
+900
+number of palindromes = 2470
+max palindrome = 906609
+problem finished in 3.50341 seconds
+Running problem 9...
+Triple found: a = 200, b = 375, c = 425
+Product = 31875000
+problem finished in 1.10777 seconds
+Running problem 18...
+Max path = 1074
+problem finished in 0.00001 seconds
+Running problem 6...
+25164150
+problem finished in 0.00000 seconds
+Running problem 21...
+found pair: 6232, 6368
+found pair: 1210, 1184
+found pair: 2924, 2620
+found pair: 5564, 5020
+found pair: 284, 220
+found pair: 2620, 2924
+found pair: 6368, 6232
+found pair: 1184, 1210
+found pair: 220, 284
+found pair: 5020, 5564
+total = 31626
+problem finished in 0.22129 seconds
+Running problem 1...
+Sum = 233168
+problem finished in 0.00022 seconds
+Running problem 8...
+maxProduct = 23514624000
+problem finished in 0.00048 seconds
+

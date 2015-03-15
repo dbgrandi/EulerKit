@@ -23,7 +23,7 @@ import Foundation
 
 class Problem23: EulerProblem {
   func aliquotSum(n:Int) -> Int {
-    return n.properDivisors().reduce(0,+)
+    return n.properDivisors().reduce(0,combine: +)
   }
   
   func isAbundant(n:Int) -> Bool {
@@ -34,12 +34,23 @@ class Problem23: EulerProblem {
     return filter(2..<n) { self.isAbundant($0) }
   }
   
-  func allPairsAsSum(n:[Int], lessThan:Int) -> NSMutableSet {
-    var sums = NSMutableSet()
+//  func allPairsAsSum(n:[Int], lessThan:Int) -> NSMutableSet {
+//    var sums = NSMutableSet()
+//    for head in n {
+//      for tail in n {
+//        if head + tail > lessThan { break; }
+//        sums.addObject(head+tail)
+//      }
+//    }
+//    return sums
+//  }
+
+  func allPairsAsSum(n:[Int], lessThan:Int) -> Set<Int> {
+    var sums = Set<Int>()
     for head in n {
       for tail in n {
         if head + tail > lessThan { break; }
-        sums.addObject(head+tail)
+          sums.insert(head+tail)
       }
     }
     return sums
@@ -48,7 +59,7 @@ class Problem23: EulerProblem {
   override func run() {
     let abundantNumbers = allAbundantNumbersBelow(28123)
     let sums = allPairsAsSum(abundantNumbers, lessThan: 28123)
-    var sum = filter(1...28123, { !sums.containsObject($0) }).reduce(0,+)
+    var sum = filter(1...28123, { !sums.contains($0) }).reduce(0,combine: +)
     println("sum = \(sum)")
   }
 }

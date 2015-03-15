@@ -142,7 +142,7 @@ class Problem13: EulerProblem {
 }
 
 func addBigNum(lhs:JKBigInteger, rhs:JKBigInteger) -> JKBigInteger {
-  return lhs.add(rhs) as JKBigInteger
+  return lhs.add(rhs) as! JKBigInteger
 }
 
 class Problem13BigNum: EulerProblem {

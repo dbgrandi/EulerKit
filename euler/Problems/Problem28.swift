@@ -9,7 +9,7 @@ class Problem28Iterative : EulerProblem {
         nums.append(last)
       }
     }
-    let sum = nums.reduce(0,+)
+    let sum = nums.reduce(0,combine: +)
     println("sum = \(sum)")
   }
 }
@@ -28,8 +28,8 @@ class Problem28 : EulerProblem {
     let s = stride(from:1, through:999, by:2)
 
     // assume the 1x1 core
-    let diagonals = map(s,findCorners).reduce([1],+)
-    let sum = diagonals.reduce(0,+)
+    let diagonals = map(s,findCorners).reduce([1],combine: +)
+    let sum = diagonals.reduce(0,combine: +)
     println("sum = \(sum)")
   }
 }

@@ -34,7 +34,7 @@ enum Weekday:Int {
 }
 
 func daysInYear(year:Int) -> Int {
-  return Month.allValues.map({ $0.length(year) }).reduce(0,+)
+  return Month.allValues.map({ $0.length(year) }).reduce(0,combine: +)
 }
 
 //

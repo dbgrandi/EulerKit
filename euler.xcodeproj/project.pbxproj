@@ -19,6 +19,8 @@
 		291948ED1A54D29C00DB9AAF /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948EB1A54D29C00DB9AAF /* GlobalHelpers.swift */; };
 		291948EF1A54DD2B00DB9AAF /* StringNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948EE1A54DD2B00DB9AAF /* StringNum.swift */; };
 		291948F01A54DD2B00DB9AAF /* StringNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948EE1A54DD2B00DB9AAF /* StringNum.swift */; };
+		2924B3681ABDC0AF00600B1E /* NumExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2924B3671ABDC0AF00600B1E /* NumExtensionTest.swift */; };
+		2924B36A1ABDCCA200600B1E /* Problem31.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2924B3691ABDCCA200600B1E /* Problem31.swift */; };
 		293741C01A57A85000CDF2DF /* Problem27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741BF1A57A85000CDF2DF /* Problem27.swift */; };
 		293741C11A57A85000CDF2DF /* Problem27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741BF1A57A85000CDF2DF /* Problem27.swift */; };
 		293741C31A589CA700CDF2DF /* Problem26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741C21A589CA700CDF2DF /* Problem26.swift */; };
@@ -116,6 +118,8 @@
 		291948E81A54D24100DB9AAF /* Int+EulerKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+EulerKit.swift"; sourceTree = "<group>"; };
 		291948EB1A54D29C00DB9AAF /* GlobalHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		291948EE1A54DD2B00DB9AAF /* StringNum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringNum.swift; sourceTree = "<group>"; };
+		2924B3671ABDC0AF00600B1E /* NumExtensionTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumExtensionTest.swift; sourceTree = "<group>"; };
+		2924B3691ABDCCA200600B1E /* Problem31.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem31.swift; sourceTree = "<group>"; };
 		293741BF1A57A85000CDF2DF /* Problem27.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem27.swift; sourceTree = "<group>"; };
 		293741C21A589CA700CDF2DF /* Problem26.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem26.swift; sourceTree = "<group>"; };
 		29B7CDEF1A54F00600BBDCB1 /* euler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "euler-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 				55B894BF19C0174A00A7E598 /* Problem16Tests.swift */,
 				55AEC16919C22A5300402275 /* Problem17Tests.swift */,
 				558DE46019B6A3CB0088B812 /* Supporting Files */,
+				2924B3671ABDC0AF00600B1E /* NumExtensionTest.swift */,
 			);
 			path = eulerTests;
 			sourceTree = "<group>";
@@ -319,6 +324,7 @@
 				29B7CDF71A579F2E00BBDCB1 /* Problem28.swift */,
 				29E2E5031A599D7700124A29 /* Problem29.swift */,
 				29E2E5061A59BB9B00124A29 /* Problem30.swift */,
+				2924B3691ABDCCA200600B1E /* Problem31.swift */,
 			);
 			path = Problems;
 			sourceTree = "<group>";
@@ -567,6 +573,7 @@
 				55B8949F19C016F400A7E598 /* Problem1.swift in Sources */,
 				55B894A319C016F400A7E598 /* Problem5.swift in Sources */,
 				5567C01C19CC011B0057B113 /* Problem24.swift in Sources */,
+				2924B36A1ABDCCA200600B1E /* Problem31.swift in Sources */,
 				55B894AB19C016F400A7E598 /* Problem13.swift in Sources */,
 				554B6F7819C5532000421F5F /* Problem20.swift in Sources */,
 			);
@@ -590,6 +597,7 @@
 				291948F01A54DD2B00DB9AAF /* StringNum.swift in Sources */,
 				55B894B019C0173700A7E598 /* Problem2.swift in Sources */,
 				558DE47819B6A6F00088B812 /* PalindromeTest.swift in Sources */,
+				2924B3681ABDC0AF00600B1E /* NumExtensionTest.swift in Sources */,
 				554B6F7919C5532000421F5F /* Problem20.swift in Sources */,
 				558A365319CA96BF007740E2 /* Problem22.swift in Sources */,
 				554B6F7C19C5532F00421F5F /* Problem19.swift in Sources */,
@@ -656,7 +664,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -692,7 +700,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};

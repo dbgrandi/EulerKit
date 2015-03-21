@@ -121,5 +121,23 @@ extension Int {
     }
     return true
   }
-  
+
+  func getDigits() -> [Int] {
+    // if the number is less than 10, just return it in an array
+    if self < 10 {
+      return [ self ]
+    }
+
+    var digits = [Int]()
+    var tmpSelf = Int(self)
+
+    while tmpSelf > 9 {
+      digits.append(tmpSelf % 10)
+      tmpSelf = tmpSelf / 10
+    }
+    digits.append(tmpSelf % 10)
+
+    return digits.reverse()
+  }
+
 }

@@ -9,7 +9,7 @@
 #ifndef euler_euler_Bridging_Header_h
 #define euler_euler_Bridging_Header_h
 
-#import "JKBigInteger.h"
+#import <JKBigInteger/JKBigInteger.h>
 #include <openssl/bn.h>
 
 #endif

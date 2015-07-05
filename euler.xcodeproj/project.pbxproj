@@ -24,6 +24,7 @@
 		293741C11A57A85000CDF2DF /* Problem27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741BF1A57A85000CDF2DF /* Problem27.swift */; };
 		293741C31A589CA700CDF2DF /* Problem26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741C21A589CA700CDF2DF /* Problem26.swift */; };
 		293741C41A589CA700CDF2DF /* Problem26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741C21A589CA700CDF2DF /* Problem26.swift */; };
+		29882E751B49F7E800FE960B /* Problem32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29882E741B49F7E800FE960B /* Problem32.swift */; };
 		299FD61C1ABE1005009804D7 /* BigNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1B4541A47A91F0002B363 /* BigNum.swift */; };
 		299FD61D1ABE100B009804D7 /* JKBigNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7CDF01A54F47000BBDCB1 /* JKBigNum.swift */; };
 		299FD61E1ABE1023009804D7 /* Problem23.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BF5B219CB787400ECDF82 /* Problem23.swift */; };
@@ -125,6 +126,7 @@
 		2924B3691ABDCCA200600B1E /* Problem31.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem31.swift; sourceTree = "<group>"; };
 		293741BF1A57A85000CDF2DF /* Problem27.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem27.swift; sourceTree = "<group>"; };
 		293741C21A589CA700CDF2DF /* Problem26.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem26.swift; sourceTree = "<group>"; };
+		29882E741B49F7E800FE960B /* Problem32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem32.swift; sourceTree = "<group>"; };
 		29B7CDEF1A54F00600BBDCB1 /* euler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "euler-Bridging-Header.h"; sourceTree = "<group>"; };
 		29B7CDF01A54F47000BBDCB1 /* JKBigNum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKBigNum.swift; sourceTree = "<group>"; };
 		29B7CDF21A55E2D900BBDCB1 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
@@ -326,6 +328,7 @@
 				29E2E5031A599D7700124A29 /* Problem29.swift */,
 				29E2E5061A59BB9B00124A29 /* Problem30.swift */,
 				2924B3691ABDCCA200600B1E /* Problem31.swift */,
+				29882E741B49F7E800FE960B /* Problem32.swift */,
 			);
 			path = Problems;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				55B894A919C016F400A7E598 /* Problem11.swift in Sources */,
 				55B894AE19C016F400A7E598 /* Problem16.swift in Sources */,
 				291948E31A54D04F00DB9AAF /* Sequences.swift in Sources */,
+				29882E751B49F7E800FE960B /* Problem32.swift in Sources */,
 				55B894AC19C016F400A7E598 /* Problem14.swift in Sources */,
 				55C643DE19CCB522000FD9E1 /* Problem25.swift in Sources */,
 				291948EF1A54DD2B00DB9AAF /* StringNum.swift in Sources */,
@@ -718,7 +722,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3E496690520F962E1DF87E6 /* Pods.debug.xcconfig */;
 			buildSettings = {
-				GCC_OPTIMIZATION_LEVEL = s;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./euler/euler-Bridging-Header.h";
 			};
@@ -728,10 +731,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 658A5A94FFCD657F9190220C /* Pods.release.xcconfig */;
 			buildSettings = {
-				GCC_OPTIMIZATION_LEVEL = s;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./euler/euler-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Ounchecked";
 			};
 			name = Release;
 		};

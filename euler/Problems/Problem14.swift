@@ -31,19 +31,13 @@ final class CollatzSequence: SequenceType {
   final func generate() -> AnyGenerator<Int> {
     var n = 0
     return anyGenerator {
-      if n == 0 {
-        n = self.start
+        switch(n) {
+        case 0: n = self.start
+        case 1: return .None
+        case _ where n.isEven(): n = n/2
+        default: n = 3*n+1
+        }
         return n
-      }
-      if n == 1 {
-        return .None
-      }
-      if n.isEven() {
-        n = n/2
-      } else {
-        n = 3*n+1
-      }
-      return n
     }
   }
 }

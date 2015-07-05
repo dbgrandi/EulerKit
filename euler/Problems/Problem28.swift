@@ -28,7 +28,7 @@ class Problem28 : EulerProblem {
     let s = stride(from:1, through:999, by:2)
 
     // assume the 1x1 core
-    let diagonals = map(s,findCorners).reduce([1],combine: +)
+    let diagonals = s.map(findCorners).reduce([1],combine: +)
     let sum = diagonals.reduce(0,combine: +)
     print("sum = \(sum)")
   }

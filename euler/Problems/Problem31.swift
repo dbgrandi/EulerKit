@@ -14,58 +14,31 @@
 import Foundation
 
 final class Problem31 : EulerProblem {
-  let allCoins = [200, 100, 50, 20, 10, 5, 2, 1]
+  let allCoins = [1, 2, 5, 10, 20, 50, 100, 200]
 
-  final func findArray(arrays:[[Int]], sub:[Int]) -> Bool {
-    for a in arrays {
-      if a == sub {
-        return true
-      }
-    }
-    return false
-  }
+    func count(coins:[Int], total:Int) -> Int {
+        // table[i] will be storing the number of solutions for
+        // value i. We need n+1 rows as the table is consturcted
+        // in bottom up manner using the base case (n = 0)
 
-  // a solution set is modeled as
-  // [Int] where a[x] = the number of coins at position x
-  // x is betweeen 0...7 (for 1,2,5,10,20,50,100,200 p respectively)
+        // Initialize all table values as 0
+        var solutions = Array<Int>(count: coins.count+1, repeatedValue: 0)
 
-  final func getCombinationsForTotal(total:Int, withCoins:[Int]) -> [[Int]] {
-    var combinations = [[Int]]()
-    if total == 0 || withCoins.count == 0 {
-      return combinations
-    }
+        solutions[0] = 1
 
-    var nextCoins = Array(withCoins)
-
-    for coin in withCoins {
-      if coin == total {
-        combinations.append([coin])
-      } else if coin < total {
-        let max = Int(floor(Double(total/coin)))
-        for num in stride(from:max, through:1, by:-1) {
-          let root = [Int](count: num, repeatedValue: coin)
-          for sub in getCombinationsForTotal(total-(coin*num), withCoins:nextCoins) {
-            let newComb = (root + sub) // .sorted({$0 > $1})
-            if !findArray(combinations, sub:newComb) {
-              combinations.append(newComb)
+        for i in coins {
+            for j in i...total {
+                solutions[j] += solutions[j-i]
             }
-          }
         }
-        nextCoins = nextCoins.filter { $0 != coin }
-      }
-    }
 
-    return combinations
-  }
+        return solutions[total]
+    }
 
   final override func run() {
-    let total = 20
-    let allCombinations = getCombinationsForTotal(total, withCoins:allCoins)
+    let total = 200
+    let allCombinations = count(allCoins, total:total)
 
-    for combo in allCombinations {
-      print(combo)
-    }
-
-    print("number of combos for \(total): \(allCombinations.count)")
+    print("number of combos for \(total): \(allCombinations)")
   }
 }

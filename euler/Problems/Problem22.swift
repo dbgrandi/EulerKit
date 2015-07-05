@@ -30,7 +30,10 @@ class Problem22: EulerProblem {
     // TODO: Of course, you should set this to a path on your machine, or file
     // a PR to allow passing in args to problems. :)
     //
-    let path = "/Users/dave/projects/watched/dbgrandi/swiftEuler/euler/Assets/p022_names.txt"
+    let path = "/Users/dbgrandi/watched/dbgrandi/swiftEuler/euler/Assets/p022_names.txt"
+    if !NSFileManager.defaultManager().fileExistsAtPath(path) {
+        fatalError("Names file does not exist at \(path)")
+    }
     let text:NSString = try! String(contentsOfFile:path, encoding: NSUTF8StringEncoding)
 
     let noQuotes = text.stringByReplacingOccurrencesOfString("\"", withString: "")
@@ -43,7 +46,7 @@ class Problem22: EulerProblem {
   let letters = ["","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
   func alphabeticalValue(s:String) -> Int {
-    return Array(s.characters).map({ self.letters.indexOf((String($0)).characters)! }).reduce(0,combine: +)
+    return Array(s.characters).map({ self.letters.indexOf((String($0)).uppercaseString)! }).reduce(0,combine: +)
   }
 
   override func run() {

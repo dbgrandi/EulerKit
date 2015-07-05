@@ -11,5 +11,5 @@ func invertDict<U, T>(dict:Dictionary<U,T>) -> Dictionary<T,U> {
 }
 
 func binaryCoefficient(n:Int, k:Int) -> Int {
-  return reduce(0..<k, 1) { $0 * (n-$1)/($1+1) }
+  return (0..<k).reduce(1) { $0 * (n-$1)/($1+1) }
 }

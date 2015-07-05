@@ -32,6 +32,6 @@ class Problem29 : EulerProblem {
       }
     }
     
-    println("unique terms count = \(terms.count)")
+    print("unique terms count = \(terms.count)")
   }
 }

@@ -6,7 +6,7 @@
 
 class Problem16: EulerProblem {
   override func run() {
-    println(powerDigitSum(1000))
+    print(powerDigitSum(1000))
   }
   
   func doubleIntegerString(s:String) -> String {
@@ -14,10 +14,10 @@ class Problem16: EulerProblem {
     var result = [Int]()
     var carry = 0
     
-    var sArray = Array(s)
+    var sArray = Array(s.characters)
     for i in stride(from:length, through:0, by: -1) {
       var sum = carry
-      if let digit = String(sArray[i]).toInt() {
+      if let digit = Int(String(sArray[i])) {
         sum += digit + digit
       }
       
@@ -34,7 +34,7 @@ class Problem16: EulerProblem {
     }
     
     var resultString:String = ""
-    for i in result.reverse() {
+    for i in Array(result.reverse()) {
       resultString += String(i)
     }
     
@@ -54,12 +54,12 @@ class Problem16: EulerProblem {
 
 class Problem16BigNum : EulerProblem {
   override func run() {
-    var two = JKBigInteger(string:"2")
+    let two = JKBigInteger(string:"2")
     var accumulator = JKBigInteger(string:"2")
-    for i in 1..<1000 {
+    for _ in 1..<1000 {
       accumulator = accumulator.multiply(two) as! JKBigInteger
     }
     let sum = sumOfDigits(accumulator.stringValue())
-    println("sum of digits of 2^1000 = \(sum)")
+    print("sum of digits of 2^1000 = \(sum)")
   }
 }

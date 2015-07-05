@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 David Grandinetti. All rights reserved.
 //
 
-import Foundation
-
 private var eulerProblems = Dictionary<Int, EulerProblem>()
 
 class EulerProblem {
@@ -42,6 +40,7 @@ class EulerProblem {
         registerProblem(28, obj:Problem28())
         registerProblem(29, obj:Problem29())
         registerProblem(30, obj:Problem30())
+        registerProblem(31, obj:Problem31())
       }
 
       class func registerProblem(num:Int, obj:EulerProblem) {
@@ -49,7 +48,7 @@ class EulerProblem {
       }
 
     func run() {
-        println("OVERRIDE ME")
+        print("OVERRIDE ME")
     }
 
     class func problems() -> Dictionary<Int, EulerProblem> {

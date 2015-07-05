@@ -72,7 +72,7 @@ class Problem19: EulerProblem {
       firstDayOfYear = firstDayOfYear.addDays(daysInYear(year))
     }
     
-    println("\(total) months started on a Sunday in the 20th century")
+    print("\(total) months started on a Sunday in the 20th century")
   }
 }
 

@@ -53,8 +53,8 @@ class Problem26Iter : EulerProblem {
       }
     }
 
-    println("maxLength = \(maxLength)")
-    println("maxDenominator = \(maxDenominator)")
+    print("maxLength = \(maxLength)")
+    print("maxDenominator = \(maxDenominator)")
   }
 
 }

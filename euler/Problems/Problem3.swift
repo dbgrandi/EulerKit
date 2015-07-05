@@ -11,6 +11,6 @@ class Problem3: EulerProblem {
     
     let factors = problem3num.primeFactors()
     
-    println("Max prime factor of \(problem3num) is \(factors.last!)")
+    print("Max prime factor of \(problem3num) is \(factors.last!)")
   }
 }

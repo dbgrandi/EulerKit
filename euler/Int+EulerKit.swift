@@ -42,7 +42,7 @@ extension Int {
   }
 
   func properDivisors() -> [Int] {
-    return filter(1...self/2, { self % $0 == 0 })
+    return (1...self/2).filter({ self % $0 == 0 })
   }
 
   func isPrime() -> Bool {
@@ -58,7 +58,7 @@ extension Int {
       return false
     }
 
-    if let cachedVal = primeCache[self] {
+    if let _ = primeCache[self] {
       return true
     }
 
@@ -83,18 +83,18 @@ extension Int {
     }
     var current = self
     var factors = Dictionary<Int,Int>()
-    var try = 2
+    var attempt = 2
 
-    while try <= current {
-      if try.isPrime() && (current % try == 0) {
-        current = current / try
-        if let f = factors[try] {
-          factors[try] = f+1
+    while attempt <= current {
+      if attempt.isPrime() && (current % attempt == 0) {
+        current = current / attempt
+        if let f = factors[attempt] {
+          factors[attempt] = f+1
         } else {
-          factors[try] = 1
+          factors[attempt] = 1
         }
       } else {
-        try++
+        attempt++
       }
     }
 
@@ -109,7 +109,7 @@ extension Int {
   }
 
   func isPalindrome() -> Bool {
-    let digits = Array(String(self))
+    let digits = Array(String(self).characters)
     var first = 0
     var last = digits.count-1
     while first < last {
@@ -137,7 +137,7 @@ extension Int {
     }
     digits.append(tmpSelf % 10)
 
-    return digits.reverse()
+    return Array(digits.reverse())
   }
 
 }

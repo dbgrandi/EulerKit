@@ -117,7 +117,7 @@ class Problem13: EulerProblem {
     for i in stride(from:length, through:0, by: -1) {
       var sum = carry
       for num in problem13nums {
-        if let digit = num[i].toInt() {
+        if let digit = Int(num[i]) {
           sum += digit
         }
       }
@@ -134,10 +134,10 @@ class Problem13: EulerProblem {
     }
     
     for i in 0...9 {
-      print(result.reverse()[i])
+      print(Array(result.reverse())[i], appendNewline: false)
     }
     
-    println()
+    print("")
   }
 }
 
@@ -147,8 +147,8 @@ func addBigNum(lhs:JKBigInteger, rhs:JKBigInteger) -> JKBigInteger {
 
 class Problem13BigNum: EulerProblem {
     override func run() {
-      let bignums = map(problem13nums) { JKBigInteger(string:$0)! }
-      let sum = reduce(bignums, JKBigInteger(string:"0"), addBigNum)
-      println("accumulator = \(sum)")
+      let bignums = problem13nums.map { JKBigInteger(string:$0)! }
+      let sum = bignums.reduce(JKBigInteger(string:"0"), combine: addBigNum)
+      print("accumulator = \(sum)")
     }
 }

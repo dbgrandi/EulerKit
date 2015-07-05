@@ -1,5 +1,3 @@
-import Foundation
-
 class Stopwatch {
   var name:String!
   var startDate:NSDate!
@@ -28,7 +26,7 @@ class Stopwatch {
   
   func stats() {
 //    println("\(name) finished in \(runtime) seconds")
-    println(NSString(format:"%@ finished in %.5f seconds", name, runtime))
+    print(NSString(format:"%@ finished in %.5f seconds", name, runtime))
   }
 
 }

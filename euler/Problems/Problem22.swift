@@ -31,25 +31,25 @@ class Problem22: EulerProblem {
     // a PR to allow passing in args to problems. :)
     //
     let path = "/Users/dave/projects/watched/dbgrandi/swiftEuler/euler/Assets/p022_names.txt"
-    let text:NSString = String(contentsOfFile:path, encoding: NSUTF8StringEncoding, error: nil)!
+    let text:NSString = try! String(contentsOfFile:path, encoding: NSUTF8StringEncoding)
 
     let noQuotes = text.stringByReplacingOccurrencesOfString("\"", withString: "")
     var names = noQuotes.componentsSeparatedByString(",")
     
-    names.sort({$0 < $1})
+    names.sortInPlace({$0 < $1})
     return names
   }
 
   let letters = ["","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 
   func alphabeticalValue(s:String) -> Int {
-    return Array(s).map({ find(self.letters, (String($0)))! }).reduce(0,combine: +)
+    return Array(s.characters).map({ self.letters.indexOf((String($0)).characters)! }).reduce(0,combine: +)
   }
 
   override func run() {
     let names = loadNames()
     let total = (0..<names.count).map({ ($0+1) * self.alphabeticalValue(names[$0]) }).reduce(0,combine: +)
 
-    println("total = \(total)")
+    print("total = \(total)")
   }
 }

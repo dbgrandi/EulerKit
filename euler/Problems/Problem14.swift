@@ -28,9 +28,9 @@ final class CollatzSequence: SequenceType {
     self.start = start
   }
   
-  final func generate() -> GeneratorOf<Int> {
+  final func generate() -> AnyGenerator<Int> {
     var n = 0
-    return GeneratorOf<Int> {
+    return anyGenerator {
       if n == 0 {
         n = self.start
         return n
@@ -53,15 +53,15 @@ final class Problem14: EulerProblem {
     var max = (n:0, length:0)
     
     for i in 1...1_000_000 {
-      let currentLength = reduce(CollatzSequence(start:i), 0, {(acc,val) in acc + 1})
+      let currentLength = CollatzSequence(start:i).reduce(0, combine: {(acc,val) in acc + 1})
       if currentLength > max.length {
         max.n = i
         max.length = currentLength
       }
     }
     
-    println("n = \(max.n)")
-    println("length = \(max.length)")
+    print("n = \(max.n)")
+    print("length = \(max.length)")
   }
 }
 

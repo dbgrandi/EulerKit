@@ -23,11 +23,11 @@ class Problem18: EulerProblem {
   // You don't need to know the specific route, only the maximum sum.
   //
   override func run() {
-    for i in reverse(0...rows.count-2) {
+    for i in Array((0...rows.count-2).reverse()) {
       for j in 0..<rows[i].count {
         rows[i][j] = rows[i][j] + max(rows[i+1][j],rows[i+1][j+1])
       }
     }
-    println("Max path = \(rows[0][0])")
+    print("Max path = \(rows[0][0])")
   }
 }

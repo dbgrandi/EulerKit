@@ -31,7 +31,7 @@ final class Problem23: EulerProblem {
   }
   
   final func allAbundantNumbersBelow(n:Int) -> [Int] {
-    return filter(2..<n) { self.isAbundant($0) }
+    return (2..<n).filter { self.isAbundant($0) }
   }
   
 //  func allPairsAsSum(n:[Int], lessThan:Int) -> NSMutableSet {
@@ -59,7 +59,7 @@ final class Problem23: EulerProblem {
   final override func run() {
     let abundantNumbers = allAbundantNumbersBelow(28123)
     let sums = allPairsAsSum(abundantNumbers, lessThan: 28123)
-    var sum = filter(1...28123, { !sums.contains($0) }).reduce(0,combine: +)
-    println("sum = \(sum)")
+    let sum = (1...28123).filter({ !sums.contains($0) }).reduce(0,combine: +)
+    print("sum = \(sum)")
   }
 }

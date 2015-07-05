@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		090C02D90F1816C52FE7A8C5 /* Pods_eulerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8E3E82C580B43F32730D5A /* Pods_eulerTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		291948DD1A54CFA500DB9AAF /* PrimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948DC1A54CFA500DB9AAF /* PrimeTests.swift */; };
 		291948E01A54CFDA00DB9AAF /* String+EulerKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948DF1A54CFDA00DB9AAF /* String+EulerKit.swift */; };
 		291948E11A54CFE200DB9AAF /* String+EulerKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291948DF1A54CFDA00DB9AAF /* String+EulerKit.swift */; };
@@ -25,9 +24,13 @@
 		293741C11A57A85000CDF2DF /* Problem27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741BF1A57A85000CDF2DF /* Problem27.swift */; };
 		293741C31A589CA700CDF2DF /* Problem26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741C21A589CA700CDF2DF /* Problem26.swift */; };
 		293741C41A589CA700CDF2DF /* Problem26.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293741C21A589CA700CDF2DF /* Problem26.swift */; };
+		299FD61C1ABE1005009804D7 /* BigNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1B4541A47A91F0002B363 /* BigNum.swift */; };
+		299FD61D1ABE100B009804D7 /* JKBigNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7CDF01A54F47000BBDCB1 /* JKBigNum.swift */; };
+		299FD61E1ABE1023009804D7 /* Problem23.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550BF5B219CB787400ECDF82 /* Problem23.swift */; };
+		299FD61F1ABE1027009804D7 /* Problem24.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5567C01B19CC011B0057B113 /* Problem24.swift */; };
+		299FD6201ABE102B009804D7 /* Problem25.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C643DD19CCB522000FD9E1 /* Problem25.swift */; };
+		299FD6211ABE1033009804D7 /* Problem31.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2924B3691ABDCCA200600B1E /* Problem31.swift */; };
 		29B7CDF11A54F47000BBDCB1 /* JKBigNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7CDF01A54F47000BBDCB1 /* JKBigNum.swift */; };
-		29B7CDF31A55E2D900BBDCB1 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B7CDF21A55E2D900BBDCB1 /* libssl.dylib */; };
-		29B7CDF61A55E40200BBDCB1 /* SSLBigNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7CDF51A55E40200BBDCB1 /* SSLBigNum.swift */; };
 		29B7CDF81A579F2E00BBDCB1 /* Problem28.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7CDF71A579F2E00BBDCB1 /* Problem28.swift */; };
 		29B7CDF91A579F2E00BBDCB1 /* Problem28.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B7CDF71A579F2E00BBDCB1 /* Problem28.swift */; };
 		29D1B4551A47A91F0002B363 /* BigNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D1B4541A47A91F0002B363 /* BigNum.swift */; };
@@ -95,7 +98,8 @@
 		55B894C319C0285400A7E598 /* Problem15Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B894C219C0285400A7E598 /* Problem15Tests.swift */; };
 		55BD79B11A42882700B293C1 /* PrimeFactorsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BD79B01A42882700B293C1 /* PrimeFactorsTest.swift */; };
 		55C643DE19CCB522000FD9E1 /* Problem25.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C643DD19CCB522000FD9E1 /* Problem25.swift */; };
-		DC23569069A77DD9575EDB26 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B19A460A663824B3F0E7026 /* libPods.a */; };
+		6AFED633D3B2E68E7815C071 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F52E9AB04FC7C46698B13A0 /* libPods.a */; };
+		E6E5D45B42329B3294251913 /* libPods-eulerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 524502AEDDD49D21AAC1B4D2 /* libPods-eulerTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,7 +115,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0B19A460A663824B3F0E7026 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		291948DC1A54CFA500DB9AAF /* PrimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeTests.swift; sourceTree = "<group>"; };
 		291948DF1A54CFDA00DB9AAF /* String+EulerKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+EulerKit.swift"; path = "EulerKit/String+EulerKit.swift"; sourceTree = "<group>"; };
 		291948E21A54D04F00DB9AAF /* Sequences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sequences.swift; path = EulerKit/Sequences.swift; sourceTree = "<group>"; };
@@ -125,13 +128,13 @@
 		29B7CDEF1A54F00600BBDCB1 /* euler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "euler-Bridging-Header.h"; sourceTree = "<group>"; };
 		29B7CDF01A54F47000BBDCB1 /* JKBigNum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JKBigNum.swift; sourceTree = "<group>"; };
 		29B7CDF21A55E2D900BBDCB1 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
-		29B7CDF51A55E40200BBDCB1 /* SSLBigNum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSLBigNum.swift; sourceTree = "<group>"; };
 		29B7CDF71A579F2E00BBDCB1 /* Problem28.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem28.swift; sourceTree = "<group>"; };
 		29D1B4541A47A91F0002B363 /* BigNum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BigNum.swift; path = EulerKit/BigNum.swift; sourceTree = "<group>"; };
 		29D1B4561A47AA200002B363 /* BigNumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigNumTests.swift; sourceTree = "<group>"; };
 		29E2E5031A599D7700124A29 /* Problem29.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem29.swift; sourceTree = "<group>"; };
 		29E2E5061A59BB9B00124A29 /* Problem30.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem30.swift; sourceTree = "<group>"; };
 		5073322D203495D289EB5811 /* Pods-eulerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eulerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eulerTests/Pods-eulerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		524502AEDDD49D21AAC1B4D2 /* libPods-eulerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-eulerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		550BF5B219CB787400ECDF82 /* Problem23.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem23.swift; sourceTree = "<group>"; };
 		552558C619AEB953004B958F /* euler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = euler; sourceTree = BUILT_PRODUCTS_DIR; };
 		552558C919AEB953004B958F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -172,7 +175,7 @@
 		55BD79B01A42882700B293C1 /* PrimeFactorsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeFactorsTest.swift; sourceTree = "<group>"; };
 		55C643DD19CCB522000FD9E1 /* Problem25.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Problem25.swift; sourceTree = "<group>"; };
 		658A5A94FFCD657F9190220C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		7C8E3E82C580B43F32730D5A /* Pods_eulerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eulerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F52E9AB04FC7C46698B13A0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E496690520F962E1DF87E6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F2FDF1EC7BD9EBF482B17466 /* Pods-eulerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eulerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-eulerTests/Pods-eulerTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,8 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29B7CDF31A55E2D900BBDCB1 /* libssl.dylib in Frameworks */,
-				DC23569069A77DD9575EDB26 /* libPods.a in Frameworks */,
+				6AFED633D3B2E68E7815C071 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				090C02D90F1816C52FE7A8C5 /* Pods_eulerTests.framework in Frameworks */,
+				E6E5D45B42329B3294251913 /* libPods-eulerTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +210,6 @@
 				291948EB1A54D29C00DB9AAF /* GlobalHelpers.swift */,
 				291948EE1A54DD2B00DB9AAF /* StringNum.swift */,
 				29B7CDF01A54F47000BBDCB1 /* JKBigNum.swift */,
-				29B7CDF51A55E40200BBDCB1 /* SSLBigNum.swift */,
 			);
 			name = EulerKit;
 			sourceTree = "<group>";
@@ -217,8 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				29B7CDF21A55E2D900BBDCB1 /* libssl.dylib */,
-				7C8E3E82C580B43F32730D5A /* Pods_eulerTests.framework */,
-				0B19A460A663824B3F0E7026 /* libPods.a */,
+				6F52E9AB04FC7C46698B13A0 /* libPods.a */,
+				524502AEDDD49D21AAC1B4D2 /* libPods-eulerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -390,7 +391,8 @@
 		552558BE19AEB953004B958F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "David Grandinetti";
 				TargetAttributes = {
 					552558C519AEB953004B958F = {
@@ -556,7 +558,6 @@
 				550BF5B319CB787400ECDF82 /* Problem23.swift in Sources */,
 				554B6F7B19C5532F00421F5F /* Problem19.swift in Sources */,
 				29E2E5041A599D7700124A29 /* Problem29.swift in Sources */,
-				29B7CDF61A55E40200BBDCB1 /* SSLBigNum.swift in Sources */,
 				29B7CDF81A579F2E00BBDCB1 /* Problem28.swift in Sources */,
 				558A364C19CA7CC6007740E2 /* Problem21.swift in Sources */,
 				55B894AD19C016F400A7E598 /* Problem15.swift in Sources */,
@@ -595,8 +596,10 @@
 				558DE46319B6A3CB0088B812 /* EulerTests.swift in Sources */,
 				55B894C019C0174A00A7E598 /* Problem16Tests.swift in Sources */,
 				291948F01A54DD2B00DB9AAF /* StringNum.swift in Sources */,
+				299FD61D1ABE100B009804D7 /* JKBigNum.swift in Sources */,
 				55B894B019C0173700A7E598 /* Problem2.swift in Sources */,
 				558DE47819B6A6F00088B812 /* PalindromeTest.swift in Sources */,
+				299FD6211ABE1033009804D7 /* Problem31.swift in Sources */,
 				2924B3681ABDC0AF00600B1E /* NumExtensionTest.swift in Sources */,
 				554B6F7919C5532000421F5F /* Problem20.swift in Sources */,
 				558A365319CA96BF007740E2 /* Problem22.swift in Sources */,
@@ -604,6 +607,7 @@
 				55B894B819C0173700A7E598 /* Problem10.swift in Sources */,
 				55B894B119C0173700A7E598 /* Problem3.swift in Sources */,
 				5581722019C54F5000053B00 /* Problem18.swift in Sources */,
+				299FD61E1ABE1023009804D7 /* Problem23.swift in Sources */,
 				291948ED1A54D29C00DB9AAF /* GlobalHelpers.swift in Sources */,
 				29E2E5051A599D7700124A29 /* Problem29.swift in Sources */,
 				558DE46919B6A4050088B812 /* Euler.swift in Sources */,
@@ -613,10 +617,13 @@
 				55B894B219C0173700A7E598 /* Problem4.swift in Sources */,
 				55B894B919C0173700A7E598 /* Problem11.swift in Sources */,
 				291948EA1A54D24100DB9AAF /* Int+EulerKit.swift in Sources */,
+				299FD6201ABE102B009804D7 /* Problem25.swift in Sources */,
 				29E2E5081A59BB9B00124A29 /* Problem30.swift in Sources */,
+				299FD61F1ABE1027009804D7 /* Problem24.swift in Sources */,
 				29D1B4571A47AA200002B363 /* BigNumTests.swift in Sources */,
 				291948E11A54CFE200DB9AAF /* String+EulerKit.swift in Sources */,
 				55B894BE19C0173700A7E598 /* Problem16.swift in Sources */,
+				299FD61C1ABE1005009804D7 /* BigNum.swift in Sources */,
 				558A364D19CA7CC6007740E2 /* Problem21.swift in Sources */,
 				55B894BC19C0173700A7E598 /* Problem14.swift in Sources */,
 				55B894AF19C0173700A7E598 /* Problem1.swift in Sources */,
@@ -650,6 +657,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
@@ -743,6 +751,7 @@
 				);
 				INFOPLIST_FILE = eulerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.dbgrandi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./euler/euler-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -760,6 +769,7 @@
 				);
 				INFOPLIST_FILE = eulerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.dbgrandi.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./euler/euler-Bridging-Header.h";
 			};

@@ -4,13 +4,13 @@ class Problem28Iterative : EulerProblem {
     var nums = [1]
     var last = 1
     for i in stride(from: 3, through: 1001, by: 2) {
-      for j in 0...3 {
+      for _ in 0...3 {
         last += i-1
         nums.append(last)
       }
     }
     let sum = nums.reduce(0,combine: +)
-    println("sum = \(sum)")
+    print("sum = \(sum)")
   }
 }
 
@@ -30,6 +30,6 @@ class Problem28 : EulerProblem {
     // assume the 1x1 core
     let diagonals = map(s,findCorners).reduce([1],combine: +)
     let sum = diagonals.reduce(0,combine: +)
-    println("sum = \(sum)")
+    print("sum = \(sum)")
   }
 }

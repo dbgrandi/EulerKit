@@ -87,10 +87,10 @@ class Problem17: EulerProblem {
     for i in 1...1000 {
       length += lengthAfterCleaning(i.toWords())
     }
-    println("sum of length = \(length)")
+    print("sum of length = \(length)")
   }
   
   func lengthAfterCleaning(s:String) -> Int {
-    return count(Array(s).filter({$0 != " " && $0 != "-"}))
+    return Array(s.characters).filter({$0 != " " && $0 != "-"}).count
   }
 }

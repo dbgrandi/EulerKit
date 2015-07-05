@@ -24,10 +24,10 @@ class Problem16Tests: XCTestCase {
   }
   
   func testSumOfDigits() {
-    XCTAssertTrue(p16.sumOfDigits("1")    == 1, "sum of 1 = 1")
-    XCTAssertTrue(p16.sumOfDigits("12")   == 3, "sum of 12 = 3")
-    XCTAssertTrue(p16.sumOfDigits("123")  == 6, "sum of 123 = 6")
-    XCTAssertTrue(p16.sumOfDigits("1234") == 10, "sum of 1234 = 10")
+    XCTAssertTrue(sumOfDigits("1")    == 1, "sum of 1 = 1")
+    XCTAssertTrue(sumOfDigits("12")   == 3, "sum of 12 = 3")
+    XCTAssertTrue(sumOfDigits("123")  == 6, "sum of 123 = 6")
+    XCTAssertTrue(sumOfDigits("1234") == 10, "sum of 1234 = 10")
   }
   
   func testDoubleIntegerString() {

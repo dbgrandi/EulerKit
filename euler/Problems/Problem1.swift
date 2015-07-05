@@ -7,8 +7,8 @@ class Problem1: EulerProblem {
     // Find the sum of all the multiples of 3 or 5 below 1000.
     //
 
-    let sum = filter(1...999, { $0.isMultipleOfAny([3,5]) }).reduce(0,combine: +)
+    let sum = (1...999).filter({ $0.isMultipleOfAny([3,5]) }).reduce(0,combine: +)
 
-    println("Sum = \(sum)")
+    print("Sum = \(sum)")
   }
 }

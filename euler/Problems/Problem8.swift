@@ -11,9 +11,9 @@ let problem8num:String = "731671765313306249192251196744265747423553491949349698
 class Problem8: EulerProblem {
   override func run() {
     var digits:[Int] = []
-    for digit in problem8num {
+    for digit in problem8num.characters {
       let str = String(digit)
-      if let toInt = str.toInt() {
+      if let toInt = Int(str) {
         digits.append(toInt)
       }
     }
@@ -29,7 +29,7 @@ class Problem8: EulerProblem {
       }
     }
     
-    println("maxProduct = \(maxProduct)")
+    print("maxProduct = \(maxProduct)")
   }
 }
 

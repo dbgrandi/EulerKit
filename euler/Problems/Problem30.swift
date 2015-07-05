@@ -22,7 +22,7 @@ class Problem30 : EulerProblem {
     var numbers = [Int]()
 
     for i in 2...1_000_000 {
-      var digits = i.getDigits()
+      let digits = i.getDigits()
       let sum = digits.map({$0 * $0 * $0 * $0 * $0}).reduce(0, combine: +)
       if sum == i {
         numbers.append(i)
@@ -30,6 +30,6 @@ class Problem30 : EulerProblem {
     }
 
     let total = numbers.reduce(0,combine:+)
-    println("sum of numbers = \(total)")
+    print("sum of numbers = \(total)")
   }
 }

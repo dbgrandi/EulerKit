@@ -6,8 +6,8 @@ class Problem2: EulerProblem {
     //
 
     let seq = LimitSequence(sequence: FibonacciSequence()) { $1 < 4_000_000 }
-    let sum = filter(seq, { $0.isEven() }).reduce(0,combine: +)
+    let sum = seq.filter({ $0.isEven() }).reduce(0,combine: +)
 
-    println("sum = \(sum)")
+    print("sum = \(sum)")
   }
 }

@@ -55,7 +55,7 @@ class Problem27Iterative : EulerProblem {
       }
     }
     let prod = coefficients.a * coefficients.b
-    println("prod = \(prod)")
+    print("prod = \(prod)")
   }
 }
 
@@ -83,7 +83,7 @@ class Problem27Recursive : EulerProblem {
       }
     }
     let prod = coefficients.a * coefficients.b
-    println("prod = \(prod)")
+    print("prod = \(prod)")
   }
 }
 
@@ -99,7 +99,7 @@ class Problem27 : EulerProblem {
 
     // option a
     // problem finished in 8.32333594560623 seconds
-    var g = limit.generate()
+    let g = limit.generate()
     var n = 0
     while let _ = g.next() {
       n++
@@ -127,6 +127,6 @@ class Problem27 : EulerProblem {
       }
     }
     let prod = coefficients.a * coefficients.b
-    println("prod = \(prod)")
+    print("prod = \(prod)")
   }
 }

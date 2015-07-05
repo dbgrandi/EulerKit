@@ -7,18 +7,14 @@
 //Find the sum of the digits in the number 100!
 //
 
-func sumOfDigits(s:String) -> Int {
-  return map(0..<s.length, { s[$0].toInt()! }).reduce(0,combine: +)
-}
-
 final class Problem20: EulerProblem {
   final override func run() {
     var accumulator = "1"
     for i in 2...100 {
-      accumulator = multiplyString(accumulator, i)
+      accumulator = multiplyString(accumulator, times: i)
     }
-    println("10! = \(accumulator)")
-    println("sum = \(sumOfDigits(accumulator))")
+    print("10! = \(accumulator)")
+    print("sum = \(sumOfDigits(accumulator))")
   }
 }
 
@@ -28,7 +24,7 @@ final class Problem20BigNum: EulerProblem {
     for i in 2...100 {
       accumulator = accumulator.multiply(JKBigInteger(unsignedLong:UInt(i))) as! JKBigInteger
     }
-    println("10! = \(accumulator)")
-    println("sum = \(sumOfDigits(accumulator.stringValue()))")
+    print("10! = \(accumulator)")
+    print("sum = \(sumOfDigits(accumulator.stringValue()))")
   }
 }

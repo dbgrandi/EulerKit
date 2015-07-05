@@ -27,13 +27,13 @@ class Problem21: EulerProblem {
     
     for (key, value) in sums {
       if sums[value] == key && key != value {
-        println("found pair: \(key), \(value)")
+        print("found pair: \(key), \(value)")
         amicableNumbers.insert(key)
         amicableNumbers.insert(value)
       }
     }
 
     let total = Array(amicableNumbers).reduce(0, combine: +)
-    println("total = \(total)")
+    print("total = \(total)")
   }
 }

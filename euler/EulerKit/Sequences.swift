@@ -12,9 +12,9 @@ struct IntSequence : SequenceType
     self.start = start
   }
 
-  func generate() -> GeneratorOf<Int> {
+  func generate() -> AnyGenerator<Int> {
     var n : Int = start
-    return GeneratorOf<Int> {
+    return anyGenerator {
       return n++
     }
   }
@@ -24,11 +24,11 @@ struct IntSequence : SequenceType
 // An infinite sequence of Fibonacci numbers
 //
 struct FibonacciSequence: SequenceType {
-  func generate() -> GeneratorOf<Int> {
+  func generate() -> AnyGenerator<Int> {
     var last = 0
         var current = 1
 
-        return GeneratorOf<Int> {
+        return anyGenerator {
             let next = last + current
             last = current
             current = next
@@ -42,11 +42,11 @@ struct FibonacciSequence: SequenceType {
 //
 
 struct PrimeSequence: SequenceType {
-    func generate() -> GeneratorOf<Int> {
+    func generate() -> AnyGenerator<Int> {
         var currentPrime = 1
         var nextPrime = 1
 
-        return GeneratorOf<Int> {
+        return anyGenerator {
             nextPrime = currentPrime+1
             while !nextPrime.isPrime() {
                 nextPrime += 1
@@ -61,11 +61,11 @@ struct PrimeSequence: SequenceType {
 // An infinite sequence of Triangle numbers
 //
 struct TriangleNumberSequence: SequenceType {
-  func generate() -> GeneratorOf<Int> {
+  func generate() -> AnyGenerator<Int> {
     var current = 0
     var count = 0
 
-    return GeneratorOf<Int> {
+    return anyGenerator {
       count += 1
       current = current + count
       return current
@@ -86,13 +86,13 @@ struct LimitSequence<S: SequenceType, T where T == S.Generator.Element>: Sequenc
         self.test = test
     }
 
-    func generate() -> GeneratorOf<T> {
+    func generate() -> AnyGenerator<T> {
         var generator = self.sequence.generate()
         let t = test
         var counter:Int = 0
 
-        return GeneratorOf<T> {
-            var next = generator.next()
+        return anyGenerator {
+            let next = generator.next()
             counter += 1
             if next != nil && t(counter, next!) {
                 return next
@@ -111,11 +111,11 @@ struct MappingSequence<S: SequenceType, U,  T where T == S.Generator.Element>: S
     self.map = map
   }
 
-  func generate() -> GeneratorOf<U> {
+  func generate() -> AnyGenerator<U> {
     var generator = self.sequence.generate()
 
-    return GeneratorOf<U> {
-      var next = generator.next()
+    return anyGenerator {
+      let next = generator.next()
       if next != nil {
         return self.map(next!)
       }

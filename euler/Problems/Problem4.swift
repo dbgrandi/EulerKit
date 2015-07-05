@@ -16,10 +16,10 @@ final class Problem4: EulerProblem {
       }
     }
     
-    sort(&palindromes) { $0 > $1 }
+    palindromes.sortInPlace { $0 > $1 }
     
-    println("number of palindromes = \(palindromes.count)")
-    println("max palindrome = \(palindromes[0])")
+    print("number of palindromes = \(palindromes.count)")
+    print("max palindrome = \(palindromes[0])")
   }
   
 }

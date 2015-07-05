@@ -1,15 +1,15 @@
 extension String {
-  var length: Int { return count(self) }
+  var length: Int { return self.characters.count }
 
-  func repeat(i:Int) -> String {
+  func `repeat`(i:Int) -> String {
     var result = ""
-    for i in 0..<i {
+    for _ in 0..<i {
       result += self
     }
     return result
   }
 
   subscript(i: Int) -> String {
-    return String(Array(self)[i])
+    return String(Array(self.characters)[i])
   }
 }

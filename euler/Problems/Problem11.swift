@@ -25,7 +25,7 @@ class Problem11: EulerProblem {
       for y in 0...19 {
         let index = x*20+y
         let str = String(format:elements[index])
-        if let toInt = str.toInt() {
+        if let toInt = Int(str) {
           grid[x][y] = toInt
         }
       }
@@ -40,8 +40,8 @@ class Problem11: EulerProblem {
         for y in 0...y_size {
           var product = 1
           for length in 0...3 {
-            var xprime = x+(dx*length)
-            var yprime = y+(dy*length)
+            let xprime = x+(dx*length)
+            let yprime = y+(dy*length)
             if xprime >= 0 && xprime <= 19 && yprime >= 0 && yprime <= 19 {
               product = product * g[xprime][yprime]
             } else {
@@ -58,31 +58,31 @@ class Problem11: EulerProblem {
     
     var maxProduct = 0
     
-    var maxHorizontal = findMaxValue(grid,1,0)
-    println("maxHorizontal = \(maxHorizontal)")
+    let maxHorizontal = findMaxValue(grid,dx: 1,dy: 0)
+    print("maxHorizontal = \(maxHorizontal)")
     if maxHorizontal > maxProduct {
       maxProduct = maxHorizontal
     }
     
-    var maxVertical = findMaxValue(grid,0,1)
-    println("maxVertical = \(maxVertical)")
+    let maxVertical = findMaxValue(grid,dx: 0,dy: 1)
+    print("maxVertical = \(maxVertical)")
     if maxVertical > maxProduct {
       maxProduct = maxVertical
     }
     
-    var maxIncDiagonal = findMaxValue(grid,1,1)
-    println("maxIncDiagonal = \(maxIncDiagonal)")
+    let maxIncDiagonal = findMaxValue(grid,dx: 1,dy: 1)
+    print("maxIncDiagonal = \(maxIncDiagonal)")
     if maxIncDiagonal > maxProduct {
       maxProduct = maxIncDiagonal
     }
     
-    var maxDecDiagonal = findMaxValue(grid,1,-1)
-    println("maxDecDiagonal = \(maxDecDiagonal)")
+    let maxDecDiagonal = findMaxValue(grid,dx: 1,dy: -1)
+    print("maxDecDiagonal = \(maxDecDiagonal)")
     if maxDecDiagonal > maxProduct {
       maxProduct = maxDecDiagonal
     }
     
-    println("maxProduct = \(maxProduct)")
+    print("maxProduct = \(maxProduct)")
   }
 }
 

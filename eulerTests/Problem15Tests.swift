@@ -14,11 +14,11 @@ var p15 = Problem15()
 
 class Problem15Tests: XCTestCase {
   func testBinaryCoefficient() {
-    XCTAssertTrue(p15.binaryCoefficient(5, k: 0) == 1,  "5 choose 0 = 1")
-    XCTAssertTrue(p15.binaryCoefficient(5, k: 1) == 5,  "5 choose 1 = 5")
-    XCTAssertTrue(p15.binaryCoefficient(5, k: 2) == 10, "5 choose 2 = 10")
-    XCTAssertTrue(p15.binaryCoefficient(5, k: 3) == 10, "5 choose 3 = 10")
-    XCTAssertTrue(p15.binaryCoefficient(5, k: 4) == 5,  "5 choose 4 = 5")
-    XCTAssertTrue(p15.binaryCoefficient(5, k: 5) == 1,  "5 choose 5 = 1")
+    XCTAssertTrue(binaryCoefficient(5, 0) == 1,  "5 choose 0 = 1")
+    XCTAssertTrue(binaryCoefficient(5, 1) == 5,  "5 choose 1 = 5")
+    XCTAssertTrue(binaryCoefficient(5, 2) == 10, "5 choose 2 = 10")
+    XCTAssertTrue(binaryCoefficient(5, 3) == 10, "5 choose 3 = 10")
+    XCTAssertTrue(binaryCoefficient(5, 4) == 5,  "5 choose 4 = 5")
+    XCTAssertTrue(binaryCoefficient(5, 5) == 1,  "5 choose 5 = 1")
   }
 }

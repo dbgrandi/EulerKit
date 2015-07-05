@@ -11,7 +11,7 @@ enum BigNumSign {
     case Positive
 }
 
-struct BigNum : DebugPrintable {
+struct BigNum : CustomDebugStringConvertible {
     let sign:BigNumSign
     let digits:[Int]
 
@@ -42,14 +42,14 @@ struct BigNum : DebugPrintable {
                 tmpI = tmpI/10
             }
 
-            self.init(sign:sign, digits:tmpDigits.reverse())
+            self.init(sign:sign, digits:Array(tmpDigits.reverse()))
         }
     }
 
     init(sign:BigNumSign, digitString:String) {
         var tmpDigits = [Int]()
         for i in 0...digitString.length-1 {
-            if let digit = digitString[i].toInt() {
+            if let digit = Int(digitString[i]) {
                 tmpDigits.append(digit)
             }
         }
@@ -58,7 +58,7 @@ struct BigNum : DebugPrintable {
 
     var debugDescription:String {
         get {
-            return (self.sign == BigNumSign.Negative ? "-" : "") + reduce(digits, "") { $0 + String($1) }
+            return (self.sign == BigNumSign.Negative ? "-" : "") + digits.reduce("") { $0 + String($1) }
         }
     }
 }

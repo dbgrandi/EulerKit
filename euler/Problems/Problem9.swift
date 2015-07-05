@@ -14,8 +14,8 @@ final class Problem9: EulerProblem {
       for b in 1...999 {
         for c in 1...999 {
           if isTriple(a, b:b, c:c) {
-            println("Triple found: a = \(a), b = \(b), c = \(c)")
-            println("Product = \(a*b*c)")
+            print("Triple found: a = \(a), b = \(b), c = \(c)")
+            print("Product = \(a*b*c)")
           }
         }
       }

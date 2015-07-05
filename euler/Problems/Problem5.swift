@@ -8,7 +8,7 @@
 final class Problem5: EulerProblem {
 
   final override func run() {
-    println(smallestDivisibleUpTo(20))
+    print(smallestDivisibleUpTo(20))
   }
 
   final func smallestDivisibleUpTo(i:Int, current:Int = 1) -> Int {

@@ -28,7 +28,7 @@ class Problem12: EulerProblem {
   override func run() {
     let seq = LimitSequence(sequence: TriangleNumberSequence()) { $1.numberOfDivisors() > 500 }
     if let last = Array(seq).last {
-      println(last)
+      print(last)
     }
   }
 }

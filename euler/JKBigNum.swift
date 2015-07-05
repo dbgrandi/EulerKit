@@ -15,5 +15,3 @@ func + (lhs:JKBigInteger, rhs:JKBigInteger) -> JKBigInteger {
 public func == (lhs: JKBigInteger, rhs: JKBigInteger) -> Bool {
   return lhs.compare(rhs) == NSComparisonResult.OrderedSame
 }
-
-extension JKBigInteger : Equatable {}

@@ -17,7 +17,11 @@ extension Int {
   }
 
   func isDivisibleUpTo(max:Int) -> Bool {
-    for i in stride(from: max, through: 2, by: -1) {
+    if self % 2 != 0 {
+        return false
+    }
+
+    for i in stride(from: max, through: 3, by: -1) {
       if self % i != 0 {
         return false
       }

@@ -16,7 +16,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/Quick/Nimble
 
 SPEC CHECKSUMS:
-  JKBigInteger: e24ff21871e12f2dd4ce54280d61363254014dbe
+  JKBigInteger: 7f3894ca331bf271a8e2ee0d5329707ca6eda6e0
   Nimble: 09c242bf483ca28ca4174ff45cb6a81cba9d32ef
 
 COCOAPODS: 0.35.0

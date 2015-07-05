@@ -50,5 +50,5 @@ import Foundation
 
 var arr = [1,2,3,2,1,25]
 var arr2 = arr.filter {$0 != 2}
-println(arr2)
+print(arr2)
 

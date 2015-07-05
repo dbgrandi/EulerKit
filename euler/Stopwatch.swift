@@ -1,7 +1,9 @@
+import QuartzCore
+
 class Stopwatch {
-  var name:String!
-  var startDate:NSDate!
-  var runtime:NSTimeInterval!
+  let name:String
+  var startTime:CFTimeInterval
+  var runtime:CFTimeInterval
 
   class func measure(name:String, closure:() -> ()) {
     let stopwatch = Stopwatch(name:name)
@@ -14,14 +16,15 @@ class Stopwatch {
   init(name:String) {
     self.name = name
     self.runtime = 0
+    self.startTime = 0
   }
   
   func start() {
-    startDate = NSDate()
+    startTime = CACurrentMediaTime()
   }
   
   func stop() {
-    runtime = (-startDate.timeIntervalSinceNow)
+    runtime = CACurrentMediaTime() - startTime
   }
   
   func stats() {

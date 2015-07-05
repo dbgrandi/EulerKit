@@ -8,7 +8,6 @@
 
 import Cocoa
 import XCTest
-import Nimble
 
 class BigNumTests: XCTestCase {
 

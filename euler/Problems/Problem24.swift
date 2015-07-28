@@ -11,40 +11,6 @@
 //
 
 class Problem24: EulerProblem {
-
-  func findFirstDigit(n:[Int], goal:Int) -> Int {
-    if n.count == 1 { return n.first! }
-    
-    let permSize = (n.count-1).factorial()
-    if permSize*1 > goal { return n[0] }
-    for i in 0..<n.count {
-      if permSize*i >= goal {
-        return n[i-1]
-      }
-    }
-    
-    return n.last!
-  }
-  
-  func findNthPermutation(var n:[Int], var goal:Int) -> String {
-    var result = ""
-    var size:Int, digit:Int, index:Int
-    
-    while n.count > 1 {
-      size = (n.count-1).factorial()
-      digit = findFirstDigit(n,goal:goal)
-      index = n.indexOf(digit)!
-      
-      goal -= size*index
-      result += String(n.removeAtIndex(index))
-    }
-    
-    return result + String(n[0])
-  }
-
   override func run() {
-    let n = [0,1,2,3,4,5,6,7,8,9]
-    let result = findNthPermutation(n,goal:1000000)
-    print("perms[999999] = \(result)")
   }
 }

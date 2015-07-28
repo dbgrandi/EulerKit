@@ -16,20 +16,5 @@
 
 class Problem30 : EulerProblem {
   override func run() {
-    // what is the upper bound of the domain?
-    // let's say 1m and work down from there?
-
-    var numbers = [Int]()
-
-    for i in 2...1_000_000 {
-      let digits = i.getDigits()
-      let sum = digits.map({$0 * $0 * $0 * $0 * $0}).reduce(0, combine: +)
-      if sum == i {
-        numbers.append(i)
-      }
-    }
-
-    let total = numbers.reduce(0,combine:+)
-    print("sum of numbers = \(total)")
   }
 }

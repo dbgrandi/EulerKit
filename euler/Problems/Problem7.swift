@@ -6,7 +6,5 @@
 
 class Problem7: EulerProblem {
   override func run() {
-    let prime = PrimeSequence().take(10_001).last()
-    print(prime)
   }
 }

@@ -12,28 +12,6 @@
 // Evaluate the sum of all the amicable numbers under 10000.
 //
 class Problem21: EulerProblem {
-
-  func findSums() -> Dictionary<Int,Int> {
-    var sums = Dictionary<Int,Int>()
-    for i in 2..<10000 {
-      sums[i] = i.properDivisors().reduce(0,combine: +)
-    }
-    return sums
-  }
-  
   override func run() {
-    let sums = findSums()
-    var amicableNumbers = Set<Int>()
-    
-    for (key, value) in sums {
-      if sums[value] == key && key != value {
-        print("found pair: \(key), \(value)")
-        amicableNumbers.insert(key)
-        amicableNumbers.insert(value)
-      }
-    }
-
-    let total = Array(amicableNumbers).reduce(0, combine: +)
-    print("total = \(total)")
   }
 }

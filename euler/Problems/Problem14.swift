@@ -18,44 +18,8 @@
 // NOTE: Once the chain starts the terms are allowed to go above one million.
 //
 
-//
-// A Collatz Sequence, which eventually has an end
-//
-final class CollatzSequence: SequenceType {
-  let start:Int
-  
-  init(start:Int) {
-    self.start = start
-  }
-  
-  final func generate() -> AnyGenerator<Int> {
-    var n = 0
-    return anyGenerator {
-        switch(n) {
-        case 0: n = self.start
-        case 1: return .None
-        case _ where n.isEven(): n = n/2
-        default: n = 3*n+1
-        }
-        return n
-    }
-  }
-}
-
 final class Problem14: EulerProblem {
   final override func run() {
-    var max = (n:0, length:0)
-    
-    for i in 1...1_000_000 {
-      let currentLength = CollatzSequence(start:i).reduce(0, combine: {(acc,val) in acc + 1})
-      if currentLength > max.length {
-        max.n = i
-        max.length = currentLength
-      }
-    }
-    
-    print("n = \(max.n)")
-    print("length = \(max.length)")
   }
 }
 

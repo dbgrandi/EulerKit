@@ -22,44 +22,6 @@
 import Foundation
 
 final class Problem23: EulerProblem {
-  final func aliquotSum(n:Int) -> Int {
-    return n.properDivisors().reduce(0,combine: +)
-  }
-  
-  final func isAbundant(n:Int) -> Bool {
-    return aliquotSum(n) > n
-  }
-  
-  final func allAbundantNumbersBelow(n:Int) -> [Int] {
-    return (2..<n).filter { self.isAbundant($0) }
-  }
-  
-//  func allPairsAsSum(n:[Int], lessThan:Int) -> NSMutableSet {
-//    var sums = NSMutableSet()
-//    for head in n {
-//      for tail in n {
-//        if head + tail > lessThan { break; }
-//        sums.addObject(head+tail)
-//      }
-//    }
-//    return sums
-//  }
-
-  final func allPairsAsSum(n:[Int], lessThan:Int) -> Set<Int> {
-    var sums = Set<Int>()
-    for head in n {
-      for tail in n {
-        if head + tail > lessThan { break; }
-          sums.insert(head+tail)
-      }
-    }
-    return sums
-  }
-
   final override func run() {
-    let abundantNumbers = allAbundantNumbersBelow(28123)
-    let sums = allPairsAsSum(abundantNumbers, lessThan: 28123)
-    let sum = (1...28123).filter({ !sums.contains($0) }).reduce(0,combine: +)
-    print("sum = \(sum)")
   }
 }

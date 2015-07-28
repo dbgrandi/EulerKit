@@ -18,20 +18,5 @@ import Foundation
 
 class Problem29 : EulerProblem {
   override func run() {
-    // problem finished in 0.00285303592681885 seconds
-//    var terms = Dictionary<Double,Bool>()
-
-    // problem finished in 0.144563972949982 seconds
-    var terms = Set<Double>()
-
-    for a in 2...100 {
-      for b in 2...100 {
-//        terms[pow(Double(a), Double(b))] = true
-
-        terms.insert(pow(Double(a), Double(b)))
-      }
-    }
-    
-    print("unique terms count = \(terms.count)")
   }
 }

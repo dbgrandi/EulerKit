@@ -9,16 +9,13 @@
 
 final class Problem20: EulerProblem {
   final override func run() {
-    var accumulator = "1"
-    for i in 2...100 {
-      accumulator = multiplyString(accumulator, times: i)
-    }
-    print("10! = \(accumulator)")
-    print("sum = \(sumOfDigits(accumulator))")
+    let total = (2...100).reduce("1") { multiplyString($0, times: $1) }
+    print("100! = \(total)")
+    print("sum = \(sumOfDigits(total))")
   }
 }
 
-final class Problem20BigNum: EulerProblem {
+final class Problem20JKBigNum: EulerProblem {
   final override func run() {
     var accumulator = JKBigInteger(string:"1")
     for i in 2...100 {

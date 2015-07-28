@@ -6,10 +6,7 @@
 
 class Problem7: EulerProblem {
   override func run() {
-    // swift doesn't like it if I use $0 here, so explicitly using "(i,x) -> Bool"
-    let primes = LimitSequence(sequence:PrimeSequence()) { (i, x) -> Bool in i < 10_001 }
-    if let lastPrime = Array(primes).last {
-      print(lastPrime)
-    }
+    let prime = PrimeSequence().take(10_001).last()
+    print(prime)
   }
 }

@@ -16,7 +16,22 @@
 import Foundation
 
 final class Problem32 : EulerProblem {
+
     final override func run() {
         print("answer to 32")
+
+        let digits = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        let dividers = ["*", "="]
+
+        // generate all permutations of digits
+        // for each permutation, insert the dividers in each spot
+
+
+
+
+        let products:Set<Int> = Set<Int>()
+
+        let sum = products.reduce(0,combine: +)
+        print("Sum of all pandigital products: \(sum)")
     }
 }

@@ -7,26 +7,25 @@
 //
 struct IntSequence : SequenceType
 {
-  var start = 0
-  init(start:Int) {
-    self.start = start
-  }
-
-  func generate() -> AnyGenerator<Int> {
-    var n : Int = start
-    return anyGenerator {
-      return n++
+    let start:Int
+    init(start:Int) {
+        self.start = start
     }
-  }
+
+    func generate() -> AnyGenerator<Int> {
+        var n : Int = start
+        return anyGenerator {
+            return n++
+        }
+    }
 }
 
 //
 // An infinite sequence of Fibonacci numbers
 //
 struct FibonacciSequence: SequenceType {
-  func generate() -> AnyGenerator<Int> {
-    var last = 0
-        var current = 1
+    func generate() -> AnyGenerator<Int> {
+        var last = 0, current = 1
 
         return anyGenerator {
             let next = last + current
@@ -43,8 +42,7 @@ struct FibonacciSequence: SequenceType {
 
 struct PrimeSequence: SequenceType {
     func generate() -> AnyGenerator<Int> {
-        var currentPrime = 1
-        var nextPrime = 1
+        var currentPrime = 1, nextPrime = 1
 
         return anyGenerator {
             nextPrime = currentPrime+1
@@ -61,22 +59,22 @@ struct PrimeSequence: SequenceType {
 // An infinite sequence of Triangle numbers
 //
 struct TriangleNumberSequence: SequenceType {
-  func generate() -> AnyGenerator<Int> {
-    var current = 0
-    var count = 0
+    func generate() -> AnyGenerator<Int> {
+        var current = 0, count = 0
 
-    return anyGenerator {
-      count += 1
-      current = current + count
-      return current
+        return anyGenerator {
+            count += 1
+            current = current + count
+            return current
+        }
     }
-  }
 }
 
 //
 // A wrapper to stop a Sequence when it grows to
 // a maximum value.
 //
+
 struct LimitSequence<S: SequenceType, T where T == S.Generator.Element>: SequenceType {
     let test: (Int,T) -> Bool
     let sequence: S
@@ -88,17 +86,32 @@ struct LimitSequence<S: SequenceType, T where T == S.Generator.Element>: Sequenc
 
     func generate() -> AnyGenerator<T> {
         var generator = self.sequence.generate()
-        let t = test
         var counter:Int = 0
 
         return anyGenerator {
             let next = generator.next()
             counter += 1
-            if next != nil && t(counter, next!) {
+            if next != nil && self.test(counter, next!) {
                 return next
             }
             return .None
         }
+    }
+}
+
+extension SequenceType {
+    typealias ValueTest = (Self.Generator.Element) -> Bool
+
+    func take(i:Int) -> LimitSequence<Self, Self.Generator.Element> {
+        return LimitSequence(sequence: self) { (counter,_) -> Bool in i < counter }
+    }
+
+    func takeWhile(test:ValueTest) -> LimitSequence<Self, Self.Generator.Element> {
+        return LimitSequence(sequence: self) { test($1) }
+    }
+
+    func last() -> Self.Generator.Element {
+        return Array(self).last!
     }
 }
 

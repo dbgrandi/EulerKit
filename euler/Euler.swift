@@ -31,7 +31,7 @@ class EulerProblem {
         registerProblem(18, obj:Problem18())
         registerProblem(19, obj:Problem19())
         registerProblem(20, obj:Problem20())
-//        registerProblem(20, obj:Problem20BigNum())
+//        registerProblem(20, obj:Problem20JKBigNum())
         registerProblem(21, obj:Problem21())
         registerProblem(22, obj:Problem22())
         registerProblem(23, obj:Problem23())

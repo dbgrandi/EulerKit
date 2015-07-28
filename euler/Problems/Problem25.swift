@@ -1,7 +1,6 @@
-class StringFibonacciSequence: SequenceType {
+struct StringFibonacciSequence: SequenceType {
   func generate() -> AnyGenerator<String> {
-    var last = "0"
-    var current = "1"
+    var last = "0", current = "1"
     
     return anyGenerator {
       let next = addStringInteger(last, rhs: current)
@@ -14,9 +13,8 @@ class StringFibonacciSequence: SequenceType {
 
 class Problem25: EulerProblem {
   override func run() {
-    let seq = LimitSequence(sequence: StringFibonacciSequence()) { $1.length < 1000 }
-    let items = Array(arrayLiteral: seq)
-    let n = items.count
+    let seq = StringFibonacciSequence().limit { $1.length < 1000 }
+    let n = Array(seq).count
     // our fib sequence spits out the 3rd value the first time it is pumped, so we add 2
     print("fib(\(n+2)) is longer than 1000 digits")
   }
@@ -43,15 +41,13 @@ class BigNumFibonacciSequence: SequenceType {
 class Problem25BigNum: EulerProblem {
   // problem finished in 3.19666504859924 seconds
   override func run() {
-    let fibSeq = BigNumFibonacciSequence()
-
     //
     // if instead we just count the elements of stringValue()
     // problem finished in 4.03327995538712 seconds
     //
 
-    let limitSeq = LimitSequence(sequence: fibSeq) { $1.stringValue().utf16.count < 1000 }
-    let items = Array(arrayLiteral: limitSeq)
+    let seq = BigNumFibonacciSequence().limit { $1.stringValue().utf16.count < 1000 }
+    let items = Array(seq)
     // our fib sequence spits out the 3rd value the first time it is pumped, so we add 2
     print("fib(\(items.count+2)) is longer than 1000 digits")
   }

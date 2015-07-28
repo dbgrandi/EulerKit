@@ -12,16 +12,5 @@
 
 class Problem6: EulerProblem {
   override func run() {
-    let diff = squareOfSumUpTo(100) - sumOfSquaresUpTo(100)
-    print(diff)
   }
-}
-
-func sumOfSquaresUpTo(max:Int) -> Int {
-  return (1...max).map({n in n*n}).reduce(0,combine: +)
-}
-
-func squareOfSumUpTo(max:Int) -> Int {
-  let sum = (1...max).reduce(0,combine: +)
-  return sum * sum
 }

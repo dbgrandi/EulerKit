@@ -5,7 +5,5 @@
 
 class Problem2: EulerProblem {
   override func run() {
-    let sum = FibonacciSequence().takeWhile({ $0 < 4_000_000 }).filter(isEven).reduce(0,combine: +)
-    print("sum = \(sum)")
   }
 }

@@ -8,9 +8,5 @@ class Problem3: EulerProblem {
     let problem3num = 600851475143
 
     override func run() {
-
-        let factors = problem3num.primeFactors()
-
-        print("Max prime factor of \(problem3num) is \(factors.last!)")
     }
 }

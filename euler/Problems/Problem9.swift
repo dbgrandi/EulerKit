@@ -10,20 +10,6 @@
 
 final class Problem9: EulerProblem {
   final override func run() {
-    for a in 1...999 {
-      for b in 1...999 {
-        for c in 1...999 {
-          if isTriple(a, b:b, c:c) {
-            print("Triple found: a = \(a), b = \(b), c = \(c)")
-            print("Product = \(a*b*c)")
-          }
-        }
-      }
-    }
-  }
-  
-  final func isTriple(a:Int, b:Int, c:Int) -> Bool {
-    return (a+b+c == 1000) && (a<b && b<c) && ((a*a + b*b) == c*c)
   }
 }
 

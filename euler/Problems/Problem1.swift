@@ -7,7 +7,5 @@
 
 class Problem1: EulerProblem {
     override func run() {
-        let sum = (1...999).filter({ $0.isMultipleOfAny([3,5]) }).reduce(0,combine: +)
-        print("Sum = \(sum)")
     }
 }

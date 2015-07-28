@@ -7,19 +7,5 @@
 
 final class Problem4: EulerProblem {
   final override func run() {
-    var palindromes:[Int] = []
-    for i in 100...999 {
-      for j in 100...999 {
-        if (i*j).isPalindrome() {
-          palindromes.append(i*j)
-        }
-      }
-    }
-    
-    palindromes.sortInPlace { $0 > $1 }
-    
-    print("number of palindromes = \(palindromes.count)")
-    print("max palindrome = \(palindromes[0])")
   }
-  
 }

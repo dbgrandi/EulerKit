@@ -110,45 +110,5 @@ let problem13nums:[String] =
 
 class Problem13: EulerProblem {
   override func run() {
-    let length = problem13nums[0].length-1
-    var result = [Int]()
-    var carry = 0
-    
-    for i in stride(from:length, through:0, by: -1) {
-      var sum = carry
-      for num in problem13nums {
-        if let digit = Int(num[i]) {
-          sum += digit
-        }
-      }
-      let digitSum = sum%10
-      let digitCarry = sum-digitSum
-      result.append(digitSum)
-      carry = digitCarry
-      carry = carry/10
-    }
-    
-    while carry>0 {
-      result.append(carry%10)
-      carry = carry/10
-    }
-    
-    for i in 0...9 {
-      print(Array(result.reverse())[i], appendNewline: false)
-    }
-    
-    print("")
   }
-}
-
-func addBigNum(lhs:JKBigInteger, rhs:JKBigInteger) -> JKBigInteger {
-  return lhs.add(rhs) as! JKBigInteger
-}
-
-class Problem13BigNum: EulerProblem {
-    override func run() {
-      let bignums = problem13nums.map { JKBigInteger(string:$0)! }
-      let sum = bignums.reduce(JKBigInteger(string:"0"), combine: addBigNum)
-      print("accumulator = \(sum)")
-    }
 }

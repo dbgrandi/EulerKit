@@ -116,23 +116,23 @@ extension SequenceType {
 }
 
 struct MappingSequence<S: SequenceType, U,  T where T == S.Generator.Element>: SequenceType {
-  let sequence: S
-  let map: (T) -> U
+    let sequence: S
+    let map: (T) -> U
 
-  init(sequence:S, map: (T) -> U) {
-    self.sequence = sequence
-    self.map = map
-  }
-
-  func generate() -> AnyGenerator<U> {
-    var generator = self.sequence.generate()
-
-    return anyGenerator {
-      let next = generator.next()
-      if next != nil {
-        return self.map(next!)
-      }
-      return .None
+    init(sequence:S, map: (T) -> U) {
+        self.sequence = sequence
+        self.map = map
     }
-  }
+
+    func generate() -> AnyGenerator<U> {
+        var generator = self.sequence.generate()
+
+        return anyGenerator {
+            let next = generator.next()
+            if next != nil {
+                return self.map(next!)
+            }
+            return .None
+        }
+    }
 }

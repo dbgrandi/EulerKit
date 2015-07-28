@@ -13,12 +13,6 @@ extension Int {
 
     func isMultipleOfAny(nums:[Int]) -> Bool {
         return nums.map(isMultipleOf).reduce(false) {$0 || $1}
-//        for i in nums {
-//            if self.isMultipleOf(i) {
-//                return true
-//            }
-//        }
-//        return false
     }
 
     func isDivisibleUpTo(max:Int) -> Bool {
@@ -130,25 +124,25 @@ extension Int {
         }
         return true
     }
-    
+
     func getDigits() -> [Int] {
         // if the number is less than 10, just return it in an array
         if self < 10 {
             return [ self ]
         }
-        
+
         var digits = [Int]()
         var tmpSelf = Int(self)
-        
+
         while tmpSelf > 9 {
             digits.append(tmpSelf % 10)
             tmpSelf = tmpSelf / 10
         }
         digits.append(tmpSelf % 10)
-        
+
         return Array(digits.reverse())
     }
-    
+
     func isPandigtal(n:Int) -> Bool {
         let digits = self.getDigits()
         return Array(Set(digits)).count == n && !digits.contains(0)

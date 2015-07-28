@@ -1,11 +1,3 @@
-//
-//  BigNum.swift
-//  euler
-//
-//  Created by David Grandinetti on 12/21/14.
-//  Copyright (c) 2014 David Grandinetti. All rights reserved.
-//
-
 enum BigNumSign {
     case Negative
     case Positive
@@ -64,13 +56,13 @@ struct BigNum : CustomDebugStringConvertible {
 }
 
 func + (lhs: BigNum, rhs: BigNum) -> BigNum {
-    return lhs
+    return lhs // TODO: implement this
 }
 
 func * (lhs: BigNum, rhs: Int) -> BigNum {
-    return lhs
+    return lhs // TODO: implement this
 }
 
 func * (lhs: BigNum, rhs: BigNum) -> BigNum {
-    return lhs
+    return lhs // TODO: implement this
 }
